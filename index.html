@@ -1,0 +1,1483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Present Biomechanics | Clinical Physiotherapy & Sports Performance</title>
+    <meta name="description" content="Premium clinical physiotherapy, sports performance, neuro biomechanics, and exercise prescription in Kandivali East, Mumbai. Move better, perform better.">
+    
+    <!-- Open Graph SEO -->
+    <meta property="og:title" content="Present Biomechanics | Movement & Performance">
+    <meta property="og:description" content="Clinical physiotherapy and sports performance practice combining biomechanics, exercise, and science-informed approaches.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.presentbiomechanics.com">
+    <link rel="canonical" href="https://www.presentbiomechanics.com">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HealthAndBeautyBusiness",
+      "name": "Present Biomechanics",
+      "image": "",
+      "@id": "",
+      "url": "https://www.presentbiomechanics.com",
+      "telephone": "+918208379366",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "1301, UK Residency, Lokhandwala",
+        "addressLocality": "Kandivali East, Mumbai",
+        "postalCode": "400101",
+        "addressCountry": "IN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 19.2064,
+        "longitude": 72.8737
+      }
+    }
+    </script>
+
+    <style>
+        /* CSS VARIABLES */
+        :root {
+            --black: #050505;
+            --charcoal: #242424;
+            --charcoal-light: #333333;
+            --yellow: #FFD400;
+            --bright-yellow: #FFEA00;
+            --white: #FFFFFF;
+            --off-white: #F5F5F5;
+            
+            --font-head: 'Bebas Neue', sans-serif;
+            --font-ui: 'Montserrat', sans-serif;
+            --font-body: 'Inter', sans-serif;
+            
+            --transition: all 0.3s ease-in-out;
+        }
+
+        /* RESET & BASE */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background-color: var(--black);
+            color: var(--white);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: var(--font-head);
+            letter-spacing: 1px;
+            line-height: 1.1;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        /* TYPOGRAPHY */
+        .section-title {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+        }
+        
+        .section-subtitle {
+            font-family: var(--font-ui);
+            font-size: 1rem;
+            color: var(--yellow);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .text-yellow { color: var(--yellow); }
+
+        /* BUTTONS & CTAs */
+        .btn {
+            display: inline-block;
+            font-family: var(--font-ui);
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 1rem 2rem;
+            cursor: pointer;
+            border: 2px solid transparent;
+            transition: var(--transition);
+            text-align: center;
+        }
+
+        .btn-primary {
+            background-color: var(--yellow);
+            color: var(--black);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--bright-yellow);
+            box-shadow: 0 0 15px rgba(255, 212, 0, 0.5);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border-color: var(--yellow);
+            color: var(--yellow);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--yellow);
+            color: var(--black);
+        }
+
+        /* HEADER & NAVIGATION */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(5, 5, 5, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 212, 0, 0.1);
+            transition: var(--transition);
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: var(--font-head);
+            font-size: 2rem;
+            color: var(--white);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .logo span {
+            color: var(--yellow);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            font-family: var(--font-ui);
+            font-size: 0.85rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            position: relative;
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover {
+            color: var(--yellow);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--yellow);
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+        }
+
+        .hamburger span {
+            width: 30px;
+            height: 2px;
+            background-color: var(--white);
+            transition: var(--transition);
+        }
+
+        /* HERO SECTION */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 8rem 2rem 4rem;
+            background: url('https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(90deg, rgba(5,5,5,0.95) 0%, rgba(5,5,5,0.8) 50%, rgba(5,5,5,0.4) 100%);
+        }
+
+        .hero-grid {
+            position: absolute;
+            inset: 0;
+            background-image: 
+                linear-gradient(rgba(255, 212, 0, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 212, 0, 0.03) 1px, transparent 1px);
+            background-size: 40px 40px;
+            pointer-events: none;
+        }
+
+        .hero-content {
+            position: relative;
+            max-width: 1400px;
+            margin: 0 auto;
+            width: 100%;
+            z-index: 2;
+        }
+
+        .hero-label {
+            font-family: var(--font-ui);
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--yellow);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 1.5rem;
+            display: inline-block;
+            border-left: 3px solid var(--yellow);
+            padding-left: 1rem;
+        }
+
+        .hero h1 {
+            font-size: clamp(3.5rem, 8vw, 6.5rem);
+            margin-bottom: 1.5rem;
+            max-width: 800px;
+            color: var(--white);
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin-bottom: 2.5rem;
+            color: #CCCCCC;
+        }
+
+        .hero-ctas {
+            display: flex;
+            gap: 1rem;
+        }
+
+        /* LAYOUT & SECTIONS */
+        .section {
+            padding: 6rem 2rem;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .bg-charcoal { background-color: var(--charcoal); }
+        .bg-black { background-color: var(--black); }
+        .bg-white { 
+            background-color: var(--off-white); 
+            color: var(--black); 
+        }
+
+        /* CORE SERVICES */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .service-card {
+            background: var(--charcoal-light);
+            padding: 3rem 2rem;
+            border-top: 3px solid transparent;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(45deg, transparent, rgba(255, 212, 0, 0.05));
+            opacity: 0;
+            transition: var(--transition);
+        }
+
+        .service-card:hover {
+            border-top-color: var(--yellow);
+            transform: translateY(-5px);
+        }
+
+        .service-card:hover::before {
+            opacity: 1;
+        }
+
+        .service-num {
+            font-family: var(--font-head);
+            font-size: 3rem;
+            color: rgba(255, 212, 0, 0.2);
+            position: absolute;
+            top: 1rem;
+            right: 2rem;
+            transition: var(--transition);
+        }
+
+        .service-card:hover .service-num {
+            color: var(--yellow);
+        }
+
+        .service-card h3 {
+            font-family: var(--font-ui);
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            margin-top: 1rem;
+        }
+
+        .service-card p {
+            color: #AAAAAA;
+            font-size: 0.95rem;
+        }
+
+        /* ABOUT SECTION */
+        .about-split {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-image {
+            position: relative;
+        }
+
+        .about-image img {
+            width: 100%;
+            filter: grayscale(100%);
+            transition: var(--transition);
+        }
+        
+        .about-image:hover img {
+            filter: grayscale(0%);
+        }
+
+        .about-image::after {
+            content: '';
+            position: absolute;
+            bottom: -20px;
+            right: -20px;
+            width: 100%;
+            height: 100%;
+            border: 2px solid var(--yellow);
+            z-index: -1;
+        }
+
+        .about-list {
+            margin-top: 2rem;
+        }
+
+        .about-list li {
+            padding-left: 2rem;
+            position: relative;
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+
+        .about-list li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 10px;
+            height: 10px;
+            background-color: var(--yellow);
+        }
+
+        /* ASSESSMENT PROCESS */
+        .process-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            margin-top: 4rem;
+            position: relative;
+        }
+
+        .process-line {
+            position: absolute;
+            top: 25px;
+            left: 10%;
+            right: 10%;
+            height: 2px;
+            background: rgba(255, 255, 255, 0.1);
+            z-index: 1;
+        }
+        
+        .process-line-active {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            background: var(--yellow);
+            width: 0%;
+            transition: width 1s ease-out;
+            box-shadow: 0 0 10px var(--yellow);
+        }
+
+        .process-step {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+        }
+
+        .step-circle {
+            width: 50px;
+            height: 50px;
+            background-color: var(--charcoal);
+            border: 2px solid var(--yellow);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-family: var(--font-head);
+            font-size: 1.5rem;
+            color: var(--yellow);
+            box-shadow: 0 0 15px rgba(255, 212, 0, 0.2);
+        }
+
+        .process-step h4 {
+            font-family: var(--font-ui);
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .process-step p {
+            font-size: 0.9rem;
+            color: #AAAAAA;
+        }
+
+        /* SPECIFIC SERVICES PAGES/SECTIONS */
+        .service-detail {
+            border-left: 4px solid var(--yellow);
+            padding-left: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .bg-white .section-title, .bg-white .service-detail h3 {
+            color: var(--black);
+        }
+        .bg-white p, .bg-white li {
+            color: var(--charcoal);
+        }
+        
+        /* PERFORMANCE LAB VISUAL */
+        .lab-visual {
+            background-color: #020202;
+            position: relative;
+            overflow: hidden;
+            border-top: 1px solid rgba(255, 212, 0, 0.2);
+            border-bottom: 1px solid rgba(255, 212, 0, 0.2);
+        }
+
+        .tech-grid {
+            position: absolute;
+            inset: 0;
+            background-image: 
+                linear-gradient(rgba(255, 212, 0, 0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 212, 0, 0.05) 1px, transparent 1px);
+            background-size: 50px 50px;
+            opacity: 0.5;
+        }
+
+        .lab-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+        }
+
+        .metrics-container {
+            display: flex;
+            justify-content: center;
+            gap: 4rem;
+            margin-top: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .metric-box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .metric-circle {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 2px dashed rgba(255, 212, 0, 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-head);
+            font-size: 1.5rem;
+            color: var(--white);
+            position: relative;
+            animation: spin 15s linear infinite;
+        }
+        
+        .metric-circle span {
+            animation: spin-reverse 15s linear infinite; /* Keep text upright */
+            font-family: var(--font-ui);
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--yellow);
+        }
+
+        @keyframes spin { 100% { transform: rotate(360deg); } }
+        @keyframes spin-reverse { 100% { transform: rotate(-360deg); } }
+
+        /* WHY US / CARDS */
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        .why-card {
+            background: var(--charcoal);
+            padding: 2rem;
+            border-radius: 4px;
+            text-align: center;
+        }
+
+        .why-card h4 {
+            font-family: var(--font-ui);
+            font-size: 1.1rem;
+            color: var(--yellow);
+            margin-bottom: 1rem;
+        }
+
+        /* LOCATION & CONTACT */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+        }
+
+        .map-placeholder {
+            width: 100%;
+            height: 400px;
+            background: #111;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid rgba(255,255,255,0.1);
+            position: relative;
+        }
+
+        .contact-details {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .contact-item {
+            margin-bottom: 2rem;
+        }
+
+        .contact-item h4 {
+            font-family: var(--font-ui);
+            color: var(--yellow);
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        /* FORMS */
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        label {
+            display: block;
+            font-family: var(--font-ui);
+            font-size: 0.85rem;
+            margin-bottom: 0.5rem;
+            color: #CCC;
+            text-transform: uppercase;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            background: transparent;
+            border: 1px solid #444;
+            padding: 1rem;
+            color: var(--white);
+            font-family: var(--font-body);
+            transition: var(--transition);
+        }
+
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: var(--yellow);
+            background: rgba(255, 212, 0, 0.02);
+        }
+        
+        option {
+            background-color: var(--charcoal);
+            color: var(--white);
+        }
+
+        .form-success {
+            display: none;
+            background: rgba(255, 212, 0, 0.1);
+            border: 1px solid var(--yellow);
+            padding: 2rem;
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .form-success h4 {
+            color: var(--yellow);
+            font-family: var(--font-ui);
+            margin-bottom: 0.5rem;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #000;
+            padding: 4rem 2rem 2rem;
+            border-top: 1px solid #222;
+        }
+        
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+        
+        .footer-logo {
+            font-family: var(--font-head);
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        .footer-logo span { color: var(--yellow); }
+        
+        .footer-links h4 {
+            font-family: var(--font-ui);
+            color: var(--white);
+            margin-bottom: 1.5rem;
+            font-size: 1rem;
+        }
+        
+        .footer-links ul li {
+            margin-bottom: 0.8rem;
+        }
+        
+        .footer-links a {
+            color: #888;
+            font-size: 0.9rem;
+            transition: var(--transition);
+        }
+        
+        .footer-links a:hover {
+            color: var(--yellow);
+        }
+
+        .medical-disclaimer {
+            border-top: 1px solid #222;
+            padding-top: 2rem;
+            font-size: 0.75rem;
+            color: #666;
+            text-align: center;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        /* FLOATING ELEMENTS */
+        .floating-whatsapp {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background-color: #25D366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            z-index: 999;
+            transition: transform 0.3s;
+        }
+        
+        .floating-whatsapp:hover {
+            transform: scale(1.1);
+        }
+        
+        .floating-whatsapp svg {
+            width: 35px;
+            height: 35px;
+            fill: white;
+        }
+
+        .mobile-bottom-bar {
+            display: none;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: var(--charcoal);
+            border-top: 1px solid #444;
+            z-index: 998;
+        }
+
+        .mobile-bottom-bar a {
+            flex: 1;
+            text-align: center;
+            padding: 1rem;
+            font-family: var(--font-ui);
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            border-right: 1px solid #444;
+        }
+        
+        .mobile-bottom-bar a:last-child {
+            border-right: none;
+            background-color: var(--yellow);
+            color: var(--black);
+        }
+
+        /* ANIMATIONS / UTILS */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+        
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* RESPONSIVE DESIGN */
+        @media (max-width: 1024px) {
+            .hero h1 { font-size: 4rem; }
+            .about-split, .contact-grid { grid-template-columns: 1fr; gap: 2rem; }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 100%;
+                height: 100vh;
+                background: var(--black);
+                flex-direction: column;
+                justify-content: center;
+                transition: 0.4s ease;
+            }
+
+            .nav-links.active {
+                right: 0;
+            }
+
+            .nav-links a {
+                font-size: 1.5rem;
+            }
+
+            .hamburger {
+                display: flex;
+                z-index: 1001;
+            }
+
+            .hamburger.active span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+            .hamburger.active span:nth-child(2) { opacity: 0; }
+            .hamburger.active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+            .hero h1 { font-size: 3rem; }
+            .process-container { grid-template-columns: 1fr; gap: 3rem; }
+            .process-line { 
+                top: 0; bottom: 0; left: 25px; right: auto; 
+                width: 2px; height: 100%;
+            }
+            .process-line-active { width: 100%; height: 0%; transition: height 1s ease-out; }
+            .process-step { display: flex; text-align: left; align-items: flex-start; gap: 1rem; }
+            .step-circle { margin: 0; flex-shrink: 0; }
+
+            .form-row { grid-template-columns: 1fr; gap: 0; }
+            
+            .floating-whatsapp { bottom: 80px; } /* Above mobile bar */
+            .mobile-bottom-bar { display: flex; }
+            footer { padding-bottom: 5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header id="header">
+        <div class="nav-container">
+            <a href="#" class="logo">PRESENT <span>BIOMECHANICS</span></a>
+            <nav class="nav-links">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#sports-performance" class="nav-link">Performance</a>
+                <a href="#neuro-biomechanics" class="nav-link">Neuro</a>
+                <a href="#contact" class="nav-link">Contact</a>
+                <a href="#book" class="btn btn-primary" style="color:var(--black);">Book Assessment</a>
+            </nav>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="hero">
+        <div class="hero-grid"></div>
+        <div class="hero-content reveal">
+            <span class="hero-label">Present Biomechanics</span>
+            <h1>Move Better.<br>Perform Better.<br>Live Better.</h1>
+            <p>Clinical physiotherapy, sports performance, neuro biomechanics and exercise prescription designed around movement, performance and individual goals.</p>
+            <div class="hero-ctas">
+                <a href="#book" class="btn btn-primary">Book an Assessment</a>
+                <a href="#services" class="btn btn-outline">Explore Services</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CORE SERVICES -->
+    <section id="services" class="section bg-black">
+        <div class="container reveal">
+            <span class="section-subtitle">Our Expertise</span>
+            <h2 class="section-title">Core Services</h2>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <span class="service-num">01</span>
+                    <h3>Clinical Physiotherapy</h3>
+                    <p>Professional physiotherapy focused on movement, function and individual rehabilitation needs. We address the root cause, not just symptoms.</p>
+                </div>
+                <div class="service-card">
+                    <span class="service-num">02</span>
+                    <h3>Sports Performance</h3>
+                    <p>Performance-focused training designed to improve movement quality, physical capacity and athletic performance across disciplines.</p>
+                </div>
+                <div class="service-card">
+                    <span class="service-num">03</span>
+                    <h3>Neuro Biomechanics</h3>
+                    <p>A movement-focused approach combining biomechanics and neurological considerations to optimize movement patterns and control.</p>
+                </div>
+                <div class="service-card">
+                    <span class="service-num">04</span>
+                    <h3>Exercise Prescription</h3>
+                    <p>Individualized exercise guidance structured specifically for health, fitness and physical performance goals.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="section bg-charcoal">
+        <div class="container about-split reveal">
+            <div class="about-image">
+                <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Athlete Assessment">
+            </div>
+            <div class="about-text">
+                <span class="section-subtitle">Our Philosophy</span>
+                <h2 class="section-title">Where Movement Meets Science</h2>
+                <p>Present Biomechanics is a movement and performance-focused practice. We bridge the gap between clinical rehabilitation and high performance by combining Physiotherapy, Biomechanics, Exercise, and Performance principles.</p>
+                
+                <ul class="about-list">
+                    <li>Comprehensive understanding of movement mechanics</li>
+                    <li>Highly individualized physical assessments</li>
+                    <li>Goal-oriented exercise prescription</li>
+                    <li>Structured performance development</li>
+                    <li>Measurable functional improvements</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- ASSESSMENT PROCESS -->
+    <section class="section bg-black">
+        <div class="container reveal">
+            <div style="text-align: center; margin-bottom: 3rem;">
+                <span class="section-subtitle">Our Methodology</span>
+                <h2 class="section-title">Understand Your Movement<br>Before You Change It</h2>
+            </div>
+            
+            <div class="process-container" id="process-container">
+                <div class="process-line"><div class="process-line-active" id="process-progress"></div></div>
+                
+                <div class="process-step">
+                    <div class="step-circle">01</div>
+                    <div>
+                        <h4>Assess</h4>
+                        <p>Understand movement, physical condition and individual goals.</p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-circle">02</div>
+                    <div>
+                        <h4>Analyze</h4>
+                        <p>Identify relevant movement and performance factors.</p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-circle">03</div>
+                    <div>
+                        <h4>Plan</h4>
+                        <p>Create an appropriate exercise and physiotherapy approach.</p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-circle">04</div>
+                    <div>
+                        <h4>Progress</h4>
+                        <p>Track progress and adapt the approach over time.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CLINICAL PHYSIOTHERAPY -->
+    <section id="physio" class="section bg-white">
+        <div class="container reveal">
+            <span class="section-subtitle">01 / Rehabilitation</span>
+            <h2 class="section-title">Clinical Physiotherapy<br>Built Around You</h2>
+            
+            <div class="about-split" style="margin-top: 3rem;">
+                <div>
+                    <p>Our clinical approach goes beyond basic symptom management. We focus on comprehensive movement assessment to design functional rehabilitation plans that restore mobility, build strength, and facilitate a confident return to activity.</p>
+                    
+                    <div class="service-detail" style="margin-top: 2rem;">
+                        <h3>Focus Areas</h3>
+                        <ul class="about-list" style="margin-top: 1rem;">
+                            <li>Movement & Functional Assessment</li>
+                            <li>Individual Exercise Rehabilitation</li>
+                            <li>Mobility & Tissue Recovery</li>
+                            <li>Strength Progression</li>
+                            <li>Structured Return to Activity</li>
+                        </ul>
+                    </div>
+                    <a href="#book" class="btn btn-primary" style="margin-top: 1rem;">Book Physiotherapy Assessment</a>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Clinical Physiotherapy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SPORTS PERFORMANCE & LAB VISUAL -->
+    <section id="sports-performance" class="section lab-visual">
+        <div class="tech-grid"></div>
+        <div class="container lab-content reveal">
+            <span class="section-subtitle">02 / Optimization</span>
+            <h2 class="section-title">Train for Better Performance</h2>
+            <p style="max-width: 700px; margin: 0 auto 3rem; color: #CCC;">Performance is built on a foundation of efficient movement, structural capacity, and specific preparation. We focus on enhancing physical qualities directly applicable to your sport or activity.</p>
+            
+            <div class="metrics-container">
+                <div class="metric-box">
+                    <div class="metric-circle"><span>Movement</span></div>
+                    <h4 style="margin-top: 1rem; color: var(--yellow); font-family: var(--font-ui);">Efficiency</h4>
+                </div>
+                <div class="metric-box">
+                    <div class="metric-circle" style="animation-duration: 20s; border-color: rgba(255,255,255,0.3);"><span>Strength</span></div>
+                    <h4 style="margin-top: 1rem; color: var(--white); font-family: var(--font-ui);">Capacity</h4>
+                </div>
+                <div class="metric-box">
+                    <div class="metric-circle" style="animation-duration: 18s; border-color: rgba(255,212,0,0.8);"><span>Control</span></div>
+                    <h4 style="margin-top: 1rem; color: var(--yellow); font-family: var(--font-ui);">Stability</h4>
+                </div>
+                <div class="metric-box">
+                    <div class="metric-circle" style="animation-duration: 25s; border-color: rgba(255,255,255,0.3);"><span>Power</span></div>
+                    <h4 style="margin-top: 1rem; color: var(--white); font-family: var(--font-ui);">Output</h4>
+                </div>
+            </div>
+
+            <div style="margin-top: 4rem;">
+                <a href="#book" class="btn btn-outline" style="background:var(--black);">Explore Performance Training</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEURO BIOMECHANICS & EXERCISE PRESCRIPTION -->
+    <section id="neuro-biomechanics" class="section bg-charcoal">
+        <div class="container reveal">
+            <div class="about-split">
+                <div>
+                    <span class="section-subtitle">03 / Neuro Biomechanics</span>
+                    <h2 class="section-title">Understanding the Science of Movement</h2>
+                    <p style="margin-bottom: 2rem;">Movement is driven by the nervous system. Our neuro biomechanics approach analyzes the interaction between the brain, nervous system, and physical mechanics. By understanding this relationship, we can optimize movement patterns, improve control, and enhance overall performance efficiency.</p>
+                    <a href="#book" class="btn btn-outline">Learn More</a>
+                </div>
+                <div>
+                    <span class="section-subtitle">04 / Exercise Prescription</span>
+                    <h2 class="section-title">Exercise With Purpose</h2>
+                    <p style="margin-bottom: 2rem;">Exercise should not be random. We provide structured, individualized exercise guidance based on objective assessments.</p>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1rem; text-align: center;">
+                        <div style="background: var(--black); padding: 1.5rem; border-bottom: 2px solid var(--yellow);">
+                            <h4 style="font-family: var(--font-ui); font-size: 0.9rem;">Health</h4>
+                        </div>
+                        <div style="background: var(--black); padding: 1.5rem; border-bottom: 2px solid var(--yellow);">
+                            <h4 style="font-family: var(--font-ui); font-size: 0.9rem;">Fitness</h4>
+                        </div>
+                        <div style="background: var(--black); padding: 1.5rem; border-bottom: 2px solid var(--yellow);">
+                            <h4 style="font-family: var(--font-ui); font-size: 0.9rem;">Performance</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AUDIENCES / WHO WE WORK WITH -->
+    <section class="section bg-black">
+        <div class="container reveal">
+            <div style="text-align: center; margin-bottom: 3rem;">
+                <span class="section-subtitle">Our Clients</span>
+                <h2 class="section-title">Who We Work With</h2>
+            </div>
+            
+            <div class="why-grid">
+                <div class="why-card">
+                    <h4>Athletes</h4>
+                    <p style="font-size: 0.9rem; color: #AAA;">Performance optimization, movement efficiency, and sport-specific physical preparation.</p>
+                </div>
+                <div class="why-card">
+                    <h4>Active Individuals</h4>
+                    <p style="font-size: 0.9rem; color: #AAA;">Strength, mobility, and structured fitness support to maintain an active lifestyle.</p>
+                </div>
+                <div class="why-card">
+                    <h4>Rehabilitation Clients</h4>
+                    <p style="font-size: 0.9rem; color: #AAA;">Movement assessment and functional rehabilitation support post-injury.</p>
+                </div>
+                <div class="why-card">
+                    <h4>Fitness Enthusiasts</h4>
+                    <p style="font-size: 0.9rem; color: #AAA;">Structured exercise guidance to break plateaus and achieve specific fitness goals.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY PRESENT BIOMECHANICS -->
+    <section class="section bg-white">
+        <div class="container reveal">
+            <h2 class="section-title" style="text-align: center;">Why Present Biomechanics</h2>
+            <div class="why-grid" style="margin-top: 3rem;">
+                <div class="service-detail">
+                    <h3>Movement-Focused</h3>
+                    <p style="font-size: 0.9rem;">Prioritizing the quality and mechanics of how the body moves.</p>
+                </div>
+                <div class="service-detail">
+                    <h3>Individualized Approach</h3>
+                    <p style="font-size: 0.9rem;">Assessments and plans based strictly on your unique profile.</p>
+                </div>
+                <div class="service-detail">
+                    <h3>Science-Informed</h3>
+                    <p style="font-size: 0.9rem;">Applying current biomechanical and physiological principles.</p>
+                </div>
+                <div class="service-detail">
+                    <h3>Performance-Oriented</h3>
+                    <p style="font-size: 0.9rem;">Bridging the gap between baseline function and high performance.</p>
+                </div>
+                <div class="service-detail">
+                    <h3>Structured Exercise</h3>
+                    <p style="font-size: 0.9rem;">Clear, purposeful programming over random workouts.</p>
+                </div>
+                <div class="service-detail">
+                    <h3>Progressive Approach</h3>
+                    <p style="font-size: 0.9rem;">Constant tracking and adaptation to ensure continued development.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LOCATION & CONTACT -->
+    <section id="contact" class="section bg-charcoal">
+        <div class="container contact-grid reveal">
+            <div class="contact-details">
+                <span class="section-subtitle">Location</span>
+                <h2 class="section-title">Visit Present Biomechanics</h2>
+                
+                <div style="margin-top: 2rem;">
+                    <div class="contact-item">
+                        <h4>Address</h4>
+                        <p id="display-address">Loading...</p>
+                    </div>
+                    <div class="contact-item">
+                        <h4>Phone</h4>
+                        <p id="display-phone">Loading...</p>
+                    </div>
+                    
+                    <div style="display: flex; gap: 1rem; margin-top: 2rem;">
+                        <a href="#" id="btn-call" class="btn btn-primary">Call Now</a>
+                        <a href="https://maps.google.com" target="_blank" class="btn btn-outline">Get Directions</a>
+                    </div>
+                </div>
+            </div>
+            <div class="map-placeholder">
+                <!-- Visual placeholder for map -->
+                <div style="text-align: center; color: var(--yellow);">
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-bottom:1rem;">
+                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                        <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                    <p style="font-family: var(--font-ui); text-transform: uppercase; letter-spacing: 1px;">Google Maps Integration</p>
+                    <p style="font-size:0.8rem; color:#888;">Kandivali East, Mumbai</p>
+                </div>
+                <div class="hero-grid" style="opacity: 0.3;"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BOOK AN ASSESSMENT (FORM) -->
+    <section id="book" class="section bg-black">
+        <div class="container reveal" style="max-width: 800px;">
+            <div style="text-align: center; margin-bottom: 3rem;">
+                <span class="section-subtitle">Take Action</span>
+                <h2 class="section-title">Ready to Move Better?</h2>
+                <p style="color: #AAA;">Fill out the form below to request an assessment. Our team will contact you to confirm your appointment.</p>
+            </div>
+
+            <form id="bookingForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Full Name *</label>
+                        <input type="text" id="name" required placeholder="John Doe">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number *</label>
+                        <input type="tel" id="phone" required placeholder="Your contact number">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" placeholder="john@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="service">Service Required *</label>
+                        <select id="service" required>
+                            <option value="" disabled selected>Select a service</option>
+                            <option value="physio">Clinical Physiotherapy</option>
+                            <option value="sports">Sports Performance</option>
+                            <option value="neuro">Neuro Biomechanics</option>
+                            <option value="exercise">Exercise Prescription</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="age">Age</label>
+                        <input type="number" id="age" placeholder="Years">
+                    </div>
+                    <div class="form-group">
+                        <label for="fitness">Current Activity Level</label>
+                        <select id="fitness">
+                            <option value="" disabled selected>Select level</option>
+                            <option value="sedentary">Sedentary</option>
+                            <option value="light">Lightly Active</option>
+                            <option value="moderate">Moderately Active</option>
+                            <option value="athlete">Highly Active / Athlete</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="date">Preferred Date</label>
+                    <input type="date" id="date">
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message / Primary Goal</label>
+                    <textarea id="message" rows="4" placeholder="Briefly describe what you'd like to achieve..."></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary" style="width: 100%; border: none; font-size: 1rem;">Book Assessment</button>
+            </form>
+
+            <div id="formSuccess" class="form-success">
+                <h4>Assessment Request Received</h4>
+                <p>Thank you for reaching out to Present Biomechanics. Our team will contact you shortly to confirm your booking.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="footer-logo">PRESENT <span>BIOMECHANICS</span></div>
+                    <p style="color: #888; font-size: 0.9rem; max-width: 300px;">Clinical physiotherapy, sports performance, neuro biomechanics and exercise prescription designed around movement.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#physio">Clinical Physiotherapy</a></li>
+                        <li><a href="#sports-performance">Sports Performance</a></li>
+                        <li><a href="#neuro-biomechanics">Neuro Biomechanics</a></li>
+                        <li><a href="#neuro-biomechanics">Exercise Prescription</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#process">Methodology</a></li>
+                        <li><a href="#contact">Location</a></li>
+                        <li><a href="#book">Book Assessment</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li id="footer-address" style="color: #888; font-size: 0.9rem;">Loading...</li>
+                        <li id="footer-phone" style="color: #888; font-size: 0.9rem; margin-top: 10px;">Loading...</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="medical-disclaimer">
+                <p><strong>Disclaimer:</strong> Information on this website is for general informational purposes and does not replace professional medical assessment, diagnosis, or treatment. Individual results and recommendations may vary. Please consult with our specialists for individualized advice.</p>
+                <p style="margin-top: 1rem;">&copy; <span id="year"></span> Present Biomechanics. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- FLOATING WHATSAPP -->
+    <a href="#" id="float-wa" class="floating-whatsapp" target="_blank" aria-label="Chat on WhatsApp">
+        <svg viewBox="0 0 24 24">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+    </a>
+
+    <!-- MOBILE STICKY BOTTOM BAR -->
+    <div class="mobile-bottom-bar">
+        <a href="#" id="mobile-call">Call</a>
+        <a href="#" id="mobile-wa">WhatsApp</a>
+        <a href="#book">Book</a>
+    </div>
+
+    <!-- JAVASCRIPT -->
+    <script>
+        // 1. CONFIGURATION OBJECT
+        const config = {
+            phone: '8208379366',
+            whatsapp: '918208379366',
+            address: '1301, UK Residency, Kandivali East, Lokhandwala, Mumbai',
+            email: 'hello@presentbiomechanics.com' // Placeholder
+        };
+
+        // Populate Data
+        document.getElementById('display-address').innerText = config.address;
+        document.getElementById('display-phone').innerText = '+91 ' + config.phone;
+        document.getElementById('footer-address').innerText = config.address;
+        document.getElementById('footer-phone').innerText = 'Ph: +91 ' + config.phone;
+        document.getElementById('year').innerText = new Date().getFullYear();
+
+        // Populate Links
+        document.getElementById('btn-call').href = 'tel:+91' + config.phone;
+        document.getElementById('mobile-call').href = 'tel:+91' + config.phone;
+        document.getElementById('float-wa').href = 'https://wa.me/' + config.whatsapp;
+        document.getElementById('mobile-wa').href = 'https://wa.me/' + config.whatsapp;
+
+        // 2. MOBILE NAVIGATION
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+        const navItems = document.querySelectorAll('.nav-link');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+
+        navItems.forEach(item => {
+            item.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // 3. STICKY HEADER & SCROLL EFFECTS
+        const header = document.getElementById('header');
+        const processProgress = document.getElementById('process-progress');
+        
+        window.addEventListener('scroll', () => {
+            // Header
+            if (window.scrollY > 50) {
+                header.style.padding = '0.5rem 0';
+                header.style.background = 'rgba(5, 5, 5, 0.98)';
+            } else {
+                header.style.padding = '1rem 0';
+                header.style.background = 'rgba(5, 5, 5, 0.95)';
+            }
+            
+            // Animate Process Line based on scroll position within container
+            const processContainer = document.getElementById('process-container');
+            if(processContainer && window.innerWidth > 768) {
+                const rect = processContainer.getBoundingClientRect();
+                const viewHeight = window.innerHeight;
+                if(rect.top < viewHeight * 0.8 && rect.bottom > 0) {
+                    // Start filling the line
+                    processProgress.style.width = '100%';
+                }
+            } else if (processContainer && window.innerWidth <= 768) {
+                const rect = processContainer.getBoundingClientRect();
+                const viewHeight = window.innerHeight;
+                if(rect.top < viewHeight * 0.8 && rect.bottom > 0) {
+                    processProgress.style.height = '100%';
+                }
+            }
+        });
+
+        // 4. SCROLL REVEAL ANIMATION (Intersection Observer)
+        const revealElements = document.querySelectorAll('.reveal');
+        
+        const revealOptions = {
+            threshold: 0.15,
+            rootMargin: "0px 0px -50px 0px"
+        };
+
+        const revealOnScroll = new IntersectionObserver(function(entries, observer) {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) {
+                    return;
+                } else {
+                    entry.target.classList.add('active');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, revealOptions);
+
+        revealElements.forEach(el => {
+            revealOnScroll.observe(el);
+        });
+
+        // 5. FORM SUBMISSION
+        const form = document.getElementById('bookingForm');
+        const formSuccess = document.getElementById('formSuccess');
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Basic validation passed (HTML5 required attributes handle basics)
+            
+            // Simulate API Call / Submission
+            const btn = form.querySelector('button');
+            const originalText = btn.innerText;
+            btn.innerText = 'Sending...';
+            btn.disabled = true;
+
+            setTimeout(() => {
+                form.style.display = 'none';
+                formSuccess.style.display = 'block';
+                
+                // Reset form in background
+                form.reset();
+                btn.innerText = originalText;
+                btn.disabled = false;
+                
+                // Scroll to success message
+                formSuccess.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }, 1000);
+        });
+
+        // 6. SPA / SMOOTH SCROLLING (Vanilla JS implementation for internal links)
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    e.preventDefault();
+                    
+                    // Account for fixed header height
+                    const headerHeight = document.getElementById('header').offsetHeight;
+                    const elementPosition = targetElement.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerHeight;
+  
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: "smooth"
+                    });
+                    
+                    // Update URL hash without jumping
+                    history.pushState(null, null, targetId);
+                }
+            });
+        });
+
+    </script>
+</body>
+</html>
