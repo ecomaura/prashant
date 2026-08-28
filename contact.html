@@ -595,6 +595,47 @@
       }
 
       /* =====================================================
+   SOCIAL LINKS
+===================================================== */
+
+      .social-links {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        margin-top: 5px;
+      }
+
+      .social-links a {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        padding: 13px 0;
+
+        color: #aaa !important;
+
+        font-size: 14px !important;
+
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+        transition: all 0.25s ease;
+      }
+
+      .social-links a:first-child {
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+      }
+
+      .social-links a:hover {
+        color: var(--yellow) !important;
+        padding-left: 8px;
+      }
+
+      .social-links a span:last-child {
+        color: var(--yellow);
+        font-size: 16px;
+      }
+
+      /* =====================================================
        FORM BOX
     ===================================================== */
 
@@ -1308,8 +1349,7 @@
               <a href="matrix-rhythm.html"> Matrix Rhythm </a>
             </div>
           </div>
-         
-          
+
           <a href="media.html">Media</a>
           <a href="contact.html">Contact</a>
 
@@ -1461,6 +1501,44 @@
               Kandivali East, Lokhandwala,<br />
               Mumbai
             </p>
+          </div>
+
+          <div class="info-block social-block">
+            <div class="info-number">05</div>
+
+            <h3>FOLLOW US</h3>
+
+            <div class="social-links">
+              <a
+                href="https://www.instagram.com/prashantbiomechanic?utm_source=qr&igsi=bjVsa3p2enBzc3lk"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+              >
+                <span>Instagram</span>
+                <span>↗</span>
+              </a>
+
+              <a
+                href="https://www.linkedin.com/in/prashant-mistry-fitness-trainer?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+              >
+                <span>LinkedIn</span>
+                <span>↗</span>
+              </a>
+
+              <a
+                href="https://youtube.com/@prashantbiomechanics?si=7GDycb-P2lWoxn0g"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="YouTube"
+              >
+                <span>YouTube</span>
+                <span>↗</span>
+              </a>
+            </div>
           </div>
         </div>
 
@@ -1860,5 +1938,7 @@
         }
       });
     </script>
+    <!-- js file -->
+    <script src="main.js"></script>
   </body>
 </html>

@@ -747,74 +747,9 @@
        ========================================================= -->
 
     <script>
-      const hamburger = document.getElementById("hamburger");
-
-      const navLinks = document.querySelector(".nav-links");
-
-      hamburger?.addEventListener("click", () => {
-        hamburger.classList.toggle("active");
-        navLinks.classList.toggle("active");
-
-        const expanded = hamburger.classList.contains("active");
-
-        hamburger.setAttribute("aria-expanded", expanded);
-      });
-
-      document.querySelectorAll(".nav-links > a").forEach((link) => {
-        link.addEventListener("click", () => {
-          hamburger.classList.remove("active");
-          navLinks.classList.remove("active");
-        });
-      });
-
-      /* Services dropdown */
-
-      const servicesToggle = document.querySelector(".nav-dropdown-toggle");
-
-      const servicesDropdown = document.querySelector(".nav-dropdown");
-
-      servicesToggle?.addEventListener("click", (e) => {
-        e.preventDefault();
-
-        servicesDropdown.classList.toggle("active");
-      });
-
-      /* Current year */
-
-      const year = document.getElementById("year");
-
-      if (year) {
-        year.textContent = new Date().getFullYear();
-      }
-
-      /* Scroll reveal */
-
-      const reveals = document.querySelectorAll(".reveal");
-
-      if ("IntersectionObserver" in window) {
-        const observer = new IntersectionObserver(
-          (entries, observer) => {
-            entries.forEach((entry) => {
-              if (entry.isIntersecting) {
-                entry.target.classList.add("active");
-
-                observer.unobserve(entry.target);
-              }
-            });
-          },
-          {
-            threshold: 0.12,
-          },
-        );
-
-        reveals.forEach((element) => {
-          observer.observe(element);
-        });
-      } else {
-        reveals.forEach((element) => {
-          element.classList.add("active");
-        });
-      }
+     
     </script>
+    <!-- js file -->
+    <script src="main.js"></script>
   </body>
 </html>

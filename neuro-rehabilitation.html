@@ -243,7 +243,7 @@
       }
 
       .hero-content {
-        max-width: 850px;
+        width: min(1250px, 90%);
       }
 
       .eyebrow {
@@ -723,9 +723,21 @@
        MOBILE
     ========================= */
 
-      @media (max-width: 950px) {
+      @media (max-width: 768px) {
         .nav-links {
           display: none;
+        }
+
+        .nav-links.active {
+          display: flex;
+          flex-direction: column;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          width: 100%;
+          background: #050505;
+          padding: 30px 20px;
+          z-index: 999;
         }
 
         .hamburger {
@@ -1196,15 +1208,30 @@
 
           <div class="footer-links">
             <h4>Contact</h4>
+
             <ul>
-              <li id="footer-address" style="color: #888; font-size: 0.9rem">
-                Loading...
+              <li style="color: #888; font-size: 0.9rem">
+                1301, UK Residency,<br />
+                Kandivali East,<br />
+                Lokhandwala, Mumbai
               </li>
-              <li
-                id="footer-phone"
-                style="color: #888; font-size: 0.9rem; margin-top: 10px"
-              >
-                Loading...
+
+              <li style="margin-top: 10px">
+                <a
+                  href="tel:+918208379366"
+                  style="color: #888; font-size: 0.9rem"
+                >
+                  +91 82083 79366
+                </a>
+              </li>
+
+              <li style="margin-top: 10px">
+                <a
+                  href="mailto:hello@presentbiomechanics.com"
+                  style="color: #888; font-size: 0.9rem"
+                >
+                  hello@presentbiomechanics.com
+                </a>
               </li>
             </ul>
           </div>
@@ -1226,18 +1253,9 @@
       </div>
     </footer>
 
-    <script>
-      document.getElementById("year").textContent = new Date().getFullYear();
+    <script></script>
 
-      const hamburger = document.getElementById("hamburger");
-      const nav = document.querySelector(".nav-links");
-
-      if (hamburger && nav) {
-        hamburger.addEventListener("click", () => {
-          hamburger.classList.toggle("active");
-          nav.classList.toggle("active");
-        });
-      }
-    </script>
+    <!-- js file -->
+    <script src="main.js"></script>
   </body>
 </html>
