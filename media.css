@@ -978,3 +978,426 @@ button {
     flex-direction: column;
   }
 }
+
+/* =========================================
+   MEDIA PAGE FOOTER
+========================================= */
+
+.site-footer {
+  background: #050505;
+  color: #fff;
+  border-top: 1px solid rgba(255, 215, 0, 0.18);
+  padding: 80px 0 30px;
+}
+
+.site-footer .container {
+  width: min(1200px, 92%);
+  margin: 0 auto;
+}
+
+.site-footer .footer-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1.25fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.footer-brand {
+  min-width: 0;
+}
+
+.footer-logo {
+  display: inline-block;
+  margin-bottom: 35px;
+}
+
+.footer-logo img {
+  width: 230px;
+  height: auto;
+  display: block;
+}
+
+.footer-brand p {
+  color: #888;
+  font-size: 15px;
+  line-height: 1.8;
+  max-width: 360px;
+  margin: 0;
+}
+
+
+/* SOCIAL ICONS */
+
+.footer-socials {
+  display: flex;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.footer-socials a {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(255, 215, 0, 0.35);
+  color: #fff;
+  text-decoration: none;
+
+  transition: all 0.3s ease;
+}
+
+.footer-socials a:hover {
+  background: #ffd000;
+  color: #050505;
+  border-color: #ffd000;
+  transform: translateY(-3px);
+}
+
+
+/* FOOTER HEADINGS */
+
+.site-footer .footer-links h4 {
+  color: #fff;
+  font-family: "Oswald", sans-serif;
+  font-size: 22px;
+  letter-spacing: 2px;
+  margin: 0 0 25px;
+}
+
+
+/* FOOTER LINKS */
+
+.site-footer .footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.site-footer .footer-links li {
+  margin-bottom: 16px;
+  color: #888;
+  line-height: 1.6;
+}
+
+.site-footer .footer-links a {
+  color: #888;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.site-footer .footer-links a:hover {
+  color: #ffd000;
+}
+
+
+/* CONTACT */
+
+.footer-contact-item {
+  margin-top: 14px;
+}
+
+.footer-contact-item a {
+  word-break: break-word;
+}
+
+
+/* DISCLAIMER */
+
+.site-footer .medical-disclaimer {
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  margin-top: 65px;
+  padding-top: 28px;
+  text-align: center;
+}
+
+.site-footer .medical-disclaimer p {
+  color: #666;
+  font-size: 13px;
+  line-height: 1.7;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.site-footer .medical-disclaimer strong {
+  color: #777;
+}
+
+.site-footer .copyright {
+  margin-top: 22px !important;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 900px) {
+
+  .site-footer {
+    padding: 60px 0 25px;
+  }
+
+  .site-footer .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 45px 35px;
+  }
+
+}
+
+
+@media (max-width: 600px) {
+
+  .site-footer .container {
+    width: 88%;
+  }
+
+  .site-footer .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .footer-logo img {
+    width: 200px;
+  }
+
+  .footer-brand p {
+    max-width: 100%;
+  }
+
+  .site-footer .footer-links h4 {
+    font-size: 20px;
+  }
+
+  .site-footer .medical-disclaimer {
+    margin-top: 45px;
+  }
+
+}
+
+
+/* =========================================
+   FOOTER FIX
+========================================= */
+
+.site-footer {
+  width: 100%;
+  background: #050505;
+  color: #fff;
+  padding: 80px 0 30px;
+  border-top: 1px solid rgba(255, 215, 0, 0.18);
+  box-sizing: border-box;
+}
+
+.site-footer .container {
+  width: 92%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+
+/* FOOTER GRID */
+
+.site-footer .footer-grid {
+  display: grid !important;
+  grid-template-columns: 1.4fr 1fr 1fr 1.15fr !important;
+  gap: 70px !important;
+  align-items: start;
+}
+
+
+/* IMPORTANT:
+   Keep heading ABOVE the links
+*/
+
+.site-footer .footer-links {
+  display: block !important;
+  width: 100%;
+}
+
+.site-footer .footer-links h4 {
+  display: block !important;
+  width: 100%;
+  margin: 0 0 25px !important;
+
+  color: #fff;
+  font-family: "Oswald", sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+.site-footer .footer-links ul {
+  display: block !important;
+  width: 100%;
+  margin: 0 !important;
+  padding: 0 !important;
+  list-style: none;
+}
+
+.site-footer .footer-links li {
+  display: block !important;
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+
+/* BRAND */
+
+.site-footer .footer-brand {
+  display: block !important;
+}
+
+.site-footer .footer-logo {
+  display: inline-block;
+  margin-bottom: 35px;
+}
+
+.site-footer .footer-logo img {
+  width: 230px;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.site-footer .footer-brand p {
+  max-width: 360px;
+  margin: 0;
+  color: #888;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+
+/* LINKS */
+
+.site-footer .footer-links a {
+  color: #888;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.site-footer .footer-links a:hover {
+  color: #ffd000;
+}
+
+
+/* CONTACT */
+
+.site-footer .footer-links li {
+  color: #888;
+  line-height: 1.6;
+}
+
+.site-footer .footer-contact-item {
+  margin-top: 14px;
+}
+
+.site-footer .footer-contact-item a {
+  word-break: normal;
+}
+
+
+/* SOCIAL */
+
+.site-footer .footer-socials {
+  display: flex !important;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.site-footer .footer-socials a {
+  width: 42px;
+  height: 42px;
+
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(255, 215, 0, 0.35);
+  color: #fff;
+  text-decoration: none;
+}
+
+.site-footer .footer-socials a:hover {
+  background: #ffd000;
+  color: #050505;
+  border-color: #ffd000;
+}
+
+
+/* DISCLAIMER */
+
+.site-footer .medical-disclaimer {
+  width: 100%;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  margin-top: 65px;
+  padding-top: 28px;
+  text-align: center;
+}
+
+.site-footer .medical-disclaimer p {
+  color: #666;
+  font-size: 13px;
+  line-height: 1.7;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.site-footer .copyright {
+  margin-top: 22px !important;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+  .site-footer .footer-grid {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 50px !important;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .site-footer {
+    padding: 60px 0 25px;
+  }
+
+  .site-footer .container {
+    width: 88%;
+  }
+
+  .site-footer .footer-grid {
+    grid-template-columns: 1fr !important;
+    gap: 42px !important;
+  }
+
+  .site-footer .footer-logo img {
+    width: 200px;
+  }
+
+  .site-footer .footer-brand p {
+    max-width: 100%;
+  }
+
+  .site-footer .footer-links h4 {
+    font-size: 20px;
+    margin-bottom: 20px !important;
+  }
+
+  .site-footer .medical-disclaimer {
+    margin-top: 45px;
+  }
+
+}

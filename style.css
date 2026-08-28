@@ -1349,3 +1349,164 @@ footer {
     font-size: 0.95rem !important;
   }
 }
+
+/* ================================
+   FOOTER - FINAL
+================================ */
+
+.site-footer {
+  background: #050505;
+  color: #fff;
+  padding: 5rem 0 2rem;
+  border-top: 1px solid rgba(255, 212, 0, 0.18);
+}
+
+.site-footer .footer-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1.15fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.footer-brand {
+  min-width: 0;
+}
+
+.footer-logo {
+  margin-bottom: 2rem;
+}
+
+.footer-logo img {
+  width: 230px;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+.footer-brand > p {
+  color: #888;
+  font-size: 0.95rem;
+  line-height: 1.8;
+  max-width: 360px;
+  margin: 0;
+}
+
+.footer-links h4 {
+  color: #fff;
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  margin: 0 0 1.5rem;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 1rem;
+  color: #888;
+  line-height: 1.6;
+}
+
+.footer-links a {
+  color: #888;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: var(--yellow);
+}
+
+.footer-contact li {
+  margin-bottom: 1.2rem;
+}
+
+/* SOCIAL ICONS */
+
+.footer-socials {
+  display: flex;
+  gap: 0.8rem;
+  margin-top: 2rem;
+}
+
+.footer-socials a {
+  width: 54px;
+  height: 54px;
+  border: 1px solid rgba(255, 212, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.25rem;
+  transition: all 0.3s ease;
+}
+
+.footer-socials a:hover {
+  background: var(--yellow);
+  color: #000;
+  border-color: var(--yellow);
+  transform: translateY(-3px);
+}
+
+/* DISCLAIMER */
+
+.site-footer .medical-disclaimer {
+  margin-top: 4rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  text-align: center;
+}
+
+.site-footer .medical-disclaimer p {
+  color: #666;
+  font-size: 0.85rem;
+  line-height: 1.8;
+  margin: 0 auto;
+  max-width: 1100px;
+}
+
+.site-footer .medical-disclaimer strong {
+  color: #777;
+}
+
+/* MOBILE */
+
+@media (max-width: 900px) {
+  .site-footer .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .site-footer {
+    padding: 4rem 0 2rem;
+  }
+
+  .site-footer .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .footer-logo img {
+    width: 200px;
+  }
+
+  .footer-socials {
+    margin-top: 1.5rem;
+  }
+
+  .footer-socials a {
+    width: 48px;
+    height: 48px;
+  }
+
+  .site-footer .medical-disclaimer {
+    margin-top: 3rem;
+  }
+}

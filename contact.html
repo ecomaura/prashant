@@ -995,67 +995,76 @@
        FOOTER
     ===================================================== */
 
-      .footer {
-        padding-top: 75px;
+      /* =====================================================
+   FOOTER - STANDARD
+===================================================== */
 
+      .footer {
+        padding: 70px 0 25px;
         background: #050505;
+        border-top: 1px solid rgba(255, 212, 0, 0.18);
       }
 
       .footer-inner {
-        width: min(1350px, 90%);
-
+        width: min(1250px, 90%);
         margin: auto;
 
-        padding-bottom: 60px;
-
         display: grid;
+        grid-template-columns: 1.5fr 1fr 1fr 1.15fr;
+        gap: 60px;
 
-        grid-template-columns: 1.5fr 0.8fr 1fr 1fr;
+        padding-bottom: 55px;
+      }
 
-        gap: 50px;
+      .footer-brand {
+        min-width: 0;
       }
 
       .footer-brand img {
-        width: 170px;
-
-        margin-bottom: 22px;
+        width: 210px;
+        height: auto;
+        display: block;
+        margin-bottom: 25px;
+        object-fit: contain;
       }
 
       .footer-brand p {
-        max-width: 320px;
+        max-width: 360px;
+        margin: 0;
 
-        color: #777;
-
-        font-size: 13px;
-
+        color: #888;
+        font-size: 14px;
         line-height: 1.8;
       }
 
+      /* FOOTER COLUMNS */
+
       .footer-column {
         display: flex;
-
         flex-direction: column;
-
-        gap: 12px;
+        gap: 13px;
       }
 
       .footer-column h4 {
-        margin-bottom: 8px;
+        margin: 0 0 12px;
 
-        color: var(--yellow);
-
-        font-size: 11px;
+        color: #fff;
+        font-family: var(--heading);
+        font-size: 22px;
+        font-weight: 700;
 
         letter-spacing: 2px;
       }
 
       .footer-column a,
       .footer-column p {
-        color: #777;
+        margin: 0;
 
-        font-size: 13px;
+        color: #888;
+        font-size: 14px;
+        line-height: 1.7;
 
-        line-height: 1.6;
+        text-decoration: none;
 
         transition: color 0.25s ease;
       }
@@ -1064,50 +1073,121 @@
         color: var(--yellow);
       }
 
-      /* =====================================================
-   FOOTER SOCIAL LINKS
-===================================================== */
+      /* SOCIAL LINKS */
+
+      .footer-social {
+        gap: 0;
+      }
 
       .footer-social a {
+        width: 170px;
+
         display: flex;
         align-items: center;
         justify-content: space-between;
 
-        width: 150px;
+        padding: 11px 0;
 
-        transition: all 0.25s ease;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      }
+
+      .footer-social a:first-of-type {
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
       }
 
       .footer-social a span {
-        color: var(--yellow);
-        font-size: 15px;
-        transition: transform 0.25s ease;
+        color: #888;
+        transition: 0.25s ease;
       }
 
-      .footer-social a:hover span {
-        transform: translate(3px, -3px);
+      .footer-social a span:last-child {
+        color: var(--yellow);
       }
+
+      .footer-social a:hover span:first-child {
+        color: var(--yellow);
+      }
+
+      /* FOOTER BOTTOM */
 
       .footer-bottom {
-        width: min(1350px, 90%);
-
+        width: min(1250px, 90%);
         margin: auto;
 
-        padding: 24px 0;
+        padding-top: 25px;
 
         border-top: 1px solid rgba(255, 255, 255, 0.1);
 
         display: flex;
-
         align-items: center;
-
         justify-content: space-between;
 
         gap: 20px;
 
-        color: #555;
+        color: #666;
+        font-size: 12px;
+        line-height: 1.6;
+      }
 
-        font-size: 11px;
+      /* TABLET */
+
+      @media (max-width: 1000px) {
+        .footer-inner {
+          grid-template-columns: 1fr 1fr;
+          gap: 45px 35px;
+        }
+      }
+
+      /* MOBILE */
+
+      @media (max-width: 600px) {
+        .footer {
+          padding: 50px 0 20px;
+        }
+
+        .footer-inner {
+          width: 88%;
+
+          grid-template-columns: 1fr;
+
+          gap: 40px;
+
+          padding-bottom: 40px;
+        }
+
+        .footer-brand img {
+          width: 190px;
+        }
+
+        .footer-brand p {
+          font-size: 13px;
+          max-width: 340px;
+        }
+
+        .footer-column h4 {
+          font-size: 20px;
+        }
+
+        .footer-column a,
+        .footer-column p {
+          font-size: 13px;
+        }
+
+        .footer-social a {
+          width: 190px;
+        }
+
+        .footer-bottom {
+          width: 88%;
+
+          flex-direction: column;
+
+          text-align: center;
+
+          gap: 8px;
+
+          font-size: 11px;
+        }
       }
 
       /* =====================================================
@@ -1339,6 +1419,115 @@
           right: 15px;
           bottom: 15px;
         }
+      }
+
+      /* =========================================
+   CONTACT PAGE - SERVICES DROPDOWN FIX
+========================================= */
+
+      .nav-dropdown {
+        position: relative;
+      }
+
+      .nav-dropdown-toggle {
+        background: transparent !important;
+        border: 0 !important;
+        box-shadow: none !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        color: #fff !important;
+        font: inherit;
+        cursor: pointer;
+      }
+
+      .nav-dropdown-menu {
+        position: absolute;
+        top: calc(100% + 25px);
+        left: 50%;
+        transform: translateX(-50%);
+
+        width: 430px;
+        padding: 10px 0;
+
+        background: #111 !important;
+        border: 1px solid rgba(255, 212, 0, 0.25);
+
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+
+        z-index: 1000;
+
+        box-shadow: 0 20px 45px rgba(0, 0, 0, 0.45);
+      }
+
+      .nav-dropdown:hover .nav-dropdown-menu,
+      .nav-dropdown.active .nav-dropdown-menu {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+      }
+
+      .nav-dropdown-menu a {
+        display: block !important;
+
+        width: 100% !important;
+        height: auto !important;
+        min-height: 0 !important;
+
+        padding: 16px 22px !important;
+        margin: 0 !important;
+
+        background: transparent !important;
+        color: #fff !important;
+
+        font-size: 14px !important;
+        font-weight: 600;
+        line-height: 1.4;
+
+        border: 0 !important;
+        box-shadow: none !important;
+
+        text-decoration: none;
+      }
+
+      .nav-dropdown-menu a:hover {
+        background: var(--yellow) !important;
+        color: #000 !important;
+        padding-left: 28px !important;
+      }
+
+      .nav-dropdown-menu a.active {
+        background: transparent !important;
+        color: #fff !important;
+      }
+
+      /* IMPORTANT:
+   Prevent generic .btn styles from affecting dropdown
+*/
+
+      .nav-dropdown-menu .btn,
+      .nav-dropdown-menu a.btn {
+        display: block !important;
+        width: 100% !important;
+        height: auto !important;
+        padding: 16px 22px !important;
+        background: transparent !important;
+        color: #fff !important;
+      }
+
+      /* Arrow */
+
+      .dropdown-arrow {
+        display: inline-block;
+        margin-left: 5px;
+        font-size: 10px;
+        transition: transform 0.25s ease;
+      }
+
+      .nav-dropdown:hover .dropdown-arrow,
+      .nav-dropdown.active .dropdown-arrow {
+        transform: rotate(180deg);
       }
     </style>
   </head>
@@ -1751,28 +1940,26 @@
      FOOTER
 ===================================================== -->
 
+    <!-- =====================================================
+     FOOTER
+===================================================== -->
+
     <footer class="footer">
       <div class="footer-inner">
+        <!-- BRAND -->
         <div class="footer-brand">
-          <img src="./74035.jpg" alt="Prashant Biomechanics" />
+          <img
+            src="https://raw.githubusercontent.com/ecomaura/prashant/refs/heads/main/74035.jpg"
+            alt="Prashant Biomechanics"
+          />
 
           <p>
-            Evidence-based rehabilitation, biomechanics and human performance.
+            Clinical physiotherapy, sports performance, neuro biomechanics and
+            exercise prescription designed around movement.
           </p>
         </div>
 
-        <div class="footer-column">
-          <h4>QUICK LINKS</h4>
-
-          <a href="index.html"> Home </a>
-
-          <a href="about.html"> About </a>
-
-          <a href="media.html"> Media </a>
-
-          <a href="contact.html"> Contact </a>
-        </div>
-
+        <!-- SERVICES -->
         <div class="footer-column">
           <h4>SERVICES</h4>
 
@@ -1787,6 +1974,22 @@
           <a href="matrix-rhythm.html"> Matrix Rhythm </a>
         </div>
 
+        <!-- COMPANY -->
+        <div class="footer-column">
+          <h4>COMPANY</h4>
+
+          <a href="about.html"> About Us </a>
+
+          <a href="about.html#methodology"> Methodology </a>
+
+          <a href="contact.html"> Location </a>
+
+          <a href="contact.html"> Book Assessment </a>
+
+          <a href="media.html"> Media </a>
+        </div>
+
+        <!-- CONTACT -->
         <div class="footer-column">
           <h4>CONTACT</h4>
 
@@ -1797,40 +2000,46 @@
           </a>
 
           <p>
+            1301, UK Residency,<br />
             Kandivali East,<br />
-            Lokhandwala,<br />
-            Mumbai
+            Lokhandwala, Mumbai
           </p>
         </div>
 
+        <!-- SOCIAL MEDIA -->
         <div class="footer-column footer-social">
           <h4>FOLLOW US</h4>
 
           <a
-            href="https://www.instagram.com/prashantbiomechanic?utm_source=qr&igsi=bjVsa3p2enBzc3lk"
+            href="https://www.instagram.com/prashantbiomechanic/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Instagram <span>↗</span>
+            <span>Instagram</span>
+            <span>↗</span>
           </a>
 
           <a
-            href="https://www.linkedin.com/in/prashant-mistry-fitness-trainer?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+            href="https://www.linkedin.com/in/prashant-mistry-fitness-trainer/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            LinkedIn <span>↗</span>
+            <span>LinkedIn</span>
+            <span>↗</span>
           </a>
 
           <a
-            href="https://youtube.com/@prashantbiomechanics?si=7GDycb-P2lWoxn0g"
+            href="https://youtube.com/@prashantbiomechanics"
             target="_blank"
             rel="noopener noreferrer"
           >
-            YouTube <span>↗</span>
+            <span>YouTube</span>
+            <span>↗</span>
           </a>
         </div>
       </div>
+
+      <!-- FOOTER BOTTOM -->
 
       <div class="footer-bottom">
         <span>

@@ -373,6 +373,153 @@
           height: 42px;
         }
       }
+
+      /* =========================================
+   STANDARD FOOTER
+========================================= */
+
+      .footer {
+        padding: 70px 0 25px;
+        background: #050505;
+        border-top: 1px solid rgba(255, 212, 0, 0.18);
+      }
+
+      .footer-inner {
+        width: min(1250px, 90%);
+        margin: auto;
+
+        display: grid;
+        grid-template-columns: 1.5fr 1fr 1fr 1.15fr 1fr;
+        gap: 40px;
+
+        padding-bottom: 55px;
+      }
+
+      .footer-brand {
+        min-width: 0;
+      }
+
+      .footer-logo {
+        margin-bottom: 22px;
+      }
+
+      .footer-logo img {
+        width: 210px;
+        height: auto;
+        display: block;
+      }
+
+      .footer-brand > p {
+        max-width: 340px;
+        color: #888;
+        font-size: 14px;
+        line-height: 1.8;
+      }
+
+      .footer-column {
+        display: flex;
+        flex-direction: column;
+        gap: 13px;
+      }
+
+      .footer-column h4 {
+        margin: 0 0 12px;
+        color: #fff;
+        font-family: var(--heading);
+        font-size: 22px;
+        letter-spacing: 2px;
+      }
+
+      .footer-column a,
+      .footer-column p {
+        margin: 0;
+        color: #888;
+        font-size: 13px;
+        line-height: 1.7;
+        text-decoration: none;
+        transition: color 0.25s ease;
+      }
+
+      .footer-column a:hover {
+        color: var(--yellow);
+      }
+
+      /* SOCIAL */
+
+      .footer-social a {
+        width: 160px;
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+        padding: 10px 0;
+
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      }
+
+      .footer-social a:first-of-type {
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+      }
+
+      .footer-social a span:last-child {
+        color: var(--yellow);
+      }
+
+      /* BOTTOM */
+
+      .footer-bottom {
+        width: min(1250px, 90%);
+        margin: auto;
+
+        padding-top: 25px;
+
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        gap: 20px;
+
+        color: #666;
+        font-size: 11px;
+      }
+
+      /* TABLET */
+
+      @media (max-width: 1100px) {
+        .footer-inner {
+          grid-template-columns: 1.5fr 1fr 1fr;
+          gap: 40px 30px;
+        }
+      }
+
+      /* MOBILE */
+
+      @media (max-width: 600px) {
+        .footer {
+          padding: 50px 0 20px;
+        }
+
+        .footer-inner {
+          width: 88%;
+          grid-template-columns: 1fr;
+          gap: 38px;
+        }
+
+        .footer-logo img {
+          width: 190px;
+        }
+
+        .footer-bottom {
+          width: 88%;
+          flex-direction: column;
+          text-align: center;
+          gap: 8px;
+        }
+      }
     </style>
   </head>
 
@@ -381,7 +528,7 @@
        HEADER
        ========================================================= -->
 
-   <header id="header">
+    <header id="header">
       <div class="nav-container">
         <a href="index.html" class="logo">
           <img
@@ -406,8 +553,7 @@
               <a href="matrix-rhythm.html"> Matrix Rhythm </a>
             </div>
           </div>
-         
-          
+
           <a href="media.html">Media</a>
           <a href="contact.html">Contact</a>
 
@@ -672,83 +818,121 @@
        FOOTER
        ========================================================= -->
 
-     <!-- FOOTER -->
-    <footer>
-      <div class="container">
-        <div class="footer-grid">
-          <div>
-            <div class="footer-logo">
-              <img
-                src="https://raw.githubusercontent.com/ecomaura/prashant/refs/heads/main/74035.jpg"
-                alt="Present Biomechanics"
-              />
-            </div>
-            <p style="color: #888; font-size: 0.9rem; max-width: 300px">
-              Clinical physiotherapy, sports performance, neuro biomechanics and
-              exercise prescription designed around movement.
-            </p>
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer-inner">
+        <!-- BRAND -->
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <img
+              src="https://raw.githubusercontent.com/ecomaura/prashant/refs/heads/main/74035.jpg"
+              alt="Present Biomechanics"
+            />
           </div>
 
-          <div class="footer-links">
-            <h4>Services</h4>
-            <ul>
-              <li><a href="#physio">Clinical Physiotherapy</a></li>
-              <li><a href="#sports-performance">Sports Performance</a></li>
-              <li><a href="#neuro-biomechanics">Neuro Biomechanics</a></li>
-              <li><a href="#neuro-biomechanics">Exercise Prescription</a></li>
-            </ul>
-          </div>
-
-          <div class="footer-links">
-            <h4>Company</h4>
-            <ul>
-              <li><a href="#about">About Us</a></li>
-              <li><a href="#process">Methodology</a></li>
-              <li><a href="#contact">Location</a></li>
-              <li><a href="#book">Book Assessment</a></li>
-            </ul>
-          </div>
-
-          <div class="footer-links">
-            <h4>Contact</h4>
-            <ul>
-              <li id="footer-address" style="color: #888; font-size: 0.9rem">
-                Loading...
-              </li>
-              <li
-                id="footer-phone"
-                style="color: #888; font-size: 0.9rem; margin-top: 10px"
-              >
-                Loading...
-              </li>
-            </ul>
-          </div>
+          <p>
+            Clinical physiotherapy, sports performance, neuro biomechanics and
+            exercise prescription designed around movement.
+          </p>
         </div>
 
-        <div class="medical-disclaimer">
+        <!-- SERVICES -->
+        <div class="footer-column">
+          <h4>SERVICES</h4>
+
+          <a href="clinical-physiotherapy.html"> Clinical Physiotherapy </a>
+
+          <a href="sports-performance.html"> Sports Performance </a>
+
+          <a href="neuro-rehabilitation.html"> Neuro Rehabilitation </a>
+
+          <a href="exercise-prescription.html"> Exercise Prescription </a>
+
+          <a href="matrix-rhythm.html"> Matrix Rhythm </a>
+        </div>
+
+        <!-- COMPANY -->
+        <div class="footer-column">
+          <h4>COMPANY</h4>
+
+          <a href="about.html"> About Us </a>
+
+          <a href="about.html#methodology"> Methodology </a>
+
+          <a href="contact.html"> Location </a>
+
+          <a href="contact.html"> Book Assessment </a>
+
+          <a href="media.html"> Media </a>
+        </div>
+
+        <!-- CONTACT -->
+        <div class="footer-column">
+          <h4>CONTACT</h4>
+
+          <a href="tel:+918208379366"> +91 82083 79366 </a>
+
+          <a href="mailto:hello@presentbiomechanics.com">
+            hello@presentbiomechanics.com
+          </a>
+
           <p>
-            <strong>Disclaimer:</strong> Information on this website is for
-            general informational purposes and does not replace professional
-            medical assessment, diagnosis, or treatment. Individual results and
-            recommendations may vary. Please consult with our specialists for
-            individualized advice.
+            1301, UK Residency,<br />
+            Kandivali East,<br />
+            Lokhandwala, Mumbai
           </p>
-          <p style="margin-top: 1rem">
-            &copy; <span id="year"></span> Present Biomechanics. All rights
-            reserved.
-          </p>
+        </div>
+
+        <!-- SOCIAL MEDIA -->
+        <div class="footer-column footer-social">
+          <h4>FOLLOW US</h4>
+
+          <a
+            href="https://www.instagram.com/prashantbiomechanic/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span>Instagram</span>
+            <span>↗</span>
+          </a>
+
+          <a
+            href="https://www.linkedin.com/in/prashant-mistry-fitness-trainer/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span>LinkedIn</span>
+            <span>↗</span>
+          </a>
+
+          <a
+            href="https://youtube.com/@prashantbiomechanics"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span>YouTube</span>
+            <span>↗</span>
+          </a>
         </div>
       </div>
-    </footer>
 
+      <!-- FOOTER BOTTOM -->
+
+      <div class="footer-bottom">
+        <span>
+          © <span id="year"></span>
+          Present Biomechanics. All Rights Reserved.
+        </span>
+
+        <span> Movement • Rehabilitation • Performance </span>
+      </div>
+    </footer>
 
     <!-- =========================================================
        MOBILE NAV SCRIPT
        ========================================================= -->
 
-    <script>
-     
-    </script>
+    <script></script>
     <!-- js file -->
     <script src="main.js"></script>
   </body>
