@@ -741,6 +741,33 @@ footer {
   margin: 0 auto;
 }
 
+/* FOOTER SOCIAL LINKS */
+
+.footer-social a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 150px;
+
+  transition: all 0.25s ease;
+}
+
+.footer-social a span {
+  color: #ffd400;
+  font-size: 15px;
+
+  transition: transform 0.25s ease;
+}
+
+.footer-social a:hover {
+  color: #ffd400;
+}
+
+.footer-social a:hover span {
+  transform: translate(3px, -3px);
+}
+
 /* FLOATING ELEMENTS */
 .floating-whatsapp {
   position: fixed;
