@@ -698,7 +698,7 @@
 
     <header id="header">
       <div class="nav-container">
-        <a href="#" class="logo">
+        <a href="index.html" class="logo">
           <img
             src="https://raw.githubusercontent.com/ecomaura/prashant/refs/heads/main/74035.jpg"
             alt="Present Biomechanics"
@@ -721,8 +721,7 @@
               <a href="matrix-rhythm.html"> Matrix Rhythm </a>
             </div>
           </div>
-         
-          
+
           <a href="media.html">Media</a>
           <a href="contact.html">Contact</a>
 
@@ -730,7 +729,7 @@
             Book Assessment
           </a>
         </nav>
-        <div class="hamburger">
+        <div class="hamburger" id="hamburger">
           <span></span>
           <span></span>
           <span></span>
@@ -1091,7 +1090,7 @@
        FOOTER
        ========================================================= -->
 
-     <!-- FOOTER -->
+    <!-- FOOTER -->
     <footer>
       <div class="container">
         <div class="footer-grid">
@@ -1160,7 +1159,6 @@
       </div>
     </footer>
 
-
     <!-- =========================================================
        JAVASCRIPT
        ========================================================= -->
@@ -1171,17 +1169,17 @@
        --------------------------------------------------------- */
 
       const hamburger = document.getElementById("hamburger");
-
       const nav = document.querySelector(".nav-links");
 
-      hamburger?.addEventListener("click", function () {
-        hamburger.classList.toggle("active");
-        nav.classList.toggle("active");
+      if (hamburger && nav) {
+        hamburger.addEventListener("click", function () {
+          hamburger.classList.toggle("active");
+          nav.classList.toggle("active");
 
-        const expanded = hamburger.classList.contains("active");
-
-        hamburger.setAttribute("aria-expanded", expanded);
-      });
+          const expanded = hamburger.classList.contains("active");
+          hamburger.setAttribute("aria-expanded", expanded);
+        });
+      }
 
       /* ---------------------------------------------------------
        SERVICES DROPDOWN

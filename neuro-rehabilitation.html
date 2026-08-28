@@ -830,7 +830,7 @@
 
     <header id="header">
       <div class="nav-container">
-        <a href="#" class="logo">
+        <a href="index.html" class="logo">
           <img
             src="https://raw.githubusercontent.com/ecomaura/prashant/refs/heads/main/74035.jpg"
             alt="Present Biomechanics"
@@ -853,8 +853,7 @@
               <a href="matrix-rhythm.html"> Matrix Rhythm </a>
             </div>
           </div>
-         
-          
+
           <a href="media.html">Media</a>
           <a href="contact.html">Contact</a>
 
@@ -862,7 +861,7 @@
             Book Assessment
           </a>
         </nav>
-        <div class="hamburger">
+        <div class="hamburger" id="hamburger">
           <span></span>
           <span></span>
           <span></span>
@@ -1158,7 +1157,7 @@
        FOOTER
   ========================= -->
 
-     <!-- FOOTER -->
+    <!-- FOOTER -->
     <footer>
       <div class="container">
         <div class="footer-grid">
@@ -1227,17 +1226,18 @@
       </div>
     </footer>
 
-
     <script>
       document.getElementById("year").textContent = new Date().getFullYear();
 
       const hamburger = document.getElementById("hamburger");
-
       const nav = document.querySelector(".nav-links");
 
-      hamburger.addEventListener("click", () => {
-        nav.classList.toggle("mobile-open");
-      });
+      if (hamburger && nav) {
+        hamburger.addEventListener("click", () => {
+          hamburger.classList.toggle("active");
+          nav.classList.toggle("active");
+        });
+      }
     </script>
   </body>
 </html>
