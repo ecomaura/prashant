@@ -1,0 +1,820 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Clinical Physiotherapy | Present Biomechanics</title>
+
+    <!-- Your existing CSS -->
+    <link rel="stylesheet" href="style.css" />
+
+    <style>
+      /* =========================================================
+       CLINICAL PHYSIOTHERAPY PAGE
+       ========================================================= */
+
+      .service-page {
+        background: #050505;
+        color: #fff;
+        min-height: 100vh;
+      }
+
+      /* HERO */
+      .service-hero {
+        min-height: 78vh;
+        display: flex;
+        align-items: center;
+        position: relative;
+        overflow: hidden;
+        background:
+          linear-gradient(
+            90deg,
+            rgba(5, 5, 5, 0.96) 0%,
+            rgba(5, 5, 5, 0.78) 55%,
+            rgba(5, 5, 5, 0.55) 100%
+          ),
+          url("assets/clinical-physiotherapy.jpg") center / cover no-repeat;
+      }
+
+      .service-hero-content {
+        width: min(1400px, 90%);
+        margin: 0 auto;
+        padding: 8rem 0 5rem;
+        position: relative;
+        z-index: 2;
+      }
+
+      .service-eyebrow {
+        color: var(--yellow);
+        font-size: 0.85rem;
+        font-weight: 700;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+        margin-bottom: 1.5rem;
+      }
+
+      .service-hero h1 {
+        max-width: 900px;
+        font-size: clamp(3.5rem, 7vw, 7rem);
+        line-height: 0.95;
+        text-transform: uppercase;
+        margin: 0 0 2rem;
+      }
+
+      .service-hero p {
+        max-width: 700px;
+        font-size: 1.15rem;
+        line-height: 1.8;
+        color: #d0d0d0;
+        margin-bottom: 2.5rem;
+      }
+
+      .service-buttons {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+      }
+
+      /* INTRO */
+      .service-intro {
+        padding: 7rem 0;
+        background: #151515;
+      }
+
+      .service-intro-grid {
+        width: min(1200px, 90%);
+        margin: auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 5rem;
+        align-items: center;
+      }
+
+      .service-image {
+        position: relative;
+      }
+
+      .service-image img {
+        width: 100%;
+        height: 520px;
+        object-fit: cover;
+        display: block;
+        border: 1px solid rgba(255, 212, 0, 0.35);
+      }
+
+      .service-image::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border: 1px solid rgba(255, 212, 0, 0.25);
+        left: 18px;
+        top: 18px;
+        z-index: -1;
+      }
+
+      .service-content .eyebrow {
+        color: var(--yellow);
+        font-size: 0.75rem;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        font-weight: 700;
+      }
+
+      .service-content h2 {
+        font-size: clamp(2.3rem, 4vw, 4rem);
+        line-height: 1.05;
+        margin: 1rem 0 1.5rem;
+      }
+
+      .service-content p {
+        color: #bdbdbd;
+        line-height: 1.8;
+        margin-bottom: 1rem;
+      }
+
+      /* WHAT WE HELP WITH */
+      .service-areas {
+        padding: 7rem 0;
+        background: #050505;
+      }
+
+      .service-heading {
+        width: min(1000px, 90%);
+        margin: 0 auto 4rem;
+        text-align: center;
+      }
+
+      .service-heading .eyebrow {
+        color: var(--yellow);
+        font-size: 0.75rem;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        font-weight: 700;
+      }
+
+      .service-heading h2 {
+        font-size: clamp(2.5rem, 5vw, 4.5rem);
+        margin: 0.8rem 0 1rem;
+      }
+
+      .service-heading p {
+        color: #aaa;
+        line-height: 1.7;
+      }
+
+      .service-card-grid {
+        width: min(1200px, 90%);
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+      }
+
+      .service-card {
+        background: #181818;
+        border: 1px solid rgba(255, 212, 0, 0.16);
+        padding: 2rem;
+        min-height: 220px;
+        transition: 0.3s ease;
+      }
+
+      .service-card:hover {
+        border-color: var(--yellow);
+        transform: translateY(-6px);
+      }
+
+      .service-number {
+        color: var(--yellow);
+        font-size: 1rem;
+        font-weight: 700;
+        letter-spacing: 2px;
+        margin-bottom: 2rem;
+      }
+
+      .service-card h3 {
+        font-size: 1.35rem;
+        margin-bottom: 1rem;
+      }
+
+      .service-card p {
+        color: #999;
+        line-height: 1.7;
+        font-size: 0.95rem;
+      }
+
+      /* APPROACH */
+      .service-approach {
+        padding: 7rem 0;
+        background: #222;
+      }
+
+      .approach-grid {
+        width: min(1200px, 90%);
+        margin: auto;
+        display: grid;
+        grid-template-columns: 0.8fr 1.2fr;
+        gap: 5rem;
+        align-items: start;
+      }
+
+      .approach-title h2 {
+        font-size: clamp(2.5rem, 5vw, 4rem);
+        line-height: 1;
+        margin: 0;
+      }
+
+      .approach-title .eyebrow {
+        color: var(--yellow);
+        font-size: 0.75rem;
+        letter-spacing: 3px;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-bottom: 1rem;
+        display: block;
+      }
+
+      .approach-list {
+        display: grid;
+        gap: 1.5rem;
+      }
+
+      .approach-item {
+        display: grid;
+        grid-template-columns: 60px 1fr;
+        gap: 1.5rem;
+        padding-bottom: 1.5rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .approach-icon {
+        width: 50px;
+        height: 50px;
+        border: 1px solid var(--yellow);
+        color: var(--yellow);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+      }
+
+      .approach-item h3 {
+        margin: 0 0 0.5rem;
+        font-size: 1.15rem;
+      }
+
+      .approach-item p {
+        margin: 0;
+        color: #999;
+        line-height: 1.7;
+      }
+
+      /* CTA */
+      .service-cta {
+        padding: 6rem 0;
+        background: var(--yellow);
+        color: #050505;
+        text-align: center;
+      }
+
+      .service-cta h2 {
+        font-size: clamp(2.5rem, 5vw, 4.5rem);
+        margin: 0 0 1rem;
+        text-transform: uppercase;
+      }
+
+      .service-cta p {
+        max-width: 650px;
+        margin: 0 auto 2rem;
+        line-height: 1.7;
+      }
+
+      .service-cta .btn {
+        background: #050505;
+        color: #fff;
+        border-color: #050505;
+      }
+
+      /* MOBILE */
+      @media (max-width: 900px) {
+        .service-hero {
+          min-height: 75vh;
+        }
+
+        .service-hero-content {
+          padding: 7rem 0 4rem;
+        }
+
+        .service-hero h1 {
+          font-size: clamp(3rem, 12vw, 5rem);
+        }
+
+        .service-intro-grid,
+        .approach-grid {
+          grid-template-columns: 1fr;
+          gap: 3rem;
+        }
+
+        .service-card-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+
+        .service-image img {
+          height: 420px;
+        }
+      }
+
+      @media (max-width: 600px) {
+        .service-hero-content {
+          width: 86%;
+        }
+
+        .service-hero p {
+          font-size: 1rem;
+        }
+
+        .service-buttons {
+          flex-direction: column;
+          align-items: stretch;
+        }
+
+        .service-buttons .btn {
+          width: 100%;
+          text-align: center;
+        }
+
+        .service-intro,
+        .service-areas,
+        .service-approach {
+          padding: 5rem 0;
+        }
+
+        .service-card-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .service-image img {
+          height: 330px;
+        }
+
+        .service-image::after {
+          left: 10px;
+          top: 10px;
+        }
+
+        .approach-item {
+          grid-template-columns: 48px 1fr;
+          gap: 1rem;
+        }
+
+        .approach-icon {
+          width: 42px;
+          height: 42px;
+        }
+      }
+    </style>
+  </head>
+
+  <body class="service-page">
+    <!-- =========================================================
+       HEADER
+       ========================================================= -->
+
+   <header id="header">
+      <div class="nav-container">
+        <a href="#" class="logo">
+          <img
+            src="https://raw.githubusercontent.com/ecomaura/prashant/refs/heads/main/74035.jpg"
+            alt="Present Biomechanics"
+          />
+        </a>
+        <nav class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <div class="nav-dropdown">
+            <button class="nav-link nav-dropdown-toggle" type="button">
+              Services
+              <span class="dropdown-arrow">▾</span>
+            </button>
+
+            <div class="nav-dropdown-menu">
+              <a href="clinical-physiotherapy.html"> Clinical Physiotherapy </a>
+              <a href="sports-performance.html"> Sports Performance </a>
+              <a href="neuro-rehabilitation.html"> Neuro Rehabilitation </a>
+              <a href="exercise-prescription.html"> Exercise Prescription </a>
+              <a href="matrix-rhythm.html"> Matrix Rhythm </a>
+            </div>
+          </div>
+         
+          
+          <a href="media.html">Media</a>
+          <a href="contact.html">Contact</a>
+
+          <a href="contact.html" class="btn btn-primary nav-btn">
+            Book Assessment
+          </a>
+        </nav>
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </header>
+
+    <!-- =========================================================
+       HERO
+       ========================================================= -->
+
+    <main>
+      <section class="service-hero">
+        <div class="service-hero-content">
+          <div class="service-eyebrow">Clinical Physiotherapy</div>
+
+          <h1>
+            Move Better.<br />
+            Recover Stronger.
+          </h1>
+
+          <p>
+            Evidence-informed physiotherapy designed around your movement,
+            recovery, performance and individual goals. We focus on
+            understanding the problem, restoring movement and building lasting
+            physical capacity.
+          </p>
+
+          <div class="service-buttons">
+            <a href="contact.html" class="btn btn-primary">
+              Book An Assessment
+            </a>
+
+            <a href="#approach" class="btn btn-outline">
+              Explore Our Approach
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================================================
+         INTRO
+         ========================================================= -->
+
+      <section class="service-intro">
+        <div class="service-intro-grid">
+          <div class="service-image reveal">
+            <img
+              src="assets/clinical-physiotherapy.jpg"
+              alt="Clinical physiotherapy assessment"
+            />
+          </div>
+
+          <div class="service-content reveal">
+            <span class="eyebrow"> Clinical Care </span>
+
+            <h2>Physiotherapy Built Around You</h2>
+
+            <p>
+              Every person moves differently. Our clinical physiotherapy
+              approach begins by understanding your movement, symptoms, physical
+              demands and goals.
+            </p>
+
+            <p>
+              Rather than treating symptoms in isolation, we look at the factors
+              influencing movement and performance so that your rehabilitation
+              can be more focused and purposeful.
+            </p>
+
+            <p>
+              Whether you are recovering from an injury, dealing with recurring
+              pain or working towards better physical function, your programme
+              is structured around your individual needs.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================================================
+         AREAS
+         ========================================================= -->
+
+      <section class="service-areas">
+        <div class="service-heading">
+          <span class="eyebrow"> What We Work With </span>
+
+          <h2>Focused Clinical Support</h2>
+
+          <p>
+            Our clinical sessions can be tailored to different movement,
+            recovery and physical performance needs.
+          </p>
+        </div>
+
+        <div class="service-card-grid">
+          <div class="service-card reveal">
+            <div class="service-number">01</div>
+
+            <h3>Pain & Movement Issues</h3>
+
+            <p>
+              Assessment and rehabilitation focused on improving movement and
+              helping you return to comfortable everyday activity.
+            </p>
+          </div>
+
+          <div class="service-card reveal">
+            <div class="service-number">02</div>
+
+            <h3>Injury Rehabilitation</h3>
+
+            <p>
+              Structured rehabilitation following injury with a progressive
+              approach to restoring strength, mobility and confidence.
+            </p>
+          </div>
+
+          <div class="service-card reveal">
+            <div class="service-number">03</div>
+
+            <h3>Strength & Conditioning</h3>
+
+            <p>
+              Targeted exercise strategies designed to improve physical capacity
+              and support long-term movement quality.
+            </p>
+          </div>
+
+          <div class="service-card reveal">
+            <div class="service-number">04</div>
+
+            <h3>Mobility & Flexibility</h3>
+
+            <p>
+              Individualised mobility work designed around your movement
+              limitations, activity demands and goals.
+            </p>
+          </div>
+
+          <div class="service-card reveal">
+            <div class="service-number">05</div>
+
+            <h3>Return to Activity</h3>
+
+            <p>
+              Progressive guidance to help you safely transition back into your
+              normal activities, training or sport.
+            </p>
+          </div>
+
+          <div class="service-card reveal">
+            <div class="service-number">06</div>
+
+            <h3>Movement Optimisation</h3>
+
+            <p>
+              Identify movement limitations and build better physical strategies
+              for everyday life and performance.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================================================
+         APPROACH
+         ========================================================= -->
+
+      <section class="service-approach" id="approach">
+        <div class="approach-grid">
+          <div class="approach-title reveal">
+            <span class="eyebrow"> Our Approach </span>
+
+            <h2>
+              Understand.<br />
+              Restore.<br />
+              Progress.
+            </h2>
+          </div>
+
+          <div class="approach-list">
+            <div class="approach-item reveal">
+              <div class="approach-icon">01</div>
+
+              <div>
+                <h3>Assess</h3>
+
+                <p>
+                  We begin by understanding your symptoms, movement patterns,
+                  physical demands and goals.
+                </p>
+              </div>
+            </div>
+
+            <div class="approach-item reveal">
+              <div class="approach-icon">02</div>
+
+              <div>
+                <h3>Identify</h3>
+
+                <p>
+                  We identify the key factors that may be affecting your
+                  movement, function or performance.
+                </p>
+              </div>
+            </div>
+
+            <div class="approach-item reveal">
+              <div class="approach-icon">03</div>
+
+              <div>
+                <h3>Restore</h3>
+
+                <p>
+                  Your programme combines appropriate movement, mobility and
+                  exercise strategies to restore physical function.
+                </p>
+              </div>
+            </div>
+
+            <div class="approach-item reveal">
+              <div class="approach-icon">04</div>
+
+              <div>
+                <h3>Progress</h3>
+
+                <p>
+                  As your capacity improves, we progressively challenge movement
+                  and strength so you can move towards your goals.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================================================
+         CTA
+         ========================================================= -->
+
+      <section class="service-cta">
+        <h2>Ready To Move Better?</h2>
+
+        <p>
+          Start with an assessment and let us understand your movement, your
+          goals and what you need to progress.
+        </p>
+
+        <a href="contact.html" class="btn"> Book An Assessment </a>
+      </section>
+    </main>
+
+    <!-- =========================================================
+       FOOTER
+       ========================================================= -->
+
+     <!-- FOOTER -->
+    <footer>
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <div class="footer-logo">
+              <img
+                src="https://raw.githubusercontent.com/ecomaura/prashant/refs/heads/main/74035.jpg"
+                alt="Present Biomechanics"
+              />
+            </div>
+            <p style="color: #888; font-size: 0.9rem; max-width: 300px">
+              Clinical physiotherapy, sports performance, neuro biomechanics and
+              exercise prescription designed around movement.
+            </p>
+          </div>
+
+          <div class="footer-links">
+            <h4>Services</h4>
+            <ul>
+              <li><a href="#physio">Clinical Physiotherapy</a></li>
+              <li><a href="#sports-performance">Sports Performance</a></li>
+              <li><a href="#neuro-biomechanics">Neuro Biomechanics</a></li>
+              <li><a href="#neuro-biomechanics">Exercise Prescription</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-links">
+            <h4>Company</h4>
+            <ul>
+              <li><a href="#about">About Us</a></li>
+              <li><a href="#process">Methodology</a></li>
+              <li><a href="#contact">Location</a></li>
+              <li><a href="#book">Book Assessment</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-links">
+            <h4>Contact</h4>
+            <ul>
+              <li id="footer-address" style="color: #888; font-size: 0.9rem">
+                Loading...
+              </li>
+              <li
+                id="footer-phone"
+                style="color: #888; font-size: 0.9rem; margin-top: 10px"
+              >
+                Loading...
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="medical-disclaimer">
+          <p>
+            <strong>Disclaimer:</strong> Information on this website is for
+            general informational purposes and does not replace professional
+            medical assessment, diagnosis, or treatment. Individual results and
+            recommendations may vary. Please consult with our specialists for
+            individualized advice.
+          </p>
+          <p style="margin-top: 1rem">
+            &copy; <span id="year"></span> Present Biomechanics. All rights
+            reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+
+    <!-- =========================================================
+       MOBILE NAV SCRIPT
+       ========================================================= -->
+
+    <script>
+      const hamburger = document.getElementById("hamburger");
+
+      const navLinks = document.querySelector(".nav-links");
+
+      hamburger?.addEventListener("click", () => {
+        hamburger.classList.toggle("active");
+        navLinks.classList.toggle("active");
+
+        const expanded = hamburger.classList.contains("active");
+
+        hamburger.setAttribute("aria-expanded", expanded);
+      });
+
+      document.querySelectorAll(".nav-links > a").forEach((link) => {
+        link.addEventListener("click", () => {
+          hamburger.classList.remove("active");
+          navLinks.classList.remove("active");
+        });
+      });
+
+      /* Services dropdown */
+
+      const servicesToggle = document.querySelector(".nav-dropdown-toggle");
+
+      const servicesDropdown = document.querySelector(".nav-dropdown");
+
+      servicesToggle?.addEventListener("click", (e) => {
+        e.preventDefault();
+
+        servicesDropdown.classList.toggle("active");
+      });
+
+      /* Current year */
+
+      const year = document.getElementById("year");
+
+      if (year) {
+        year.textContent = new Date().getFullYear();
+      }
+
+      /* Scroll reveal */
+
+      const reveals = document.querySelectorAll(".reveal");
+
+      if ("IntersectionObserver" in window) {
+        const observer = new IntersectionObserver(
+          (entries, observer) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("active");
+
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          {
+            threshold: 0.12,
+          },
+        );
+
+        reveals.forEach((element) => {
+          observer.observe(element);
+        });
+      } else {
+        reveals.forEach((element) => {
+          element.classList.add("active");
+        });
+      }
+    </script>
+  </body>
+</html>

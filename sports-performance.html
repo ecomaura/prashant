@@ -1,0 +1,1118 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Sports Performance | Prashant Biomechanics</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- css -->
+    <link rel="stylesheet" href="style.css" />
+
+    <style>
+      :root {
+        --black: #050505;
+        --dark: #101010;
+        --dark-2: #171717;
+        --yellow: #ffd400;
+        --white: #fff;
+        --gray: #a2a2a2;
+        --light-gray: #d0d0d0;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        background: var(--black);
+        color: var(--white);
+        font-family: "Inter", sans-serif;
+        line-height: 1.7;
+        overflow-x: hidden;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .container {
+        width: min(1200px, 90%);
+        margin: auto;
+      }
+
+      /* =========================
+       NAVBAR
+    ========================= */
+
+      .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 999;
+        background: rgba(5, 5, 5, 0.96);
+        border-bottom: 1px solid rgba(255, 212, 0, 0.16);
+      }
+
+      .nav-container {
+        min-height: 88px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .logo {
+        width: 175px;
+        display: block;
+      }
+
+      .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 32px;
+      }
+
+      .nav-links > a,
+      .dropdown-toggle {
+        position: relative;
+        color: #fff;
+        font-size: 14px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+
+      .nav-links > a::after,
+      .dropdown-toggle::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -8px;
+        width: 0;
+        height: 2px;
+        background: var(--yellow);
+        transition: 0.3s;
+      }
+
+      .nav-links > a:hover::after,
+      .dropdown:hover .dropdown-toggle::after {
+        width: 100%;
+      }
+
+      .dropdown {
+        position: relative;
+      }
+
+      .dropdown-toggle {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        cursor: pointer;
+      }
+
+      .arrow {
+        font-size: 10px;
+        transition: 0.3s;
+      }
+
+      .dropdown:hover .arrow {
+        transform: rotate(180deg);
+      }
+
+      .dropdown-menu {
+        position: absolute;
+        top: calc(100% + 26px);
+        left: 50%;
+        transform: translateX(-50%);
+
+        width: 280px;
+        background: #111;
+        border: 1px solid rgba(255, 212, 0, 0.3);
+
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+
+        transition: 0.25s;
+      }
+
+      .dropdown:hover .dropdown-menu {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+      }
+
+      .dropdown-menu a {
+        display: block;
+        padding: 14px 20px;
+        font-size: 13px;
+        text-transform: uppercase;
+        color: #ddd;
+        transition: 0.25s;
+      }
+
+      .dropdown-menu a:hover,
+      .dropdown-menu a.active {
+        color: var(--yellow);
+        background: rgba(255, 212, 0, 0.05);
+        padding-left: 27px;
+      }
+
+      .book-btn {
+        padding: 18px 24px;
+        background: var(--yellow);
+        color: #000 !important;
+      }
+
+      .book-btn:hover {
+        background: #fff;
+      }
+
+      .hamburger {
+        display: none;
+        cursor: pointer;
+        width: 34px;
+      }
+
+      .hamburger span {
+        display: block;
+        height: 3px;
+        background: #fff;
+        margin: 6px 0;
+      }
+
+      /* =========================
+       HERO
+    ========================= */
+
+      .hero {
+        min-height: 720px;
+        padding-top: 88px;
+
+        display: flex;
+        align-items: center;
+
+        position: relative;
+
+        background:
+          linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.96) 0%,
+            rgba(0, 0, 0, 0.82) 42%,
+            rgba(0, 0, 0, 0.52) 100%
+          ),
+          url("images/sports-performance.jpg") center / cover no-repeat;
+      }
+
+      .hero-content {
+        max-width: 850px;
+      }
+
+      .eyebrow {
+        color: var(--yellow);
+        font-size: 13px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        margin-bottom: 20px;
+      }
+
+      .hero h1 {
+        font-family: "Montserrat", sans-serif;
+        font-size: clamp(48px, 7vw, 88px);
+        line-height: 0.98;
+        text-transform: uppercase;
+        margin-bottom: 30px;
+      }
+
+      .hero h1 span {
+        color: var(--yellow);
+      }
+
+      .hero p {
+        max-width: 720px;
+        color: #c5c5c5;
+        font-size: 19px;
+        margin-bottom: 35px;
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 16px 30px;
+        background: var(--yellow);
+        color: #000;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        transition: 0.3s;
+      }
+
+      .btn:hover {
+        background: #fff;
+        transform: translateY(-3px);
+      }
+
+      /* =========================
+       INTRO
+    ========================= */
+
+      .section {
+        padding: 110px 0;
+      }
+
+      .split {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 80px;
+        align-items: center;
+      }
+
+      .label {
+        color: var(--yellow);
+        font-size: 13px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        margin-bottom: 18px;
+      }
+
+      h2 {
+        font-family: "Montserrat", sans-serif;
+        font-size: clamp(36px, 4vw, 58px);
+        line-height: 1.05;
+        text-transform: uppercase;
+        margin-bottom: 25px;
+      }
+
+      .content p {
+        color: #aaa;
+        font-size: 17px;
+        margin-bottom: 20px;
+      }
+
+      .visual {
+        position: relative;
+      }
+
+      .visual img {
+        width: 100%;
+        height: 520px;
+        object-fit: cover;
+      }
+
+      .visual::after {
+        content: "";
+        position: absolute;
+        right: -18px;
+        bottom: -18px;
+        width: 100%;
+        height: 100%;
+        border: 2px solid var(--yellow);
+        z-index: -1;
+      }
+
+      /* =========================
+       PERFORMANCE SYSTEM
+    ========================= */
+
+      .dark-section {
+        background: var(--dark);
+      }
+
+      .section-heading {
+        max-width: 800px;
+        margin: 0 auto 60px;
+        text-align: center;
+      }
+
+      .section-heading p {
+        color: var(--gray);
+        font-size: 17px;
+      }
+
+      .performance-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+      }
+
+      .performance-card {
+        position: relative;
+        min-height: 290px;
+        padding: 38px 30px;
+
+        background: #151515;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+
+        transition: 0.3s;
+      }
+
+      .performance-card:hover {
+        transform: translateY(-7px);
+        border-color: var(--yellow);
+      }
+
+      .number {
+        color: var(--yellow);
+        font-family: "Montserrat", sans-serif;
+        font-size: 15px;
+        font-weight: 700;
+        letter-spacing: 2px;
+        margin-bottom: 25px;
+      }
+
+      .performance-card h3 {
+        font-family: "Montserrat", sans-serif;
+        font-size: 22px;
+        text-transform: uppercase;
+        line-height: 1.2;
+        margin-bottom: 15px;
+      }
+
+      .performance-card p {
+        color: #999;
+        font-size: 15px;
+      }
+
+      /* =========================
+       PERFORMANCE AREAS
+    ========================= */
+
+      .areas {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 18px;
+        margin-top: 45px;
+      }
+
+      .area {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+
+        padding: 22px 25px;
+
+        background: #0e0e0e;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+
+        transition: 0.25s;
+      }
+
+      .area:hover {
+        border-color: var(--yellow);
+        transform: translateX(5px);
+      }
+
+      .area-icon {
+        width: 28px;
+        height: 28px;
+        flex: 0 0 28px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        border: 1px solid var(--yellow);
+        color: var(--yellow);
+
+        font-size: 14px;
+        font-weight: bold;
+      }
+
+      .area span {
+        color: #ccc;
+      }
+
+      /* =========================
+       PROCESS
+    ========================= */
+
+      .process-section {
+        background: #080808;
+      }
+
+      .process {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 30px;
+        margin-top: 60px;
+      }
+
+      .process-step {
+        text-align: center;
+        position: relative;
+      }
+
+      .process-step:not(:last-child)::after {
+        content: "";
+        position: absolute;
+
+        top: 30px;
+        left: calc(50% + 35px);
+
+        width: calc(100% - 70px);
+        height: 1px;
+
+        background: rgba(255, 212, 0, 0.35);
+      }
+
+      .circle {
+        width: 60px;
+        height: 60px;
+        margin: 0 auto 22px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        border: 2px solid var(--yellow);
+        border-radius: 50%;
+
+        color: var(--yellow);
+        font-family: "Montserrat", sans-serif;
+        font-weight: 700;
+
+        background: #080808;
+        position: relative;
+        z-index: 2;
+      }
+
+      .process-step h3 {
+        font-family: "Montserrat", sans-serif;
+        font-size: 17px;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+      }
+
+      .process-step p {
+        color: #888;
+        font-size: 14px;
+      }
+
+      /* =========================
+       CTA
+    ========================= */
+
+      .cta {
+        padding: 90px 0;
+        background: var(--yellow);
+        color: #000;
+      }
+
+      .cta-inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 40px;
+      }
+
+      .cta h2 {
+        margin-bottom: 10px;
+      }
+
+      .cta p {
+        max-width: 650px;
+        font-size: 17px;
+      }
+
+      .cta .btn {
+        background: #000;
+        color: #fff;
+        white-space: nowrap;
+      }
+
+      .cta .btn:hover {
+        background: #fff;
+        color: #000;
+      }
+
+      /* =========================
+       FOOTER
+    ========================= */
+
+      footer {
+        background: #050505;
+        padding: 70px 0 25px;
+      }
+
+      .footer-grid {
+        display: grid;
+        grid-template-columns: 1.5fr 1fr 1fr;
+        gap: 60px;
+        padding-bottom: 50px;
+      }
+
+      .footer-logo {
+        width: 175px;
+        margin-bottom: 20px;
+      }
+
+      .footer-col p {
+        color: #777;
+        max-width: 400px;
+      }
+
+      .footer-col h4 {
+        color: var(--yellow);
+        font-size: 13px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+      }
+
+      .footer-col a {
+        display: block;
+        color: #888;
+        font-size: 14px;
+        margin-bottom: 10px;
+        transition: 0.25s;
+      }
+
+      .footer-col a:hover {
+        color: var(--yellow);
+      }
+
+      .copyright {
+        padding-top: 22px;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        text-align: center;
+        color: #666;
+        font-size: 13px;
+      }
+
+      /* =========================
+       MOBILE
+    ========================= */
+
+      @media (max-width: 950px) {
+        .nav-links {
+          display: none;
+        }
+
+        .hamburger {
+          display: block;
+        }
+
+        .split {
+          grid-template-columns: 1fr;
+          gap: 55px;
+        }
+
+        .performance-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+
+        .process {
+          grid-template-columns: 1fr 1fr;
+          row-gap: 45px;
+        }
+
+        .process-step:not(:last-child)::after {
+          display: none;
+        }
+
+        .cta-inner {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
+        .footer-grid {
+          grid-template-columns: 1fr;
+          gap: 40px;
+        }
+      }
+
+      @media (max-width: 600px) {
+        .nav-container {
+          min-height: 75px;
+        }
+
+        .logo {
+          width: 145px;
+        }
+
+        .hero {
+          min-height: 650px;
+          padding-top: 75px;
+        }
+
+        .hero h1 {
+          font-size: 48px;
+        }
+
+        .hero p {
+          font-size: 16px;
+        }
+
+        .section {
+          padding: 75px 0;
+        }
+
+        .visual img {
+          height: 380px;
+        }
+
+        .performance-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .areas {
+          grid-template-columns: 1fr;
+        }
+
+        .process {
+          grid-template-columns: 1fr;
+        }
+
+        .process-step {
+          text-align: left;
+        }
+
+        .circle {
+          margin-left: 0;
+        }
+
+        .cta {
+          padding: 70px 0;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- =========================
+       NAVBAR
+  ========================= -->
+
+    <header id="header">
+      <div class="nav-container">
+        <a href="#" class="logo">
+          <img
+            src="https://raw.githubusercontent.com/ecomaura/prashant/refs/heads/main/74035.jpg"
+            alt="Present Biomechanics"
+          />
+        </a>
+        <nav class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <div class="nav-dropdown">
+            <button class="nav-link nav-dropdown-toggle" type="button">
+              Services
+              <span class="dropdown-arrow">▾</span>
+            </button>
+
+            <div class="nav-dropdown-menu">
+              <a href="clinical-physiotherapy.html"> Clinical Physiotherapy </a>
+              <a href="sports-performance.html"> Sports Performance </a>
+              <a href="neuro-rehabilitation.html"> Neuro Rehabilitation </a>
+              <a href="exercise-prescription.html"> Exercise Prescription </a>
+              <a href="matrix-rhythm.html"> Matrix Rhythm </a>
+            </div>
+          </div>
+         
+          
+          <a href="media.html">Media</a>
+          <a href="contact.html">Contact</a>
+
+          <a href="contact.html" class="btn btn-primary nav-btn">
+            Book Assessment
+          </a>
+        </nav>
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </header>
+
+    <!-- =========================
+       HERO
+  ========================= -->
+
+    <section class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <div class="eyebrow">Performance & Human Movement</div>
+
+          <h1>
+            Sports
+            <span>Performance</span>
+          </h1>
+
+          <p>
+            Performance training built around biomechanics, movement quality and
+            physical capacity — helping athletes move better, perform stronger
+            and stay ready for competition.
+          </p>
+
+          <a href="contact.html" class="btn"> Start Your Assessment → </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================
+       INTRO
+  ========================= -->
+
+    <section class="section">
+      <div class="container split">
+        <div class="content">
+          <div class="label">Performance Philosophy</div>
+
+          <h2>Train With Purpose. Perform With Precision.</h2>
+
+          <p>
+            Sports performance is more than simply becoming stronger or faster.
+            It is about understanding how your body produces, controls and
+            transfers movement.
+          </p>
+
+          <p>
+            Our performance approach combines biomechanics, strength, mobility,
+            movement control and sport-specific demands to create a more
+            complete physical profile.
+          </p>
+
+          <p>
+            Training is progressively developed according to the athlete's
+            current capacity, goals and performance demands.
+          </p>
+        </div>
+
+        <div class="visual">
+          <img
+            src="images/sports-performance.jpg"
+            alt="Sports Performance Training"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================
+       PERFORMANCE SYSTEM
+  ========================= -->
+
+    <section class="section dark-section">
+      <div class="container">
+        <div class="section-heading">
+          <div class="label">Performance System</div>
+
+          <h2>Build A Better Athlete</h2>
+
+          <p>
+            A structured approach designed to develop the physical qualities
+            that support efficient and repeatable performance.
+          </p>
+        </div>
+
+        <div class="performance-grid">
+          <div class="performance-card">
+            <div class="number">01</div>
+
+            <h3>Movement Assessment</h3>
+
+            <p>
+              Identify movement limitations, asymmetries and control strategies
+              that may influence performance.
+            </p>
+          </div>
+
+          <div class="performance-card">
+            <div class="number">02</div>
+
+            <h3>Strength Development</h3>
+
+            <p>
+              Develop appropriate strength and force-producing capacity for the
+              demands of your sport.
+            </p>
+          </div>
+
+          <div class="performance-card">
+            <div class="number">03</div>
+
+            <h3>Speed & Agility</h3>
+
+            <p>
+              Improve acceleration, deceleration, change of direction and
+              efficient movement under speed.
+            </p>
+          </div>
+
+          <div class="performance-card">
+            <div class="number">04</div>
+
+            <h3>Power Development</h3>
+
+            <p>
+              Train the ability to express force quickly and effectively through
+              sport-specific movement patterns.
+            </p>
+          </div>
+
+          <div class="performance-card">
+            <div class="number">05</div>
+
+            <h3>Mobility & Control</h3>
+
+            <p>
+              Develop usable mobility and control to support efficient movement
+              across the athlete's available range.
+            </p>
+          </div>
+
+          <div class="performance-card">
+            <div class="number">06</div>
+
+            <h3>Return To Performance</h3>
+
+            <p>
+              Progress athletes from rehabilitation into the physical demands
+              required for full sporting participation.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================
+       PERFORMANCE AREAS
+  ========================= -->
+
+    <section class="section">
+      <div class="container">
+        <div class="label">What We Develop</div>
+
+        <h2>Performance From Every Angle</h2>
+
+        <p class="content" style="max-width: 760px">
+          Training can be structured around the specific physical and movement
+          qualities required by the athlete and their sport.
+        </p>
+
+        <div class="areas">
+          <div class="area">
+            <div class="area-icon">✓</div>
+            <span>Strength & force production</span>
+          </div>
+
+          <div class="area">
+            <div class="area-icon">✓</div>
+            <span>Acceleration & sprint performance</span>
+          </div>
+
+          <div class="area">
+            <div class="area-icon">✓</div>
+            <span>Change of direction</span>
+          </div>
+
+          <div class="area">
+            <div class="area-icon">✓</div>
+            <span>Power & explosive movement</span>
+          </div>
+
+          <div class="area">
+            <div class="area-icon">✓</div>
+            <span>Mobility & movement control</span>
+          </div>
+
+          <div class="area">
+            <div class="area-icon">✓</div>
+            <span>Sport-specific conditioning</span>
+          </div>
+
+          <div class="area">
+            <div class="area-icon">✓</div>
+            <span>Injury risk management</span>
+          </div>
+
+          <div class="area">
+            <div class="area-icon">✓</div>
+            <span>Return-to-sport progression</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================
+       PROCESS
+  ========================= -->
+
+    <section class="section process-section">
+      <div class="container">
+        <div class="section-heading">
+          <div class="label">The Process</div>
+
+          <h2>From Assessment To Performance</h2>
+
+          <p>
+            A progressive system that turns assessment findings into focused
+            training and measurable physical development.
+          </p>
+        </div>
+
+        <div class="process">
+          <div class="process-step">
+            <div class="circle">01</div>
+
+            <h3>Assess</h3>
+
+            <p>Understand movement, capacity and performance requirements.</p>
+          </div>
+
+          <div class="process-step">
+            <div class="circle">02</div>
+
+            <h3>Plan</h3>
+
+            <p>Build a training strategy around individual goals and needs.</p>
+          </div>
+
+          <div class="process-step">
+            <div class="circle">03</div>
+
+            <h3>Develop</h3>
+
+            <p>Progress strength, movement quality and physical capacity.</p>
+          </div>
+
+          <div class="process-step">
+            <div class="circle">04</div>
+
+            <h3>Perform</h3>
+
+            <p>
+              Transfer physical development into sport-specific performance.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================
+       CTA
+  ========================= -->
+
+    <section class="cta">
+      <div class="container">
+        <div class="cta-inner">
+          <div>
+            <h2>Ready To Perform Better?</h2>
+
+            <p>
+              Start with an assessment and build a performance programme around
+              the way you move, train and compete.
+            </p>
+          </div>
+
+          <a href="contact.html" class="btn"> Book Assessment → </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================
+       FOOTER
+  ========================= -->
+
+     <!-- FOOTER -->
+    <footer>
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <div class="footer-logo">
+              <img
+                src="https://raw.githubusercontent.com/ecomaura/prashant/refs/heads/main/74035.jpg"
+                alt="Present Biomechanics"
+              />
+            </div>
+            <p style="color: #888; font-size: 0.9rem; max-width: 300px">
+              Clinical physiotherapy, sports performance, neuro biomechanics and
+              exercise prescription designed around movement.
+            </p>
+          </div>
+
+          <div class="footer-links">
+            <h4>Services</h4>
+            <ul>
+              <li><a href="#physio">Clinical Physiotherapy</a></li>
+              <li><a href="#sports-performance">Sports Performance</a></li>
+              <li><a href="#neuro-biomechanics">Neuro Biomechanics</a></li>
+              <li><a href="#neuro-biomechanics">Exercise Prescription</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-links">
+            <h4>Company</h4>
+            <ul>
+              <li><a href="#about">About Us</a></li>
+              <li><a href="#process">Methodology</a></li>
+              <li><a href="#contact">Location</a></li>
+              <li><a href="#book">Book Assessment</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-links">
+            <h4>Contact</h4>
+            <ul>
+              <li id="footer-address" style="color: #888; font-size: 0.9rem">
+                Loading...
+              </li>
+              <li
+                id="footer-phone"
+                style="color: #888; font-size: 0.9rem; margin-top: 10px"
+              >
+                Loading...
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="medical-disclaimer">
+          <p>
+            <strong>Disclaimer:</strong> Information on this website is for
+            general informational purposes and does not replace professional
+            medical assessment, diagnosis, or treatment. Individual results and
+            recommendations may vary. Please consult with our specialists for
+            individualized advice.
+          </p>
+          <p style="margin-top: 1rem">
+            &copy; <span id="year"></span> Present Biomechanics. All rights
+            reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+
+      const hamburger = document.getElementById("hamburger");
+
+      const nav = document.querySelector(".nav-links");
+
+      hamburger.addEventListener("click", () => {
+        nav.classList.toggle("mobile-open");
+      });
+    </script>
+  </body>
+</html>

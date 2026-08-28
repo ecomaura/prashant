@@ -1,0 +1,1242 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>About Us | Prasahnt Biomechanics</title>
+
+    <!-- Existing main stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+
+    <style>
+      /* =========================================================
+       ABOUT PAGE
+       ========================================================= */
+
+      .about-page {
+        background: #050505;
+        color: #ffffff;
+        overflow-x: hidden;
+      }
+
+      /* =========================================================
+       HERO
+       ========================================================= */
+
+      .about-hero {
+        min-height: 72vh;
+        position: relative;
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+
+        background:
+          radial-gradient(
+            circle at 75% 45%,
+            rgba(255, 212, 0, 0.08),
+            transparent 30%
+          ),
+          #050505;
+      }
+
+      .about-hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+
+        background-image:
+          linear-gradient(rgba(255, 212, 0, 0.035) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(255, 212, 0, 0.035) 1px, transparent 1px);
+
+        background-size: 55px 55px;
+        pointer-events: none;
+      }
+
+      .about-hero-inner {
+        width: min(1250px, 90%);
+        margin: 0 auto;
+        padding: 9rem 0 6rem;
+        position: relative;
+        z-index: 2;
+      }
+
+      .about-eyebrow {
+        color: var(--yellow, #ffd400);
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        font-size: 0.78rem;
+        font-weight: 700;
+        margin-bottom: 1.5rem;
+      }
+
+      .about-hero h1 {
+        max-width: 1000px;
+        margin: 0;
+
+        font-size: clamp(3.5rem, 8vw, 8rem);
+        line-height: 0.9;
+        letter-spacing: -3px;
+        text-transform: uppercase;
+      }
+
+      .about-hero h1 span {
+        color: var(--yellow, #ffd400);
+      }
+
+      .about-hero-description {
+        max-width: 700px;
+        margin-top: 2rem;
+
+        font-size: 1.1rem;
+        line-height: 1.8;
+        color: #bdbdbd;
+      }
+
+      /* =========================================================
+       FOUNDERS
+       ========================================================= */
+
+      .founders-section {
+        padding: 7rem 0;
+        background: #151515;
+      }
+
+      .section-wrap {
+        width: min(1250px, 90%);
+        margin: 0 auto;
+      }
+
+      .section-intro {
+        max-width: 850px;
+        margin-bottom: 4rem;
+      }
+
+      .section-label {
+        color: var(--yellow, #ffd400);
+        font-size: 0.75rem;
+        font-weight: 700;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        margin-bottom: 1rem;
+      }
+
+      .section-intro h2 {
+        margin: 0 0 1rem;
+        font-size: clamp(2.5rem, 5vw, 4.5rem);
+        line-height: 1;
+        text-transform: uppercase;
+      }
+
+      .section-intro p {
+        color: #999;
+        line-height: 1.8;
+        max-width: 700px;
+      }
+
+      .founders-grid {
+        display: grid;
+        grid-template-columns: 1.25fr 1fr 1fr;
+        gap: 1.5rem;
+        align-items: stretch;
+      }
+
+      .founder-card {
+        position: relative;
+        min-height: 560px;
+        overflow: hidden;
+        background: #090909;
+        border: 1px solid rgba(255, 212, 0, 0.16);
+      }
+
+      .founder-card:first-child {
+        min-height: 620px;
+      }
+
+      .founder-card img {
+        width: 100%;
+        height: 100%;
+        min-height: inherit;
+        display: block;
+        object-fit: cover;
+
+        transition: transform 0.7s ease;
+      }
+
+      /* Fix middle founder image positioning */
+      .founder-card:nth-child(2) img {
+        object-fit: cover;
+        object-position: 80% center;
+      }
+
+      .founder-card:hover img {
+        transform: scale(1.04);
+      }
+
+      .founder-card::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+
+        background: linear-gradient(
+          to top,
+          rgba(0, 0, 0, 0.92) 0%,
+          rgba(0, 0, 0, 0.2) 48%,
+          rgba(0, 0, 0, 0) 75%
+        );
+      }
+
+      .founder-info {
+        position: absolute;
+        left: 2rem;
+        right: 2rem;
+        bottom: 2rem;
+        z-index: 2;
+      }
+
+      .founder-role {
+        color: var(--yellow, #ffd400);
+        font-size: 0.7rem;
+        font-weight: 700;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        margin-bottom: 0.5rem;
+      }
+
+      .founder-info h3 {
+        margin: 0;
+        font-size: 1.7rem;
+        text-transform: uppercase;
+      }
+
+      .founder-note {
+        color: #aaa;
+        font-size: 0.85rem;
+        margin-top: 0.5rem;
+      }
+
+      /* =========================================================
+       ABOUT US
+       ========================================================= */
+
+      .about-main {
+        padding: 8rem 0;
+        background: #050505;
+      }
+
+      .about-main-grid {
+        display: grid;
+        grid-template-columns: 0.7fr 1.3fr;
+        gap: 6rem;
+        align-items: start;
+      }
+
+      .about-main-title {
+        position: sticky;
+        top: 120px;
+      }
+
+      .about-main-title h2 {
+        margin: 0;
+
+        font-size: clamp(3rem, 5vw, 5rem);
+        line-height: 0.95;
+        text-transform: uppercase;
+      }
+
+      .about-main-title h2 span {
+        color: var(--yellow, #ffd400);
+      }
+
+      .about-copy p {
+        margin: 0 0 1.5rem;
+
+        color: #b8b8b8;
+        font-size: 1.05rem;
+        line-height: 1.9;
+      }
+
+      .about-copy p:first-child {
+        color: #e6e6e6;
+        font-size: 1.2rem;
+      }
+
+      /* =========================================================
+       INTEGRATED APPROACH
+       ========================================================= */
+
+      .integrated-section {
+        padding: 8rem 0;
+        background: #1b1b1b;
+      }
+
+      .integrated-header {
+        max-width: 900px;
+        margin-bottom: 4rem;
+      }
+
+      .integrated-header h2 {
+        font-size: clamp(2.5rem, 5vw, 4.5rem);
+        line-height: 1;
+        text-transform: uppercase;
+        margin: 0 0 1.5rem;
+      }
+
+      .integrated-header p {
+        max-width: 760px;
+        color: #999;
+        line-height: 1.8;
+      }
+
+      .approach-highlight {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 1px;
+        background: rgba(255, 212, 0, 0.2);
+        border: 1px solid rgba(255, 212, 0, 0.2);
+      }
+
+      .approach-box {
+        background: #111;
+        padding: 2.5rem 2rem;
+        min-height: 230px;
+      }
+
+      .approach-number {
+        color: var(--yellow, #ffd400);
+        font-size: 0.8rem;
+        font-weight: 700;
+        letter-spacing: 2px;
+        margin-bottom: 2rem;
+      }
+
+      .approach-box h3 {
+        margin: 0 0 1rem;
+        font-size: 1.4rem;
+        text-transform: uppercase;
+      }
+
+      .approach-box p {
+        margin: 0;
+        color: #909090;
+        line-height: 1.7;
+        font-size: 0.95rem;
+      }
+
+      /* =========================================================
+       CORE EXPERTISE
+       ========================================================= */
+
+      .expertise-section {
+        padding: 8rem 0;
+        background: #050505;
+      }
+
+      .expertise-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+        margin-top: 4rem;
+      }
+
+      .expertise-card {
+        position: relative;
+        padding: 2.5rem 2rem;
+        min-height: 370px;
+
+        background: #151515;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+
+        transition:
+          transform 0.3s ease,
+          border-color 0.3s ease;
+      }
+
+      .expertise-card:hover {
+        transform: translateY(-7px);
+        border-color: var(--yellow, #ffd400);
+      }
+
+      .expertise-icon {
+        width: 58px;
+        height: 58px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        border: 1px solid var(--yellow, #ffd400);
+        color: var(--yellow, #ffd400);
+
+        font-weight: 700;
+        margin-bottom: 3rem;
+      }
+
+      .expertise-card h3 {
+        margin: 0 0 1rem;
+
+        font-size: 1.45rem;
+        line-height: 1.2;
+        text-transform: uppercase;
+      }
+
+      .expertise-card p {
+        color: #999;
+        line-height: 1.75;
+        font-size: 0.95rem;
+      }
+
+      /* =========================================================
+       COMMITMENT
+       ========================================================= */
+
+      .commitment-section {
+        padding: 8rem 0;
+        background: #ffd400;
+        color: #050505;
+      }
+
+      .commitment-inner {
+        max-width: 1100px;
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      .commitment-label {
+        font-size: 0.75rem;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        font-weight: 800;
+        margin-bottom: 1.5rem;
+      }
+
+      .commitment-inner h2 {
+        margin: 0 0 2rem;
+
+        font-size: clamp(2.7rem, 6vw, 6rem);
+        line-height: 0.95;
+        text-transform: uppercase;
+      }
+
+      .commitment-inner p {
+        max-width: 850px;
+        margin: 0 auto;
+
+        font-size: 1.1rem;
+        line-height: 1.85;
+      }
+
+      /* =========================================================
+       CTA
+       ========================================================= */
+
+      .about-cta {
+        padding: 6rem 0;
+        background: #050505;
+        text-align: center;
+      }
+
+      .about-cta h2 {
+        margin: 0 0 1rem;
+
+        font-size: clamp(2.5rem, 5vw, 4.5rem);
+        text-transform: uppercase;
+      }
+
+      .about-cta p {
+        max-width: 650px;
+        margin: 0 auto 2rem;
+
+        color: #999;
+        line-height: 1.7;
+      }
+
+      /* =========================================================
+       MOBILE
+       ========================================================= */
+
+      @media (max-width: 1000px) {
+        .founders-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+
+        .founder-card:first-child {
+          grid-column: span 2;
+        }
+
+        .about-main-grid {
+          grid-template-columns: 1fr;
+          gap: 3rem;
+        }
+
+        .about-main-title {
+          position: static;
+        }
+
+        .expertise-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+
+        .approach-highlight {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media (max-width: 650px) {
+        .about-hero-inner {
+          padding: 7rem 0 4rem;
+        }
+
+        .about-hero h1 {
+          font-size: clamp(3.1rem, 16vw, 5rem);
+          letter-spacing: -2px;
+        }
+
+        .about-hero-description {
+          font-size: 1rem;
+        }
+
+        .founders-section,
+        .about-main,
+        .integrated-section,
+        .expertise-section {
+          padding: 5rem 0;
+        }
+
+        .founders-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .founder-card,
+        .founder-card:first-child {
+          grid-column: auto;
+          min-height: 500px;
+        }
+
+        .founder-card:first-child {
+          min-height: 520px;
+        }
+
+        .founder-info {
+          left: 1.5rem;
+          right: 1.5rem;
+          bottom: 1.5rem;
+        }
+
+        .expertise-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .expertise-card {
+          min-height: auto;
+        }
+
+        .commitment-section {
+          padding: 5rem 1rem;
+        }
+
+        .commitment-inner h2 {
+          font-size: 3rem;
+        }
+
+        .commitment-inner p {
+          font-size: 1rem;
+        }
+
+        .about-cta {
+          padding: 5rem 1rem;
+        }
+      }
+
+      /* =========================
+   FOOTER
+========================= */
+
+      .site-footer {
+        background: #050505;
+        color: #ffffff;
+        border-top: 1px solid rgba(255, 215, 0, 0.2);
+        padding: 70px 5% 25px;
+      }
+
+      .footer-container {
+        max-width: 1200px;
+        margin: 0 auto;
+
+        display: grid;
+        grid-template-columns: 1.5fr 1fr;
+        gap: 100px;
+
+        padding-bottom: 55px;
+      }
+
+      .footer-brand {
+        max-width: 500px;
+      }
+
+      .footer-logo {
+        width: 180px;
+        height: auto;
+        display: block;
+        margin-bottom: 25px;
+        object-fit: contain;
+      }
+
+      .footer-brand p {
+        margin: 0;
+        color: #aaa;
+        font-size: 16px;
+        line-height: 1.7;
+        max-width: 450px;
+      }
+
+      .footer-links {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 40px;
+        row-gap: 14px;
+        align-content: start;
+      }
+
+      .footer-links h4 {
+        grid-column: 1 / -1;
+
+        margin: 0 0 10px;
+
+        color: #ffd400;
+        font-size: 14px;
+        letter-spacing: 2px;
+        font-weight: 700;
+      }
+
+      .footer-links a {
+        color: #aaa;
+        text-decoration: none;
+        font-size: 15px;
+        transition: 0.3s ease;
+      }
+
+      .footer-links a:hover {
+        color: #ffd400;
+      }
+
+      .footer-bottom {
+        max-width: 1200px;
+        margin: 0 auto;
+
+        padding-top: 25px;
+
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+
+        text-align: center;
+      }
+
+      .footer-bottom p {
+        margin: 0;
+        color: #777;
+        font-size: 14px;
+      }
+
+      /* =========================
+   FOOTER MOBILE
+========================= */
+
+      @media (max-width: 768px) {
+        .site-footer {
+          padding: 50px 25px 20px;
+        }
+
+        .footer-container {
+          grid-template-columns: 1fr;
+          gap: 45px;
+          padding-bottom: 40px;
+        }
+
+        .footer-brand {
+          max-width: 100%;
+        }
+
+        .footer-logo {
+          width: 160px;
+        }
+
+        .footer-brand p {
+          font-size: 14px;
+        }
+
+        .footer-links {
+          grid-template-columns: 1fr 1fr;
+          gap: 14px 25px;
+        }
+
+        .footer-links h4 {
+          margin-bottom: 8px;
+        }
+
+        .footer-links a {
+          font-size: 13px;
+        }
+
+        .footer-bottom p {
+          font-size: 12px;
+          line-height: 1.5;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .footer-links {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+
+  <body class="about-page">
+    <!-- =========================================================
+       HEADER
+       ========================================================= -->
+
+    <header id="header">
+      <div class="nav-container">
+        <a href="#" class="logo">
+          <img
+            src="https://raw.githubusercontent.com/ecomaura/prashant/refs/heads/main/74035.jpg"
+            alt="Present Biomechanics"
+          />
+        </a>
+        <nav class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <div class="nav-dropdown">
+            <button class="nav-link nav-dropdown-toggle" type="button">
+              Services
+              <span class="dropdown-arrow">▾</span>
+            </button>
+
+            <div class="nav-dropdown-menu">
+              <a href="clinical-physiotherapy.html"> Clinical Physiotherapy </a>
+              <a href="sports-performance.html"> Sports Performance </a>
+              <a href="neuro-rehabilitation.html"> Neuro Rehabilitation </a>
+              <a href="exercise-prescription.html"> Exercise Prescription </a>
+              <a href="matrix-rhythm.html"> Matrix Rhythm </a>
+            </div>
+          </div>
+         
+          
+          <a href="media.html">Media</a>
+          <a href="contact.html">Contact</a>
+
+          <a href="contact.html" class="btn btn-primary nav-btn">
+            Book Assessment
+          </a>
+        </nav>
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </header>
+
+    <!-- =========================================================
+       HERO
+       ========================================================= -->
+
+    <main>
+      <section class="about-hero">
+        <div class="about-hero-inner">
+          <div class="about-eyebrow">About Prasahnt Biomechanics</div>
+
+          <h1>
+            Where Movement<br />
+            Meets <span>Science.</span>
+          </h1>
+
+          <p class="about-hero-description">
+            Evidence-based clinical rehabilitation meets peak movement
+            performance. We bring together physical therapy, biomechanics,
+            neuromechanics and elite strength conditioning to redefine how human
+            movement is evaluated, restored and optimized.
+          </p>
+        </div>
+      </section>
+
+      <!-- =========================================================
+         FOUNDERS
+         ========================================================= -->
+
+      <section class="founders-section">
+        <div class="section-wrap">
+          <div class="section-intro">
+            <div class="section-label">The People Behind The Practice</div>
+
+            <h2>Our Founders</h2>
+
+            <p>
+              Prasahnt Biomechanics is built around a commitment to
+              understanding movement at a deeper level—bringing clinical
+              rehabilitation, biomechanics and physical performance together
+              under one approach.
+            </p>
+          </div>
+
+          <div class="founders-grid">
+            <!-- Founder 1 -->
+
+            <article class="founder-card reveal">
+              <img
+                src="assets/images/founder1.jpeg"
+                alt="Founders of Prasahnt Biomechanics"
+                loading="lazy"
+              />
+
+              <div class="founder-info">
+                <div class="founder-role">Founders</div>
+
+                <h3>Prasahnt Biomechanics</h3>
+
+                <div class="founder-note">
+                  Movement • Rehabilitation • Performance
+                </div>
+              </div>
+            </article>
+
+            <!-- Founder 2 -->
+
+            <article class="founder-card reveal">
+              <img
+                src="assets/images/founder2.jpeg"
+                alt="Founder of Prasahnt Biomechanics"
+                loading="lazy"
+              />
+
+              <div class="founder-info">
+                <div class="founder-role">Founder</div>
+
+                <h3>Movement & Performance</h3>
+
+                <div class="founder-note">
+                  Biomechanics • Strength • Conditioning
+                </div>
+              </div>
+            </article>
+
+            <!-- Founder 3 -->
+
+            <article class="founder-card reveal">
+              <img
+                src="assets/images/founder3.jpeg"
+                alt="Founder of Prasahnt Biomechanics"
+                loading="lazy"
+              />
+
+              <div class="founder-info">
+                <div class="founder-role">Founder</div>
+
+                <h3>Clinical & Rehabilitation</h3>
+
+                <div class="founder-note">
+                  Rehabilitation • Recovery • Performance
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================================================
+         ABOUT US
+         ========================================================= -->
+
+      <section class="about-main">
+        <div class="section-wrap">
+          <div class="about-main-grid">
+            <div class="about-main-title reveal">
+              <div class="section-label">About Us</div>
+
+              <h2>
+                Built Around<br />
+                <span>Movement.</span>
+              </h2>
+            </div>
+
+            <div class="about-copy reveal">
+              <p>
+                Welcome to "Prasahnt Biomechanics", where evidence-based
+                clinical rehabilitation meets peak movement performance.
+              </p>
+
+              <p>
+                Our practice sits at the intersection of physical therapy,
+                biomechanics, neuromechanics, and elite strength conditioning.
+                We are dedicated to redefining how human movement is evaluated,
+                restored, and optimized—delivering high-level care that bridges
+                the gap between clinical healing and athletic capability.
+              </p>
+
+              <p>
+                We believe that sustainable physical health requires a holistic
+                understanding of how the body generates force, processes
+                neurological feedback, and adapts to load.
+              </p>
+
+              <p>
+                Traditional models often treat pain in isolation; our framework
+                evaluates the entire kinetic chain to identify underlying
+                movement dysfunctions, compensatory habits, and structural
+                strain.
+              </p>
+
+              <p>
+                By unifying clinical expertise with scientific movement
+                principles, we design targeted interventions that eliminate
+                pain, restore structural integrity, and unlock your physical
+                potential.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================================================
+         INTEGRATED APPROACH
+         ========================================================= -->
+
+      <section class="integrated-section">
+        <div class="section-wrap">
+          <div class="integrated-header reveal">
+            <div class="section-label">Our Integrated Approach</div>
+
+            <h2>
+              Understand The Body.<br />
+              Improve The Movement.
+            </h2>
+
+            <p>
+              We look beyond the immediate symptom to understand how the body
+              generates force, processes neurological feedback and adapts to
+              physical load.
+            </p>
+          </div>
+
+          <div class="approach-highlight">
+            <div class="approach-box reveal">
+              <div class="approach-number">01 — FORCE</div>
+
+              <h3>Force & Load</h3>
+
+              <p>
+                Understanding how the body generates, absorbs and transfers
+                force allows us to better identify movement dysfunctions and
+                physical limitations.
+              </p>
+            </div>
+
+            <div class="approach-box reveal">
+              <div class="approach-number">02 — NEURO</div>
+
+              <h3>Neurological Feedback</h3>
+
+              <p>
+                Movement depends on the interaction between the nervous system
+                and muscular system. We consider these interactions when
+                assessing movement and performance.
+              </p>
+            </div>
+
+            <div class="approach-box reveal">
+              <div class="approach-number">03 — ADAPTATION</div>
+
+              <h3>Adaptation To Load</h3>
+
+              <p>
+                Effective rehabilitation and performance require progressive
+                adaptation. Our interventions are designed around the
+                individual's physical demands and goals.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================================================
+         CORE AREAS OF EXPERTISE
+         ========================================================= -->
+
+      <section class="expertise-section">
+        <div class="section-wrap">
+          <div class="section-intro reveal">
+            <div class="section-label">Core Areas Of Expertise</div>
+
+            <h2>What We Do</h2>
+
+            <p>
+              Our services bring clinical rehabilitation, movement analysis and
+              physical conditioning together to create a more complete approach
+              to human performance.
+            </p>
+          </div>
+
+          <div class="expertise-grid">
+            <!-- Card 1 -->
+
+            <article class="expertise-card reveal">
+              <div class="expertise-icon">01</div>
+
+              <h3>Advanced Physiotherapy & Clinical Rehabilitation</h3>
+
+              <p>
+                Our physical therapy services prioritize precise diagnosis,
+                manual therapy, and active movement restoration. We specialize
+                in post-surgical rehabilitation, acute injury recovery, and
+                chronic musculoskeletal pain management.
+              </p>
+
+              <p>
+                Every treatment protocol is tailored to accelerate tissue
+                healing while restoring full joint function and structural
+                alignment.
+              </p>
+            </article>
+
+            <!-- Card 2 -->
+
+            <article class="expertise-card reveal">
+              <div class="expertise-icon">02</div>
+
+              <h3>Neuromechanics & Biomechanical Analysis</h3>
+
+              <p>
+                Movement is governed by complex interactions between the nervous
+                system, muscle tissue, and leverage mechanics.
+              </p>
+
+              <p>
+                Using advanced observational and functional movement
+                assessments, we analyze how your brain coordinates muscle
+                recruitment and how force translates across your joints.
+              </p>
+            </article>
+
+            <!-- Card 3 -->
+
+            <article class="expertise-card reveal">
+              <div class="expertise-icon">03</div>
+
+              <h3>Targeted Fitness & Physical Conditioning</h3>
+
+              <p>
+                Recovery does not end when pain stops; optimal health requires
+                functional capacity.
+              </p>
+
+              <p>
+                We offer comprehensive training programs ranging from joint
+                mobility and core stabilization to elite strength and
+                sports-specific performance.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================================================
+         COMMITMENT
+         ========================================================= -->
+
+      <section class="commitment-section">
+        <div class="section-wrap">
+          <div class="commitment-inner reveal">
+            <div class="commitment-label">Our Commitment To You</div>
+
+            <h2>
+              Move.<br />
+              Perform.<br />
+              Thrive.
+            </h2>
+
+            <p>
+              Whether you are an athlete striving for baseline performance, a
+              professional recovering from stress-induced tension, or an
+              individual seeking freedom from long-term joint pain, our mission
+              remains the same: to empower you with the movement capabilities,
+              strength, and knowledge required to live, move, and perform at
+              your highest level.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================================================
+         CTA
+         ========================================================= -->
+
+      <section class="about-cta">
+        <div class="section-wrap">
+          <h2>Ready To Move Better?</h2>
+
+          <p>
+            Begin with an assessment and discover a more structured approach to
+            rehabilitation, movement and performance.
+          </p>
+
+          <a href="contact.html" class="btn btn-primary">
+            Book An Assessment
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <!-- =========================================================
+       FOOTER
+       ========================================================= -->
+
+     <!-- FOOTER -->
+    <footer>
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <div class="footer-logo">
+              <img
+                src="https://raw.githubusercontent.com/ecomaura/prashant/refs/heads/main/74035.jpg"
+                alt="Present Biomechanics"
+              />
+            </div>
+            <p style="color: #888; font-size: 0.9rem; max-width: 300px">
+              Clinical physiotherapy, sports performance, neuro biomechanics and
+              exercise prescription designed around movement.
+            </p>
+          </div>
+
+          <div class="footer-links">
+            <h4>Services</h4>
+            <ul>
+              <li><a href="#physio">Clinical Physiotherapy</a></li>
+              <li><a href="#sports-performance">Sports Performance</a></li>
+              <li><a href="#neuro-biomechanics">Neuro Biomechanics</a></li>
+              <li><a href="#neuro-biomechanics">Exercise Prescription</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-links">
+            <h4>Company</h4>
+            <ul>
+              <li><a href="#about">About Us</a></li>
+              <li><a href="#process">Methodology</a></li>
+              <li><a href="#contact">Location</a></li>
+              <li><a href="#book">Book Assessment</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-links">
+            <h4>Contact</h4>
+            <ul>
+              <li id="footer-address" style="color: #888; font-size: 0.9rem">
+                Loading...
+              </li>
+              <li
+                id="footer-phone"
+                style="color: #888; font-size: 0.9rem; margin-top: 10px"
+              >
+                Loading...
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="medical-disclaimer">
+          <p>
+            <strong>Disclaimer:</strong> Information on this website is for
+            general informational purposes and does not replace professional
+            medical assessment, diagnosis, or treatment. Individual results and
+            recommendations may vary. Please consult with our specialists for
+            individualized advice.
+          </p>
+          <p style="margin-top: 1rem">
+            &copy; <span id="year"></span> Present Biomechanics. All rights
+            reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+
+    <!-- =========================================================
+       JAVASCRIPT
+       ========================================================= -->
+
+    <script>
+      /* ---------------------------------------------------------
+       MOBILE NAV
+       --------------------------------------------------------- */
+
+      const hamburger = document.getElementById("hamburger");
+
+      const nav = document.querySelector(".nav-links");
+
+      hamburger?.addEventListener("click", function () {
+        hamburger.classList.toggle("active");
+        nav.classList.toggle("active");
+
+        const expanded = hamburger.classList.contains("active");
+
+        hamburger.setAttribute("aria-expanded", expanded);
+      });
+
+      /* ---------------------------------------------------------
+       SERVICES DROPDOWN
+       --------------------------------------------------------- */
+
+      const dropdown = document.querySelector(".nav-dropdown");
+
+      const dropdownToggle = document.querySelector(".nav-dropdown-toggle");
+
+      dropdownToggle?.addEventListener("click", function (e) {
+        e.preventDefault();
+
+        dropdown.classList.toggle("active");
+      });
+
+      /* ---------------------------------------------------------
+       CURRENT YEAR
+       --------------------------------------------------------- */
+
+      const year = document.getElementById("year");
+
+      if (year) {
+        year.textContent = new Date().getFullYear();
+      }
+
+      /* ---------------------------------------------------------
+       SCROLL REVEAL
+       --------------------------------------------------------- */
+
+      const revealElements = document.querySelectorAll(".reveal");
+
+      if ("IntersectionObserver" in window) {
+        const observer = new IntersectionObserver(
+          function (entries, observer) {
+            entries.forEach(function (entry) {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("active");
+
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          {
+            threshold: 0.12,
+          },
+        );
+
+        revealElements.forEach(function (element) {
+          observer.observe(element);
+        });
+      } else {
+        revealElements.forEach(function (element) {
+          element.classList.add("active");
+        });
+      }
+    </script>
+  </body>
+</html>

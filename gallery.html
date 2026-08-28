@@ -1,0 +1,1540 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Gallery | Prashant Biomechanics</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      :root {
+        --black: #050505;
+        --dark: #111111;
+        --dark2: #171717;
+        --yellow: #ffd400;
+        --white: #ffffff;
+        --gray: #999999;
+        --border: rgba(255, 212, 0, 0.22);
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        background: var(--black);
+        color: var(--white);
+        font-family: "Inter", sans-serif;
+        overflow-x: hidden;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      img {
+        display: block;
+        width: 100%;
+      }
+
+      .container {
+        width: min(1200px, 90%);
+        margin: auto;
+      }
+
+      /* ========================================
+       NAVBAR
+    ======================================== */
+
+      .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+
+        background: rgba(5, 5, 5, 0.97);
+        border-bottom: 1px solid rgba(255, 212, 0, 0.15);
+      }
+
+      .nav-container {
+        min-height: 88px;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .logo {
+        width: 175px;
+      }
+
+      .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+      }
+
+      .nav-links > a,
+      .dropdown-toggle {
+        position: relative;
+
+        font-size: 14px;
+        font-weight: 600;
+
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+
+      .nav-links > a:not(.book-btn)::after,
+      .dropdown-toggle::after {
+        content: "";
+
+        position: absolute;
+        left: 0;
+        bottom: -8px;
+
+        width: 0;
+        height: 2px;
+
+        background: var(--yellow);
+
+        transition: 0.3s;
+      }
+
+      .nav-links > a:hover::after,
+      .dropdown:hover .dropdown-toggle::after {
+        width: 100%;
+      }
+
+      /* DROPDOWN */
+
+      .dropdown {
+        position: relative;
+      }
+
+      .dropdown-toggle {
+        display: flex;
+        align-items: center;
+        gap: 7px;
+
+        cursor: pointer;
+      }
+
+      .dropdown-arrow {
+        font-size: 9px;
+        transition: 0.3s;
+      }
+
+      .dropdown:hover .dropdown-arrow {
+        transform: rotate(180deg);
+      }
+
+      .dropdown-menu {
+        position: absolute;
+
+        top: calc(100% + 26px);
+        left: 50%;
+
+        width: 285px;
+
+        transform: translateX(-50%);
+
+        background: #111;
+
+        border: 1px solid rgba(255, 212, 0, 0.3);
+
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+
+        transition: 0.25s;
+      }
+
+      .dropdown:hover .dropdown-menu {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+      }
+
+      .dropdown-menu a {
+        display: block;
+
+        padding: 15px 20px;
+
+        color: #ddd;
+
+        font-size: 13px;
+        font-weight: 600;
+
+        text-transform: uppercase;
+
+        transition: 0.25s;
+      }
+
+      .dropdown-menu a:hover {
+        color: var(--yellow);
+        background: rgba(255, 212, 0, 0.05);
+        padding-left: 28px;
+      }
+
+      .book-btn {
+        padding: 17px 25px;
+
+        background: var(--yellow);
+        color: #000 !important;
+      }
+
+      .hamburger {
+        display: none;
+
+        width: 34px;
+        cursor: pointer;
+      }
+
+      .hamburger span {
+        display: block;
+
+        height: 3px;
+        width: 100%;
+
+        background: #fff;
+
+        margin: 6px 0;
+      }
+
+      /* ========================================
+       PAGE HERO
+    ======================================== */
+
+      .page-hero {
+        min-height: 430px;
+
+        padding-top: 88px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        text-align: center;
+
+        position: relative;
+
+        background:
+          linear-gradient(rgba(0, 0, 0, 0.82), rgba(0, 0, 0, 0.9)),
+          url("images/gallery-hero.jpg") center / cover no-repeat;
+      }
+
+      .page-hero-content {
+        max-width: 850px;
+      }
+
+      .eyebrow {
+        display: block;
+
+        color: var(--yellow);
+
+        font-size: 13px;
+        font-weight: 700;
+
+        letter-spacing: 4px;
+
+        text-transform: uppercase;
+
+        margin-bottom: 18px;
+      }
+
+      .page-hero h1 {
+        font-family: "Montserrat", sans-serif;
+
+        font-size: clamp(48px, 7vw, 86px);
+
+        line-height: 1;
+
+        text-transform: uppercase;
+
+        margin-bottom: 22px;
+      }
+
+      .page-hero p {
+        color: #aaa;
+
+        font-size: 17px;
+      }
+
+      /* ========================================
+       GALLERY
+    ======================================== */
+
+      .gallery-section {
+        padding: 100px 0 120px;
+
+        background: #0b0b0b;
+      }
+
+      .section-heading {
+        max-width: 750px;
+
+        margin: 0 auto 55px;
+
+        text-align: center;
+      }
+
+      .section-heading h2 {
+        font-family: "Montserrat", sans-serif;
+
+        font-size: clamp(35px, 4vw, 55px);
+
+        line-height: 1.05;
+
+        text-transform: uppercase;
+
+        margin-bottom: 18px;
+      }
+
+      .section-heading h2 span {
+        color: var(--yellow);
+      }
+
+      .section-heading p {
+        color: var(--gray);
+
+        font-size: 16px;
+      }
+
+      /* GRID */
+
+      .gallery-grid {
+        display: grid;
+
+        grid-template-columns: repeat(3, 1fr);
+
+        gap: 24px;
+      }
+
+      .gallery-card {
+        position: relative;
+
+        overflow: hidden;
+
+        background: #151515;
+
+        border: 1px solid rgba(255, 212, 0, 0.18);
+
+        transition: 0.35s;
+      }
+
+      .gallery-card:hover {
+        transform: translateY(-8px);
+
+        border-color: var(--yellow);
+      }
+
+      .gallery-image {
+        position: relative;
+
+        height: 350px;
+
+        overflow: hidden;
+      }
+
+      .gallery-image img {
+        width: 100%;
+        height: 100%;
+
+        object-fit: cover;
+
+        transition: transform 0.5s ease;
+      }
+
+      .gallery-card:hover .gallery-image img {
+        transform: scale(1.06);
+      }
+
+      .gallery-overlay {
+        position: absolute;
+
+        inset: 0;
+
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+
+        background: rgba(0, 0, 0, 0.65);
+
+        opacity: 0;
+
+        transition: 0.3s;
+      }
+
+      .gallery-card:hover .gallery-overlay {
+        opacity: 1;
+      }
+
+      .view-text {
+        padding: 12px 22px;
+
+        border: 1px solid var(--yellow);
+
+        color: var(--yellow);
+
+        font-size: 12px;
+        font-weight: 700;
+
+        letter-spacing: 2px;
+
+        text-transform: uppercase;
+      }
+
+      .gallery-info {
+        padding: 22px 20px 25px;
+      }
+
+      .gallery-info .number {
+        display: block;
+
+        color: var(--yellow);
+
+        font-size: 11px;
+        font-weight: 700;
+
+        letter-spacing: 3px;
+
+        margin-bottom: 8px;
+      }
+
+      .gallery-info h3 {
+        font-family: "Montserrat", sans-serif;
+
+        font-size: 20px;
+
+        line-height: 1.2;
+
+        text-transform: uppercase;
+      }
+
+      .gallery-info p {
+        color: #777;
+
+        font-size: 13px;
+
+        margin-top: 8px;
+      }
+
+      /* ========================================
+       FEATURED GALLERY ITEM
+    ======================================== */
+
+      .gallery-card.large {
+        grid-column: span 2;
+      }
+
+      .gallery-card.large .gallery-image {
+        height: 420px;
+      }
+
+      /* ========================================
+       CTA
+    ======================================== */
+
+      .gallery-cta {
+        padding: 90px 0;
+
+        background: var(--yellow);
+
+        color: #000;
+      }
+
+      .cta-inner {
+        display: flex;
+
+        align-items: center;
+        justify-content: space-between;
+
+        gap: 40px;
+      }
+
+      .cta-inner h2 {
+        font-family: "Montserrat", sans-serif;
+
+        font-size: clamp(32px, 4vw, 52px);
+
+        line-height: 1;
+
+        text-transform: uppercase;
+
+        margin-bottom: 12px;
+      }
+
+      .cta-inner p {
+        max-width: 650px;
+
+        font-size: 16px;
+      }
+
+      .cta-btn {
+        padding: 17px 30px;
+
+        background: #000;
+        color: #fff;
+
+        font-size: 13px;
+        font-weight: 700;
+
+        letter-spacing: 1px;
+
+        text-transform: uppercase;
+
+        white-space: nowrap;
+
+        transition: 0.3s;
+      }
+
+      .cta-btn:hover {
+        background: #fff;
+        color: #000;
+      }
+
+      /* ========================================
+       FOOTER
+    ======================================== */
+
+      footer {
+        padding: 70px 0 25px;
+
+        background: #050505;
+      }
+
+      .footer-grid {
+        display: grid;
+
+        grid-template-columns: 1.5fr 1fr 1fr;
+
+        gap: 60px;
+
+        padding-bottom: 50px;
+      }
+
+      .footer-logo {
+        width: 175px;
+
+        margin-bottom: 20px;
+      }
+
+      .footer-col p {
+        max-width: 420px;
+
+        color: #777;
+
+        font-size: 14px;
+      }
+
+      .footer-col h4 {
+        color: var(--yellow);
+
+        font-size: 12px;
+
+        letter-spacing: 2px;
+
+        text-transform: uppercase;
+
+        margin-bottom: 20px;
+      }
+
+      .footer-col a {
+        display: block;
+
+        color: #888;
+
+        font-size: 13px;
+
+        margin-bottom: 10px;
+
+        transition: 0.25s;
+      }
+
+      .footer-col a:hover {
+        color: var(--yellow);
+      }
+
+      .copyright {
+        padding-top: 22px;
+
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+
+        text-align: center;
+
+        color: #666;
+
+        font-size: 12px;
+      }
+
+      /* ========================================
+   HIDDEN GALLERY ITEMS
+======================================== */
+
+      .extra-gallery {
+        display: none;
+      }
+
+      .extra-gallery.show {
+        display: block;
+      }
+
+      /* ========================================
+   VIEW MORE BUTTON
+======================================== */
+
+      .view-more-wrapper {
+        display: flex;
+        justify-content: center;
+
+        margin-top: 50px;
+      }
+
+      .view-more-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 15px;
+
+        padding: 17px 32px;
+
+        border: 1px solid var(--yellow);
+
+        background: transparent;
+        color: var(--yellow);
+
+        font-family: "Inter", sans-serif;
+        font-size: 13px;
+        font-weight: 700;
+
+        letter-spacing: 2px;
+
+        cursor: pointer;
+
+        transition:
+          background 0.3s ease,
+          color 0.3s ease,
+          transform 0.3s ease;
+      }
+
+      .view-more-btn span {
+        font-size: 18px;
+
+        transition: transform 0.3s ease;
+      }
+
+      .view-more-btn:hover {
+        background: var(--yellow);
+        color: #000;
+
+        transform: translateY(-3px);
+      }
+
+      .view-more-btn:hover span {
+        transform: translateY(4px);
+      }
+
+      /* ========================================
+   LIGHTBOX
+======================================== */
+
+      .lightbox {
+        position: fixed;
+
+        inset: 0;
+
+        z-index: 9999;
+
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+
+        padding: 40px;
+
+        background: rgba(0, 0, 0, 0.94);
+
+        opacity: 0;
+        visibility: hidden;
+
+        transition:
+          opacity 0.3s ease,
+          visibility 0.3s ease;
+      }
+
+      .lightbox.active {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      .lightbox-content {
+        position: relative;
+
+        max-width: 1100px;
+        max-height: 90vh;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .lightbox-image {
+        display: block;
+
+        max-width: 100%;
+        max-height: 85vh;
+
+        width: auto;
+        height: auto;
+
+        object-fit: contain;
+
+        border: 1px solid rgba(255, 212, 0, 0.35);
+
+        box-shadow: 0 20px 80px rgba(0, 0, 0, 0.7);
+      }
+
+      /* CLOSE BUTTON */
+
+      .lightbox-close {
+        position: fixed;
+
+        top: 25px;
+        right: 30px;
+
+        width: 48px;
+        height: 48px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        border: 1px solid rgba(255, 212, 0, 0.5);
+
+        background: #111;
+
+        color: #fff;
+
+        font-size: 30px;
+        font-weight: 300;
+
+        line-height: 1;
+
+        cursor: pointer;
+
+        transition: 0.3s;
+
+        z-index: 10000;
+      }
+
+      .lightbox-close:hover {
+        background: var(--yellow);
+        color: #000;
+      }
+
+      /* PREVIOUS / NEXT */
+
+      .lightbox-prev,
+      .lightbox-next {
+        position: fixed;
+
+        top: 50%;
+
+        width: 55px;
+        height: 55px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        transform: translateY(-50%);
+
+        border: 1px solid rgba(255, 212, 0, 0.5);
+
+        background: rgba(10, 10, 10, 0.9);
+
+        color: #fff;
+
+        font-size: 28px;
+
+        cursor: pointer;
+
+        transition: 0.3s;
+
+        z-index: 10000;
+      }
+
+      .lightbox-prev {
+        left: 25px;
+      }
+
+      .lightbox-next {
+        right: 25px;
+      }
+
+      .lightbox-prev:hover,
+      .lightbox-next:hover {
+        background: var(--yellow);
+        color: #000;
+      }
+
+      /* IMAGE COUNTER */
+
+      .lightbox-counter {
+        position: fixed;
+
+        bottom: 25px;
+        left: 50%;
+
+        transform: translateX(-50%);
+
+        color: #aaa;
+
+        font-size: 13px;
+        letter-spacing: 2px;
+
+        z-index: 10000;
+      }
+
+      /* MOBILE */
+
+      @media (max-width: 600px) {
+        .lightbox {
+          padding: 20px;
+        }
+
+        .lightbox-image {
+          max-width: 95vw;
+          max-height: 78vh;
+        }
+
+        .lightbox-close {
+          top: 15px;
+          right: 15px;
+
+          width: 42px;
+          height: 42px;
+
+          font-size: 25px;
+        }
+
+        .lightbox-prev,
+        .lightbox-next {
+          width: 42px;
+          height: 42px;
+
+          font-size: 22px;
+        }
+
+        .lightbox-prev {
+          left: 10px;
+        }
+
+        .lightbox-next {
+          right: 10px;
+        }
+
+        .view-more-btn {
+          width: 100%;
+
+          justify-content: center;
+        }
+      }
+
+      /* ========================================
+       MOBILE
+    ======================================== */
+
+      @media (max-width: 1000px) {
+        .nav-links {
+          display: none;
+        }
+
+        .hamburger {
+          display: block;
+        }
+
+        .gallery-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        .gallery-card.large {
+          grid-column: span 2;
+        }
+
+        .cta-inner {
+          flex-direction: column;
+
+          align-items: flex-start;
+        }
+
+        .footer-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+
+      @media (max-width: 600px) {
+        .nav-container {
+          min-height: 75px;
+        }
+
+        .logo {
+          width: 145px;
+        }
+
+        .page-hero {
+          min-height: 350px;
+
+          padding-top: 75px;
+        }
+
+        .page-hero h1 {
+          font-size: 48px;
+        }
+
+        .gallery-section {
+          padding: 70px 0 80px;
+        }
+
+        .gallery-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .gallery-card.large {
+          grid-column: span 1;
+        }
+
+        .gallery-card.large .gallery-image,
+        .gallery-image {
+          height: 300px;
+        }
+
+        .footer-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .gallery-cta {
+          padding: 70px 0;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- ========================================
+       NAVBAR
+  ======================================== -->
+
+    <header id="header">
+      <div class="nav-container">
+        <a href="#" class="logo">
+          <img
+            src="https://raw.githubusercontent.com/ecomaura/prashant/refs/heads/main/74035.jpg"
+            alt="Present Biomechanics"
+          />
+        </a>
+        <nav class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <div class="nav-dropdown">
+            <button class="nav-link nav-dropdown-toggle" type="button">
+              Services
+              <span class="dropdown-arrow">▾</span>
+            </button>
+
+            <div class="nav-dropdown-menu">
+              <a href="clinical-physiotherapy.html"> Clinical Physiotherapy </a>
+              <a href="sports-performance.html"> Sports Performance </a>
+              <a href="neuro-rehabilitation.html"> Neuro Rehabilitation </a>
+              <a href="exercise-prescription.html"> Exercise Prescription </a>
+              <a href="matrix-rhythm.html"> Matrix Rhythm </a>
+            </div>
+          </div>
+         
+          
+          <a href="media.html">Media</a>
+          <a href="contact.html">Contact</a>
+
+          <a href="contact.html" class="btn btn-primary nav-btn">
+            Book Assessment
+          </a>
+        </nav>
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </header>
+
+    <!-- ========================================
+       PAGE HERO
+  ======================================== -->
+
+    <section class="page-hero">
+      <div class="page-hero-content">
+        <span class="eyebrow"> Prashant Biomechanics </span>
+
+        <h1>Gallery</h1>
+
+        <p>
+          Explore our work, environment, movement practice and the people behind
+          Prashant Biomechanics.
+        </p>
+      </div>
+    </section>
+
+    <!-- ========================================
+       GALLERY
+  ======================================== -->
+
+    <section class="gallery-section">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow"> Our Gallery </span>
+
+          <h2>Movement. <span>Performance.</span> People.</h2>
+
+          <p>
+            A glimpse into our approach to rehabilitation, performance and human
+            movement.
+          </p>
+        </div>
+
+        <div class="gallery-grid">
+          <!-- CARD 1 -->
+
+          <article class="gallery-card large">
+            <div class="gallery-image">
+              <img src="images/gallery-1.jpg" alt="Prashant Biomechanics" />
+
+              <div class="gallery-overlay">
+                <span class="view-text"> View Image </span>
+              </div>
+            </div>
+
+            <div class="gallery-info">
+              <span class="number"> 01 </span>
+
+              <h3>Prashant Biomechanics</h3>
+
+              <p>Movement • Rehabilitation • Performance</p>
+            </div>
+          </article>
+
+          <!-- CARD 2 -->
+
+          <article class="gallery-card">
+            <div class="gallery-image">
+              <img src="images/gallery-2.jpg" alt="Movement and Performance" />
+
+              <div class="gallery-overlay">
+                <span class="view-text"> View Image </span>
+              </div>
+            </div>
+
+            <div class="gallery-info">
+              <span class="number"> 02 </span>
+
+              <h3>Movement & Performance</h3>
+
+              <p>Biomechanics • Strength • Conditioning</p>
+            </div>
+          </article>
+
+          <!-- CARD 3 -->
+
+          <article class="gallery-card">
+            <div class="gallery-image">
+              <img src="images/gallery-3.jpg" alt="Clinical Rehabilitation" />
+
+              <div class="gallery-overlay">
+                <span class="view-text"> View Image </span>
+              </div>
+            </div>
+
+            <div class="gallery-info">
+              <span class="number"> 03 </span>
+
+              <h3>Clinical & Rehabilitation</h3>
+
+              <p>Rehabilitation • Recovery • Performance</p>
+            </div>
+          </article>
+
+          <!-- CARD 4 -->
+
+          <article class="gallery-card">
+            <div class="gallery-image">
+              <img src="images/gallery-4.jpg" alt="Biomechanics Practice" />
+
+              <div class="gallery-overlay">
+                <span class="view-text"> View Image </span>
+              </div>
+            </div>
+
+            <div class="gallery-info">
+              <span class="number"> 04 </span>
+
+              <h3>Biomechanics Practice</h3>
+
+              <p>Assessment • Movement • Training</p>
+            </div>
+          </article>
+
+          <!-- CARD 5 -->
+
+          <article class="gallery-card">
+            <div class="gallery-image">
+              <img src="images/gallery-5.jpg" alt="Performance Training" />
+
+              <div class="gallery-overlay">
+                <span class="view-text"> View Image </span>
+              </div>
+            </div>
+
+            <div class="gallery-info">
+              <span class="number"> 05 </span>
+
+              <h3>Performance Training</h3>
+
+              <p>Strength • Conditioning • Movement</p>
+            </div>
+          </article>
+
+          <!-- HIDDEN GALLERY ITEMS -->
+
+          <article class="gallery-card extra-gallery">
+            <div class="gallery-image">
+              <img
+                src="images/gallery-6.jpg"
+                alt="Prashant Biomechanics Gallery"
+              />
+
+              <div class="gallery-overlay">
+                <span class="view-text">View Image</span>
+              </div>
+            </div>
+
+            <div class="gallery-info">
+              <span class="number">06</span>
+              <h3>Movement & Rehabilitation</h3>
+              <p>Assessment • Recovery • Performance</p>
+            </div>
+          </article>
+
+          <article class="gallery-card extra-gallery">
+            <div class="gallery-image">
+              <img
+                src="images/gallery-7.jpg"
+                alt="Prashant Biomechanics Gallery"
+              />
+
+              <div class="gallery-overlay">
+                <span class="view-text">View Image</span>
+              </div>
+            </div>
+
+            <div class="gallery-info">
+              <span class="number">07</span>
+              <h3>Clinical Practice</h3>
+              <p>Movement • Rehabilitation • Care</p>
+            </div>
+          </article>
+
+          <article class="gallery-card extra-gallery">
+            <div class="gallery-image">
+              <img
+                src="images/gallery-8.jpg"
+                alt="Prashant Biomechanics Gallery"
+              />
+
+              <div class="gallery-overlay">
+                <span class="view-text">View Image</span>
+              </div>
+            </div>
+
+            <div class="gallery-info">
+              <span class="number">08</span>
+              <h3>Performance Training</h3>
+              <p>Strength • Conditioning • Movement</p>
+            </div>
+          </article>
+
+          <article class="gallery-card extra-gallery">
+            <div class="gallery-image">
+              <img
+                src="images/gallery-9.jpg"
+                alt="Prashant Biomechanics Gallery"
+              />
+
+              <div class="gallery-overlay">
+                <span class="view-text">View Image</span>
+              </div>
+            </div>
+
+            <div class="gallery-info">
+              <span class="number">09</span>
+              <h3>Biomechanical Assessment</h3>
+              <p>Analysis • Movement • Performance</p>
+            </div>
+          </article>
+
+          <article class="gallery-card extra-gallery">
+            <div class="gallery-image">
+              <img
+                src="images/gallery-10.jpg"
+                alt="Prashant Biomechanics Gallery"
+              />
+
+              <div class="gallery-overlay">
+                <span class="view-text">View Image</span>
+              </div>
+            </div>
+
+            <div class="gallery-info">
+              <span class="number">10</span>
+              <h3>Human Movement</h3>
+              <p>Rehabilitation • Performance • Strength</p>
+            </div>
+          </article>
+        </div>
+
+        <div class="view-more-wrapper">
+          <button id="viewMoreBtn" class="view-more-btn">
+            VIEW MORE
+            <span>↓</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================
+       CTA
+  ======================================== -->
+
+    <section class="gallery-cta">
+      <div class="container">
+        <div class="cta-inner">
+          <div>
+            <h2>Ready To Move Better?</h2>
+
+            <p>
+              Begin with an assessment and discover a more structured approach
+              to rehabilitation, movement and performance.
+            </p>
+          </div>
+
+          <a href="contact.html" class="cta-btn"> Book An Assessment → </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================
+       FOOTER
+  ======================================== -->
+
+    <footer>
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-col">
+            <img
+              src="images/logo.png"
+              alt="Prashant Biomechanics"
+              class="footer-logo"
+            />
+
+            <p>
+              Evidence-based rehabilitation, biomechanics and human performance.
+            </p>
+          </div>
+
+          <div class="footer-col">
+            <h4>Quick Links</h4>
+
+            <a href="index.html"> Home </a>
+
+            <a href="about.html"> About </a>
+
+            <a href="gallery.html"> Gallery </a>
+
+            <a href="events.html"> Events </a>
+
+            <a href="contact.html"> Contact </a>
+          </div>
+
+          <div class="footer-col">
+            <h4>Services</h4>
+
+            <a href="clinical-physiotherapy.html"> Clinical Physiotherapy </a>
+
+            <a href="sports-performance.html"> Sports Performance </a>
+
+            <a href="neuro-rehabilitation.html"> Neuro Rehabilitation </a>
+
+            <a href="exercise-prescription.html"> Exercise Prescription </a>
+
+            <a href="matrix-rhythm.html"> Matrix Rhythm </a>
+          </div>
+        </div>
+
+        <div class="copyright">
+          © <span id="year"></span>
+          Prashant Biomechanics. All Rights Reserved.
+        </div>
+      </div>
+    </footer>
+
+    <!-- ========================================
+     LIGHTBOX
+======================================== -->
+
+    <div class="lightbox" id="lightbox">
+      <button class="lightbox-close" id="lightboxClose" aria-label="Close">
+        ×
+      </button>
+
+      <button
+        class="lightbox-prev"
+        id="lightboxPrev"
+        aria-label="Previous image"
+      >
+        ‹
+      </button>
+
+      <div class="lightbox-content">
+        <img
+          src=""
+          alt="Gallery Image"
+          class="lightbox-image"
+          id="lightboxImage"
+        />
+      </div>
+
+      <button class="lightbox-next" id="lightboxNext" aria-label="Next image">
+        ›
+      </button>
+
+      <div class="lightbox-counter" id="lightboxCounter">1 / 10</div>
+    </div>
+
+    <script>
+      /* ========================================
+     YEAR
+  ======================================== */
+
+      document.getElementById("year").textContent = new Date().getFullYear();
+
+      /* ========================================
+     MOBILE MENU
+  ======================================== */
+
+      const hamburger = document.querySelector(".hamburger");
+
+      const navLinks = document.querySelector(".nav-links");
+
+      if (hamburger) {
+        hamburger.addEventListener("click", () => {
+          navLinks.classList.toggle("mobile-open");
+        });
+      }
+
+      /* ========================================
+     VIEW MORE
+  ======================================== */
+
+      const viewMoreBtn = document.getElementById("viewMoreBtn");
+
+      const extraGalleryItems = document.querySelectorAll(".extra-gallery");
+
+      viewMoreBtn.addEventListener("click", () => {
+        const isExpanded = viewMoreBtn.classList.contains("expanded");
+
+        if (!isExpanded) {
+          extraGalleryItems.forEach((item, index) => {
+            setTimeout(() => {
+              item.classList.add("show");
+            }, index * 100);
+          });
+
+          viewMoreBtn.classList.add("expanded");
+
+          viewMoreBtn.innerHTML = "SHOW LESS <span>↑</span>";
+        } else {
+          extraGalleryItems.forEach((item) => {
+            item.classList.remove("show");
+          });
+
+          viewMoreBtn.classList.remove("expanded");
+
+          viewMoreBtn.innerHTML = "VIEW MORE <span>↓</span>";
+
+          document.querySelector(".gallery-section").scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+          });
+        }
+      });
+
+      /* ========================================
+     LIGHTBOX
+  ======================================== */
+
+      const lightbox = document.getElementById("lightbox");
+
+      const lightboxImage = document.getElementById("lightboxImage");
+
+      const lightboxClose = document.getElementById("lightboxClose");
+
+      const lightboxPrev = document.getElementById("lightboxPrev");
+
+      const lightboxNext = document.getElementById("lightboxNext");
+
+      const lightboxCounter = document.getElementById("lightboxCounter");
+
+      let galleryImages = [];
+
+      let currentImageIndex = 0;
+
+      /* GET ALL GALLERY IMAGES */
+
+      function updateGalleryImages() {
+        galleryImages = Array.from(
+          document.querySelectorAll(".gallery-card .gallery-image img"),
+        );
+      }
+
+      updateGalleryImages();
+
+      /* OPEN LIGHTBOX */
+
+      function openLightbox(index) {
+        updateGalleryImages();
+
+        currentImageIndex = index;
+
+        showLightboxImage();
+
+        lightbox.classList.add("active");
+
+        document.body.style.overflow = "hidden";
+      }
+
+      /* SHOW IMAGE */
+
+      function showLightboxImage() {
+        const image = galleryImages[currentImageIndex];
+
+        if (!image) return;
+
+        lightboxImage.src = image.src;
+
+        lightboxImage.alt = image.alt;
+
+        lightboxCounter.textContent = `${currentImageIndex + 1} / ${galleryImages.length}`;
+      }
+
+      /* CLOSE LIGHTBOX */
+
+      function closeLightbox() {
+        lightbox.classList.remove("active");
+
+        document.body.style.overflow = "";
+      }
+
+      /* NEXT IMAGE */
+
+      function nextImage() {
+        if (!galleryImages.length) return;
+
+        currentImageIndex = (currentImageIndex + 1) % galleryImages.length;
+
+        showLightboxImage();
+      }
+
+      /* PREVIOUS IMAGE */
+
+      function previousImage() {
+        if (!galleryImages.length) return;
+
+        currentImageIndex =
+          (currentImageIndex - 1 + galleryImages.length) % galleryImages.length;
+
+        showLightboxImage();
+      }
+
+      /* CLICK ON GALLERY IMAGE */
+
+      document.addEventListener("click", (e) => {
+        const image = e.target.closest(".gallery-card .gallery-image img");
+
+        if (!image) return;
+
+        updateGalleryImages();
+
+        const index = galleryImages.indexOf(image);
+
+        if (index !== -1) {
+          openLightbox(index);
+        }
+      });
+
+      /* CLOSE */
+
+      lightboxClose.addEventListener("click", closeLightbox);
+
+      /* NEXT */
+
+      lightboxNext.addEventListener("click", nextImage);
+
+      /* PREVIOUS */
+
+      lightboxPrev.addEventListener("click", previousImage);
+
+      /* CLICK OUTSIDE IMAGE */
+
+      lightbox.addEventListener("click", (e) => {
+        if (e.target === lightbox) {
+          closeLightbox();
+        }
+      });
+
+      /* KEYBOARD CONTROLS */
+
+      document.addEventListener("keydown", (e) => {
+        if (!lightbox.classList.contains("active")) {
+          return;
+        }
+
+        if (e.key === "Escape") {
+          closeLightbox();
+        }
+
+        if (e.key === "ArrowRight") {
+          nextImage();
+        }
+
+        if (e.key === "ArrowLeft") {
+          previousImage();
+        }
+      });
+    </script>
+  </body>
+</html>
