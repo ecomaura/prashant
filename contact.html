@@ -1421,92 +1421,154 @@
         }
       }
 
-      /* =========================================
-   CONTACT PAGE - SERVICES DROPDOWN FIX
+     
+
+     /* =========================================
+   SERVICES DROPDOWN - FINAL FIX
 ========================================= */
 
-      .nav-dropdown {
-        position: relative;
-      }
+.nav-dropdown {
+  position: relative;
+}
 
-      .nav-dropdown-toggle {
-        background: transparent !important;
-        border: 0 !important;
-        box-shadow: none !important;
-        padding: 0 !important;
-        margin: 0 !important;
-        color: #fff !important;
-        font: inherit;
-        cursor: pointer;
-      }
+/* SERVICES BUTTON */
+.nav-dropdown-toggle {
+  display: flex;
+  align-items: center;
+  gap: 7px;
 
-      .nav-dropdown-menu {
-        position: absolute;
-        top: calc(100% + 25px);
-        left: 50%;
-        transform: translateX(-50%);
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
 
-        width: 430px;
-        padding: 10px 0;
+  padding: 0 !important;
+  margin: 0 !important;
 
-        background: #111 !important;
-        border: 1px solid rgba(255, 212, 0, 0.25);
+  color: #fff !important;
+  font: inherit;
 
-        opacity: 0;
-        visibility: hidden;
-        pointer-events: none;
+  cursor: pointer;
+}
 
-        z-index: 1000;
+/* DROPDOWN */
+.nav-dropdown-menu {
+  position: absolute;
 
-        box-shadow: 0 20px 45px rgba(0, 0, 0, 0.45);
-      }
+  top: calc(100% + 12px);
+  left: 50%;
 
-      .nav-dropdown:hover .nav-dropdown-menu,
-      .nav-dropdown.active .nav-dropdown-menu {
-        opacity: 1;
-        visibility: visible;
-        pointer-events: auto;
-      }
+  transform: translateX(-50%);
 
-      .nav-dropdown-menu a {
-        display: block !important;
+  width: 250px;
 
-        width: 100% !important;
-        height: auto !important;
-        min-height: 0 !important;
+  padding: 8px 0;
 
-        padding: 16px 22px !important;
-        margin: 0 !important;
+  background: #111 !important;
 
-        background: transparent !important;
-        color: #fff !important;
+  border: 1px solid rgba(255, 212, 0, 0.25);
 
-        font-size: 14px !important;
-        font-weight: 600;
-        line-height: 1.4;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.55);
 
-        border: 0 !important;
-        box-shadow: none !important;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
 
-        text-decoration: none;
-      }
+  z-index: 10000;
 
-      .nav-dropdown-menu a:hover {
-        background: var(--yellow) !important;
-        color: #000 !important;
-        padding-left: 28px !important;
-      }
+  transition:
+    opacity 0.2s ease,
+    visibility 0.2s ease;
+}
 
-      .nav-dropdown-menu a.active {
-        background: transparent !important;
-        color: #fff !important;
-      }
+/* SHOW DROPDOWN */
+.nav-dropdown:hover .nav-dropdown-menu,
+.nav-dropdown:focus-within .nav-dropdown-menu,
+.nav-dropdown.active .nav-dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+/* SMALL INVISIBLE BRIDGE
+   Prevents dropdown from disappearing
+   while moving mouse from Services to menu
+*/
+.nav-dropdown-menu::before {
+  content: "";
+  position: absolute;
+
+  top: -13px;
+  left: 0;
+
+  width: 100%;
+  height: 13px;
+}
+
+/* DROPDOWN LINKS */
+.nav-dropdown-menu a {
+  display: block !important;
+
+  width: 100% !important;
+
+  padding: 16px 22px !important;
+  margin: 0 !important;
+
+  background: transparent !important;
+
+  color: #fff !important;
+
+  font-size: 14px !important;
+  font-weight: 600;
+
+  line-height: 1.4;
+  letter-spacing: 0.5px;
+
+  border: 0 !important;
+
+  text-decoration: none;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    padding-left 0.2s ease;
+}
+
+/* HOVER */
+.nav-dropdown-menu a:hover {
+  background: var(--yellow) !important;
+  color: #000 !important;
+
+  padding-left: 28px !important;
+}
+
+/* ACTIVE LINK */
+.nav-dropdown-menu a.active {
+  background: transparent !important;
+  color: #fff !important;
+}
+
+/* ARROW */
+.dropdown-arrow {
+  display: inline-block;
+
+  margin-left: 3px;
+
+  font-size: 10px;
+
+  transition: transform 0.25s ease;
+}
+
+.nav-dropdown:hover .dropdown-arrow,
+.nav-dropdown.active .dropdown-arrow,
+.nav-dropdown:focus-within .dropdown-arrow {
+  transform: rotate(180deg);
+}
 
       /* IMPORTANT:
    Prevent generic .btn styles from affecting dropdown
 */
 
-      .nav-dropdown-menu .btn,
+      /* .nav-dropdown-menu .btn,
       .nav-dropdown-menu a.btn {
         display: block !important;
         width: 100% !important;
@@ -1514,11 +1576,11 @@
         padding: 16px 22px !important;
         background: transparent !important;
         color: #fff !important;
-      }
+      } */
 
       /* Arrow */
 
-      .dropdown-arrow {
+      /* .dropdown-arrow {
         display: inline-block;
         margin-left: 5px;
         font-size: 10px;
@@ -1528,7 +1590,7 @@
       .nav-dropdown:hover .dropdown-arrow,
       .nav-dropdown.active .dropdown-arrow {
         transform: rotate(180deg);
-      }
+      } */
     </style>
   </head>
 
@@ -1559,7 +1621,7 @@
               <a href="sports-performance.html"> Sports Performance </a>
               <a href="neuro-rehabilitation.html"> Neuro Rehabilitation </a>
               <a href="exercise-prescription.html"> Exercise Prescription </a>
-              <a href="matrix-rhythm.html"> Matrix Rhythm </a>
+              <!-- <a href="matrix-rhythm.html"> Matrix Rhythm </a> -->
             </div>
           </div>
 
@@ -1846,7 +1908,7 @@
                     Exercise Prescription
                   </option>
 
-                  <option value="Matrix Rhythm">Matrix Rhythm</option>
+                  <!-- <option value="Matrix Rhythm">Matrix Rhythm</option> -->
                 </select>
               </div>
 
@@ -1971,7 +2033,7 @@
 
           <a href="exercise-prescription.html"> Exercise Prescription </a>
 
-          <a href="matrix-rhythm.html"> Matrix Rhythm </a>
+          <!-- <a href="matrix-rhythm.html"> Matrix Rhythm </a> -->
         </div>
 
         <!-- COMPANY -->
