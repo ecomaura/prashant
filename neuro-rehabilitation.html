@@ -647,163 +647,151 @@
         color: #000;
       }
 
-      /* =========================
-       FOOTER
-    ========================= */
-
       /* =====================================================
    STANDARD FOOTER
 ===================================================== */
 
-.footer {
-  padding: 70px 0 25px;
-  background: #050505;
-  border-top: 1px solid rgba(255, 212, 0, 0.18);
-}
+      .footer {
+        padding: 70px 0 25px;
+        background: #050505;
+        border-top: 1px solid rgba(255, 212, 0, 0.18);
+      }
 
-.footer-inner {
-  width: min(1250px, 90%);
-  margin: auto;
+      .footer-inner {
+        width: min(1250px, 90%);
+        margin: auto;
 
-  display: grid;
-  grid-template-columns: 1.5fr 1fr 1fr 1.15fr 1fr;
-  gap: 40px;
+        display: grid;
+        grid-template-columns: 1.5fr 1fr 1fr 1.15fr 1fr;
+        gap: 40px;
 
-  padding-bottom: 55px;
-}
+        padding-bottom: 55px;
+      }
 
-.footer-brand {
-  min-width: 0;
-}
+      .footer-brand {
+        min-width: 0;
+      }
 
-.footer-logo {
-  margin-bottom: 22px;
-}
+      .footer-logo {
+        margin-bottom: 22px;
+      }
 
-.footer-logo img {
-  width: 210px;
-  height: auto;
-  display: block;
-}
+      .footer-logo img {
+        width: 210px;
+        height: auto;
+        display: block;
+      }
 
-.footer-brand > p {
-  max-width: 340px;
-  color: #888;
-  font-size: 14px;
-  line-height: 1.8;
-}
+      .footer-brand > p {
+        max-width: 340px;
+        color: #888;
+        font-size: 14px;
+        line-height: 1.8;
+      }
 
-.footer-column {
-  display: flex;
-  flex-direction: column;
-  gap: 13px;
-}
+      .footer-column {
+        display: flex;
+        flex-direction: column;
+        gap: 13px;
+      }
 
-.footer-column h4 {
-  margin: 0 0 12px;
-  color: #fff;
-  font-family: "Montserrat", sans-serif;
-  font-size: 20px;
-  letter-spacing: 2px;
-}
+      .footer-column h4 {
+        margin: 0 0 12px;
+        color: #fff;
+        font-family: "Montserrat", sans-serif;
+        font-size: 20px;
+        letter-spacing: 2px;
+      }
 
-.footer-column a,
-.footer-column p {
-  margin: 0;
-  color: #888;
-  font-size: 13px;
-  line-height: 1.7;
-  text-decoration: none;
-  transition: color 0.25s ease;
-}
+      .footer-column a,
+      .footer-column p {
+        margin: 0;
+        color: #888;
+        font-size: 13px;
+        line-height: 1.7;
+        text-decoration: none;
+        transition: color 0.25s ease;
+      }
 
-.footer-column a:hover {
-  color: var(--yellow);
-}
+      .footer-column a:hover {
+        color: var(--yellow);
+      }
 
+      /* SOCIAL MEDIA */
 
-/* SOCIAL MEDIA */
+      .footer-social a {
+        width: 160px;
 
-.footer-social a {
-  width: 160px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
 
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+        padding: 10px 0;
 
-  padding: 10px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      }
 
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-}
+      .footer-social a:first-of-type {
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+      }
 
-.footer-social a:first-of-type {
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
-}
+      .footer-social a span:last-child {
+        color: var(--yellow);
+      }
 
-.footer-social a span:last-child {
-  color: var(--yellow);
-}
+      /* FOOTER BOTTOM */
 
+      .footer-bottom {
+        width: min(1250px, 90%);
+        margin: auto;
 
-/* FOOTER BOTTOM */
+        padding-top: 25px;
 
-.footer-bottom {
-  width: min(1250px, 90%);
-  margin: auto;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
 
-  padding-top: 25px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
 
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+        gap: 20px;
 
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+        color: #666;
+        font-size: 11px;
+      }
 
-  gap: 20px;
+      /* TABLET */
 
-  color: #666;
-  font-size: 11px;
-}
+      @media (max-width: 1100px) {
+        .footer-inner {
+          grid-template-columns: 1.5fr 1fr 1fr;
+          gap: 40px 30px;
+        }
+      }
 
+      /* MOBILE */
 
-/* TABLET */
+      @media (max-width: 600px) {
+        .footer {
+          padding: 50px 0 20px;
+        }
 
-@media (max-width: 1100px) {
+        .footer-inner {
+          width: 88%;
+          grid-template-columns: 1fr;
+          gap: 38px;
+        }
 
-  .footer-inner {
-    grid-template-columns: 1.5fr 1fr 1fr;
-    gap: 40px 30px;
-  }
+        .footer-logo img {
+          width: 190px;
+        }
 
-}
-
-
-/* MOBILE */
-
-@media (max-width: 600px) {
-
-  .footer {
-    padding: 50px 0 20px;
-  }
-
-  .footer-inner {
-    width: 88%;
-    grid-template-columns: 1fr;
-    gap: 38px;
-  }
-
-  .footer-logo img {
-    width: 190px;
-  }
-
-  .footer-bottom {
-    width: 88%;
-    flex-direction: column;
-    text-align: center;
-    gap: 8px;
-  }
-
-}
+        .footer-bottom {
+          width: 88%;
+          flex-direction: column;
+          text-align: center;
+          gap: 8px;
+        }
+      }
 
       @media (max-width: 600px) {
         .nav-container {
@@ -858,6 +846,572 @@
 
         .cta {
           padding: 70px 0;
+        }
+      }
+    </style>
+
+    <style id="responsive-final-fix">
+      /* =========================================================
+   FINAL RESPONSIVE FIX — NEURO REHABILITATION
+   ========================================================= */
+
+      html,
+      body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden !important;
+      }
+
+      img {
+        max-width: 100%;
+      }
+
+      /* Keep header consistent with the actual markup used on this page */
+      #header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 9999;
+        background: rgba(5, 5, 5, 0.97);
+        border-bottom: 1px solid rgba(255, 212, 0, 0.16);
+      }
+
+      #header .nav-container {
+        width: min(1200px, 90%);
+        min-height: 88px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      #header .logo {
+        width: 175px;
+        flex: 0 0 auto;
+      }
+
+      #header .logo img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      #header .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 32px;
+      }
+
+      #header .nav-links > a,
+      #header .nav-link,
+      #header .nav-dropdown-toggle {
+        color: #fff;
+        font-family: "Inter", sans-serif;
+        font-size: 14px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        text-decoration: none;
+      }
+
+      #header .nav-dropdown {
+        position: relative;
+      }
+
+      #header .nav-dropdown-toggle {
+        background: transparent;
+        border: 0;
+        padding: 0;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 7px;
+      }
+
+      #header .dropdown-arrow {
+        font-size: 10px;
+        transition: transform 0.25s ease;
+      }
+
+      #header .nav-dropdown-menu {
+        position: absolute;
+        top: calc(100% + 26px);
+        left: 50%;
+        transform: translateX(-50%);
+        width: 280px;
+        background: #111;
+        border: 1px solid rgba(255, 212, 0, 0.3);
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transition:
+          opacity 0.25s ease,
+          visibility 0.25s ease;
+        z-index: 10000;
+      }
+
+      #header .nav-dropdown:hover .nav-dropdown-menu,
+      #header .nav-dropdown.open .nav-dropdown-menu {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+      }
+
+      #header .nav-dropdown-menu a {
+        display: block;
+        padding: 14px 20px;
+        color: #ddd;
+        font-size: 13px;
+        text-transform: uppercase;
+      }
+
+      #header .nav-dropdown-menu a:hover {
+        color: var(--yellow);
+        background: rgba(255, 212, 0, 0.05);
+      }
+
+      #header .hamburger {
+        display: none;
+        width: 42px;
+        height: 42px;
+        padding: 7px;
+        border: 1px solid rgba(255, 255, 255, 0.35);
+        cursor: pointer;
+        flex: 0 0 auto;
+        background: transparent;
+      }
+
+      #header .hamburger span {
+        display: block;
+        width: 100%;
+        height: 3px;
+        margin: 5px 0;
+        background: #fff;
+        transition:
+          transform 0.25s ease,
+          opacity 0.25s ease;
+      }
+
+      #header .hamburger.active span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+      }
+      #header .hamburger.active span:nth-child(2) {
+        opacity: 0;
+      }
+      #header .hamburger.active span:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+      }
+
+      /* Tablet */
+      @media (max-width: 900px) {
+        #header .nav-container {
+          width: 92%;
+        }
+
+        #header .nav-links {
+          gap: 20px;
+        }
+
+        #header .nav-links > a,
+        #header .nav-link,
+        #header .nav-dropdown-toggle {
+          font-size: 13px;
+        }
+      }
+
+      /* =========================================================
+   MOBILE
+   ========================================================= */
+      @media (max-width: 768px) {
+        #header .nav-container {
+          width: 90%;
+          min-height: 76px;
+        }
+
+        #header .logo {
+          width: 145px;
+        }
+
+        #header .hamburger {
+          display: block !important;
+        }
+
+        #header .nav-links {
+          position: absolute;
+          top: 76px;
+          left: 0;
+          width: 100%;
+          max-height: calc(100vh - 76px);
+          overflow-y: auto;
+          display: none !important;
+          flex-direction: column;
+          align-items: stretch;
+          gap: 0;
+          padding: 12px 6%;
+          background: rgba(5, 5, 5, 0.99);
+          border-top: 1px solid rgba(255, 212, 0, 0.14);
+          border-bottom: 1px solid rgba(255, 212, 0, 0.22);
+        }
+
+        #header .nav-links.mobile-open {
+          display: flex !important;
+        }
+
+        #header .nav-links > a,
+        #header .nav-link,
+        #header .nav-dropdown-toggle {
+          width: 100%;
+          min-height: 52px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 14px 0;
+          font-size: 14px;
+        }
+
+        #header .nav-dropdown {
+          width: 100%;
+        }
+
+        #header .nav-dropdown-toggle {
+          border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        #header .nav-dropdown-menu,
+        #header .nav-dropdown:hover .nav-dropdown-menu {
+          position: static;
+          width: 100%;
+          transform: none;
+          margin: 0;
+          padding: 0 0 8px;
+          background: #0d0d0d;
+          border: 0;
+          border-left: 2px solid var(--yellow);
+          opacity: 1;
+          visibility: hidden;
+          pointer-events: none;
+          display: none;
+        }
+
+        #header .nav-dropdown.open .nav-dropdown-menu {
+          display: block;
+          visibility: visible;
+          pointer-events: auto;
+        }
+
+        #header .nav-dropdown-menu a {
+          min-height: 46px;
+          display: flex;
+          align-items: center;
+          padding: 12px 16px;
+          font-size: 12px;
+        }
+
+        #header .nav-dropdown.open .dropdown-arrow {
+          transform: rotate(180deg);
+        }
+
+        #header .nav-btn {
+          width: 100%;
+          min-height: 54px;
+          justify-content: center !important;
+          margin: 10px 0 6px;
+          padding: 15px 20px !important;
+        }
+
+        /* Prevent the fixed header from covering hero content */
+        .hero {
+          min-height: auto !important;
+          padding-top: 140px !important;
+          padding-bottom: 75px !important;
+          background-position: 62% center !important;
+        }
+
+        .hero > .container,
+        .hero-content {
+          width: 100% !important;
+          max-width: 100% !important;
+        }
+
+        .eyebrow {
+          font-size: 11px !important;
+          line-height: 1.5 !important;
+          letter-spacing: 3px !important;
+          margin-bottom: 16px !important;
+        }
+
+        .hero h1 {
+          font-size: clamp(42px, 13vw, 64px) !important;
+          line-height: 0.98 !important;
+          overflow-wrap: wrap;
+          word-break: normal;
+          margin-bottom: 25px !important;
+        }
+
+        .hero p {
+          max-width: 100% !important;
+          font-size: 17px !important;
+          line-height: 1.7 !important;
+          margin-bottom: 28px !important;
+        }
+
+        .hero .btn {
+          width: 100%;
+          max-width: 100%;
+          min-height: 68px;
+          padding: 17px 20px !important;
+          text-align: center;
+        }
+
+        /* General sections */
+        .section {
+          padding: 70px 0 !important;
+        }
+
+        .section > .container,
+        .section .container {
+          width: 90% !important;
+          max-width: none !important;
+        }
+
+        .split {
+          grid-template-columns: 1fr !important;
+          gap: 42px !important;
+        }
+
+        h2 {
+          font-size: clamp(32px, 9vw, 48px) !important;
+          line-height: 1.05 !important;
+          overflow-wrap: break-word;
+        }
+
+        .content p,
+        .section-heading p {
+          font-size: 16px !important;
+          line-height: 1.75 !important;
+        }
+
+        .visual img {
+          height: 360px !important;
+          width: 100% !important;
+        }
+
+        .visual::after {
+          right: -8px !important;
+          bottom: -8px !important;
+        }
+
+        /* Approach cards */
+        .section-heading {
+          width: 100% !important;
+          max-width: 100% !important;
+          margin-bottom: 38px !important;
+        }
+
+        .neuro-grid {
+          grid-template-columns: 1fr !important;
+          gap: 16px !important;
+        }
+
+        .neuro-card {
+          min-height: auto !important;
+          padding: 28px 22px !important;
+        }
+
+        .neuro-card h3 {
+          font-size: 19px !important;
+        }
+
+        .neuro-card p {
+          font-size: 15px !important;
+          line-height: 1.65 !important;
+        }
+
+        /* Focus areas */
+        .areas {
+          grid-template-columns: 1fr !important;
+          gap: 12px !important;
+          margin-top: 30px !important;
+        }
+
+        .area {
+          width: 100% !important;
+          min-width: 0 !important;
+          padding: 17px 18px !important;
+          gap: 13px !important;
+        }
+
+        .area span {
+          min-width: 0;
+          font-size: 15px;
+          line-height: 1.5;
+        }
+
+        /* Process — stack each item cleanly, no horizontal overflow */
+        .process {
+          display: flex !important;
+          flex-direction: column !important;
+          gap: 30px !important;
+          margin-top: 35px !important;
+        }
+
+        .process-step {
+          width: 100% !important;
+          min-width: 0 !important;
+          display: grid !important;
+          grid-template-columns: 64px minmax(0, 1fr) !important;
+          column-gap: 18px !important;
+          align-items: start !important;
+          text-align: left !important;
+        }
+
+        .circle {
+          width: 58px !important;
+          height: 58px !important;
+          margin: 0 !important;
+          grid-row: 1 / span 2 !important;
+        }
+
+        .process-step h3 {
+          margin: 2px 0 7px !important;
+          font-size: 19px !important;
+        }
+
+        .process-step p {
+          min-width: 0 !important;
+          margin: 0 !important;
+          font-size: 15px !important;
+          line-height: 1.65 !important;
+        }
+
+        .process-step:not(:last-child)::after {
+          display: none !important;
+        }
+
+        /* CTA — fix the severe mobile flex/width issue shown in screenshot */
+        .cta {
+          padding: 70px 0 !important;
+        }
+
+        .cta-inner {
+          display: flex !important;
+          flex-direction: column !important;
+          align-items: flex-start !important;
+          justify-content: flex-start !important;
+          gap: 28px !important;
+        }
+
+        .cta-inner > div {
+          width: 100% !important;
+          min-width: 0 !important;
+        }
+
+        .cta h2 {
+          font-size: clamp(42px, 12vw, 58px) !important;
+          line-height: 1.02 !important;
+          margin-bottom: 16px !important;
+        }
+
+        .cta p {
+          max-width: 100% !important;
+          font-size: 17px !important;
+          line-height: 1.7 !important;
+        }
+
+        .cta .btn {
+          width: 100% !important;
+          max-width: 100% !important;
+          white-space: normal !important;
+          min-height: 64px;
+          padding: 17px 20px !important;
+        }
+
+        /* Footer */
+        .footer-inner {
+          width: 90% !important;
+          grid-template-columns: 1fr !important;
+        }
+
+        .footer-bottom {
+          width: 90% !important;
+          flex-direction: column !important;
+          text-align: center !important;
+        }
+      }
+
+      /* Smaller phones */
+      @media (max-width: 480px) {
+        #header .nav-container {
+          min-height: 70px;
+        }
+
+        #header .nav-links {
+          top: 70px;
+        }
+
+        #header .logo {
+          width: 138px;
+        }
+
+        #header .hamburger {
+          width: 40px;
+          height: 40px;
+        }
+
+        .hero {
+          padding-top: 112px !important;
+          padding-bottom: 30px !important;
+        }
+
+        .hero h1 {
+          font-size: 30px !important;
+        }
+
+        .hero p {
+          font-size: 16px !important;
+        }
+
+        .section {
+          padding: 58px 0 !important;
+        }
+
+        .section-heading {
+          margin-bottom: 32px !important;
+        }
+
+        h2 {
+          font-size: 34px !important;
+        }
+
+        .visual img {
+          height: 300px !important;
+        }
+
+        .process-step {
+          grid-template-columns: 58px minmax(0, 1fr) !important;
+          column-gap: 14px !important;
+        }
+
+        .circle {
+          width: 54px !important;
+          height: 54px !important;
+        }
+
+        .process-step h3 {
+          font-size: 18px !important;
+        }
+
+        .process-step p {
+          font-size: 14px !important;
+        }
+
+        .cta {
+          padding: 58px 0 !important;
+        }
+
+        .cta h2 {
+          font-size: 42px !important;
         }
       }
     </style>
@@ -964,10 +1518,7 @@
         </div>
 
         <div class="visual">
-          <img
-            src="images/neuro-rehabilitation.jpg"
-            alt="Neuro Rehabilitation"
-          />
+          <img src="./assets/images/neuro.jpg" alt="Neuro Rehabilitation" />
         </div>
       </div>
     </section>
@@ -1193,166 +1744,193 @@
       </div>
     </section>
 
-   
-
-    
     <!-- FOOTER -->
-<footer class="footer">
+    <footer class="footer">
+      <div class="footer-inner">
+        <!-- BRAND -->
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <img
+              src="https://raw.githubusercontent.com/ecomaura/prashant/refs/heads/main/74035.jpg"
+              alt="Present Biomechanics"
+            />
+          </div>
 
-  <div class="footer-inner">
+          <p>
+            Clinical physiotherapy, sports performance, neuro biomechanics and
+            exercise prescription designed around movement.
+          </p>
+        </div>
 
-    <!-- BRAND -->
-    <div class="footer-brand">
+        <!-- SERVICES -->
+        <div class="footer-column">
+          <h4>SERVICES</h4>
 
-      <div class="footer-logo">
-        <img
-          src="https://raw.githubusercontent.com/ecomaura/prashant/refs/heads/main/74035.jpg"
-          alt="Present Biomechanics"
-        />
-      </div>
+          <a href="clinical-physiotherapy.html"> Clinical Physiotherapy </a>
 
-      <p>
-        Clinical physiotherapy, sports performance, neuro biomechanics and
-        exercise prescription designed around movement.
-      </p>
+          <a href="sports-performance.html"> Sports Performance </a>
 
-    </div>
+          <a href="neuro-rehabilitation.html"> Neuro Rehabilitation </a>
 
+          <a href="exercise-prescription.html"> Exercise Prescription </a>
 
-    <!-- SERVICES -->
-    <div class="footer-column">
-
-      <h4>SERVICES</h4>
-
-      <a href="clinical-physiotherapy.html">
-        Clinical Physiotherapy
-      </a>
-
-      <a href="sports-performance.html">
-        Sports Performance
-      </a>
-
-      <a href="neuro-rehabilitation.html">
-        Neuro Rehabilitation
-      </a>
-
-      <a href="exercise-prescription.html">
-        Exercise Prescription
-      </a>
-
-      <!-- <a href="matrix-rhythm.html">
+          <!-- <a href="matrix-rhythm.html">
         Matrix Rhythm
       </a> -->
+        </div>
 
-    </div>
+        <!-- COMPANY -->
+        <div class="footer-column">
+          <h4>COMPANY</h4>
 
+          <a href="about.html"> About Us </a>
 
-    <!-- COMPANY -->
-    <div class="footer-column">
+          <a href="about.html#methodology"> Methodology </a>
 
-      <h4>COMPANY</h4>
+          <a href="contact.html"> Location </a>
 
-      <a href="about.html">
-        About Us
-      </a>
+          <a href="contact.html"> Book Assessment </a>
 
-      <a href="about.html#methodology">
-        Methodology
-      </a>
+          <a href="media.html"> Media </a>
+        </div>
 
-      <a href="contact.html">
-        Location
-      </a>
+        <!-- CONTACT -->
+        <div class="footer-column">
+          <h4>CONTACT</h4>
 
-      <a href="contact.html">
-        Book Assessment
-      </a>
+          <a href="tel:+918208379366"> +91 82083 79366 </a>
 
-      <a href="media.html">
-        Media
-      </a>
+          <a href="mailto:hello@presentbiomechanics.com">
+            hello@presentbiomechanics.com
+          </a>
 
-    </div>
+          <p>
+            1301, UK Residency,<br />
+            Kandivali East,<br />
+            Lokhandwala, Mumbai
+          </p>
+        </div>
 
+        <!-- SOCIAL MEDIA -->
+        <div class="footer-column footer-social">
+          <h4>FOLLOW US</h4>
 
-    <!-- CONTACT -->
-    <div class="footer-column">
+          <a
+            href="https://www.instagram.com/prashantbiomechanic/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span>Instagram</span>
+            <span>↗</span>
+          </a>
 
-      <h4>CONTACT</h4>
+          <a
+            href="https://www.linkedin.com/in/prashant-mistry-fitness-trainer/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span>LinkedIn</span>
+            <span>↗</span>
+          </a>
 
-      <a href="tel:+918208379366">
-        +91 82083 79366
-      </a>
+          <a
+            href="https://youtube.com/@prashantbiomechanics"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span>YouTube</span>
+            <span>↗</span>
+          </a>
+        </div>
+      </div>
 
-      <a href="mailto:hello@presentbiomechanics.com">
-        hello@presentbiomechanics.com
-      </a>
+      <!-- FOOTER BOTTOM -->
+      <div class="footer-bottom">
+        <span>
+          © <span id="year"></span>
+          Present Biomechanics. All Rights Reserved.
+        </span>
 
-      <p>
-        1301, UK Residency,<br />
-        Kandivali East,<br />
-        Lokhandwala, Mumbai
-      </p>
-
-    </div>
-
-
-    <!-- SOCIAL MEDIA -->
-    <div class="footer-column footer-social">
-
-      <h4>FOLLOW US</h4>
-
-      <a
-        href="https://www.instagram.com/prashantbiomechanic/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <span>Instagram</span>
-        <span>↗</span>
-      </a>
-
-      <a
-        href="https://www.linkedin.com/in/prashant-mistry-fitness-trainer/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <span>LinkedIn</span>
-        <span>↗</span>
-      </a>
-
-      <a
-        href="https://youtube.com/@prashantbiomechanics"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <span>YouTube</span>
-        <span>↗</span>
-      </a>
-
-    </div>
-
-  </div>
-
-
-  <!-- FOOTER BOTTOM -->
-  <div class="footer-bottom">
-
-    <span>
-      © <span id="year"></span>
-      Present Biomechanics. All Rights Reserved.
-    </span>
-
-    <span>
-      Movement • Rehabilitation • Performance
-    </span>
-
-  </div>
-
-</footer>
+        <span> Movement • Rehabilitation • Performance </span>
+      </div>
+    </footer>
 
     <script></script>
 
     <!-- js file -->
     <script src="main.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const hamburger = document.getElementById("hamburger");
+        const nav = document.querySelector("#header .nav-links");
+        const serviceDropdown = document.querySelector("#header .nav-dropdown");
+        const serviceToggle = document.querySelector(
+          "#header .nav-dropdown-toggle",
+        );
+
+        if (!hamburger || !nav) return;
+
+        hamburger.setAttribute("role", "button");
+        hamburger.setAttribute("aria-label", "Toggle navigation");
+        hamburger.setAttribute("aria-expanded", "false");
+
+        hamburger.addEventListener("click", function (e) {
+          e.stopPropagation();
+          const open = nav.classList.toggle("mobile-open");
+          hamburger.classList.toggle("active", open);
+          hamburger.setAttribute("aria-expanded", String(open));
+
+          if (!open && serviceDropdown) {
+            serviceDropdown.classList.remove("open");
+          }
+        });
+
+        if (serviceToggle && serviceDropdown) {
+          serviceToggle.addEventListener("click", function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            if (window.innerWidth <= 768) {
+              serviceDropdown.classList.toggle("open");
+            }
+          });
+        }
+
+        nav.querySelectorAll("a").forEach(function (link) {
+          link.addEventListener("click", function () {
+            if (window.innerWidth <= 768) {
+              nav.classList.remove("mobile-open");
+              hamburger.classList.remove("active");
+              hamburger.setAttribute("aria-expanded", "false");
+              if (serviceDropdown) serviceDropdown.classList.remove("open");
+            }
+          });
+        });
+
+        document.addEventListener("click", function (e) {
+          if (
+            window.innerWidth <= 768 &&
+            nav.classList.contains("mobile-open") &&
+            !nav.contains(e.target) &&
+            !hamburger.contains(e.target)
+          ) {
+            nav.classList.remove("mobile-open");
+            hamburger.classList.remove("active");
+            hamburger.setAttribute("aria-expanded", "false");
+            if (serviceDropdown) serviceDropdown.classList.remove("open");
+          }
+        });
+
+        window.addEventListener("resize", function () {
+          if (window.innerWidth > 768) {
+            nav.classList.remove("mobile-open");
+            hamburger.classList.remove("active");
+            hamburger.setAttribute("aria-expanded", "false");
+            if (serviceDropdown) serviceDropdown.classList.remove("open");
+          }
+        });
+      });
+    </script>
   </body>
 </html>

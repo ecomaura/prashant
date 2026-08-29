@@ -702,7 +702,7 @@
 
 }
 
-      @media (max-width: 600px) {
+      /* @media (max-width: 600px) {
         .nav-container {
           min-height: 75px;
         }
@@ -755,7 +755,7 @@
         .cta {
           padding: 70px 0;
         }
-      }
+      } */
 
       /* =========================================
    MOBILE NAVBAR FIX
@@ -978,6 +978,488 @@
     overflow: hidden;
   }
 }
+
+/* =========================================
+   HERO + INTRO RESPONSIVE FIX
+========================================= */
+
+/* Prevent hero/intro horizontal overflow */
+.hero,
+.section {
+  width: 100%;
+  overflow: hidden;
+}
+
+.hero-content,
+.split,
+.content,
+.visual {
+  min-width: 0;
+}
+
+/* -------------------------
+   TABLET / MOBILE
+------------------------- */
+@media (max-width: 768px) {
+
+  /* HERO */
+  .hero {
+    min-height: 560px;
+    padding-top: 120px;
+    padding-bottom: 70px;
+    display: flex;
+    align-items: center;
+
+    background:
+      linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 0.94) 0%,
+        rgba(0, 0, 0, 0.78) 60%,
+        rgba(0, 0, 0, 0.55) 100%
+      ),
+      url("images/sports-performance.jpg") center / cover no-repeat;
+  }
+
+  .hero .container {
+    width: 88%;
+  }
+
+  .hero-content {
+    width: 100%;
+    max-width: 650px;
+  }
+
+  .eyebrow {
+    font-size: 11px;
+    letter-spacing: 2.5px;
+    margin-bottom: 15px;
+  }
+
+  .hero h1 {
+    font-size: clamp(42px, 11vw, 64px);
+    line-height: 0.95;
+    margin-bottom: 22px;
+    letter-spacing: -1px;
+  }
+
+  .hero p {
+    max-width: 100%;
+    font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 28px;
+  }
+
+  .hero .btn {
+    width: auto;
+    max-width: 100%;
+    padding: 15px 22px;
+    font-size: 12px;
+  }
+
+
+  /* -------------------------
+     INTRO
+  ------------------------- */
+
+  .section {
+    padding: 70px 0;
+  }
+
+  .split {
+    width: 88%;
+    grid-template-columns: 1fr;
+    gap: 55px;
+    align-items: start;
+  }
+
+  .content {
+    width: 100%;
+  }
+
+  .label {
+    font-size: 11px;
+    letter-spacing: 2.5px;
+    margin-bottom: 15px;
+  }
+
+  .content h2 {
+    font-size: clamp(36px, 9vw, 52px);
+    line-height: 1;
+    margin-bottom: 25px;
+    letter-spacing: -0.5px;
+  }
+
+  .content p {
+    font-size: 15px;
+    line-height: 1.75;
+    margin-bottom: 18px;
+  }
+
+  /* INTRO IMAGE */
+  .visual {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+  }
+
+  .visual img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: 380px;
+    object-fit: cover;
+  }
+
+  .visual::after {
+    right: -10px;
+    bottom: -10px;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+
+/* -------------------------
+   SMALL MOBILE
+------------------------- */
+@media (max-width: 480px) {
+
+  .hero {
+    min-height: 520px;
+    padding-top: 105px;
+    padding-bottom: 60px;
+  }
+
+  .hero .container {
+    width: 88%;
+  }
+
+  .eyebrow {
+    font-size: 10px;
+    letter-spacing: 2px;
+    margin-bottom: 13px;
+  }
+
+  .hero h1 {
+    font-size: 44px;
+    line-height: 0.95;
+    margin-bottom: 20px;
+  }
+
+  .hero p {
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 25px;
+  }
+
+  .hero .btn {
+    width: 100%;
+    padding: 16px 18px;
+    font-size: 11px;
+  }
+
+
+  /* INTRO */
+  .section {
+    padding: 65px 0;
+  }
+
+  .split {
+    width: 88%;
+    gap: 45px;
+  }
+
+  .content h2 {
+    font-size: 38px;
+    line-height: 1;
+  }
+
+  .content p {
+    font-size: 14px;
+    line-height: 1.75;
+  }
+
+  .visual img {
+    height: 300px;
+  }
+
+  .visual::after {
+    right: -7px;
+    bottom: -7px;
+  }
+}
+
+
+/* =========================================
+   REST OF PAGE - RESPONSIVE FIX
+   Hero + Intro remain unchanged
+========================================= */
+
+@media (max-width: 768px) {
+
+  /* ---------------------------------
+     GENERAL SECTIONS
+  --------------------------------- */
+
+  .section {
+    padding: 70px 0;
+  }
+
+  .section > .container {
+    width: 88%;
+  }
+
+
+  /* ---------------------------------
+     PERFORMANCE SYSTEM
+  --------------------------------- */
+
+  .section-heading {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  .section-heading h2 {
+    font-size: clamp(34px, 9vw, 48px);
+    line-height: 1.05;
+  }
+
+  .section-heading p {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .performance-grid {
+    width: 100%;
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .performance-card {
+    min-height: auto;
+    padding: 30px 24px;
+  }
+
+  .performance-card h3 {
+    font-size: 20px;
+  }
+
+  .performance-card p {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+
+  /* ---------------------------------
+     PERFORMANCE AREAS
+  --------------------------------- */
+
+  .areas {
+    width: 100%;
+    grid-template-columns: 1fr;
+    gap: 14px;
+    margin-top: 35px;
+  }
+
+  .area {
+    width: 100%;
+    padding: 18px 20px;
+    gap: 14px;
+  }
+
+  .area span {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+
+  /* ---------------------------------
+     PROCESS
+  --------------------------------- */
+
+  .process {
+    width: 100%;
+    grid-template-columns: 1fr;
+    gap: 38px;
+    margin-top: 40px;
+  }
+
+  .process-step {
+    text-align: left;
+    width: 100%;
+  }
+
+  .process-step:not(:last-child)::after {
+    display: none;
+  }
+
+  .circle {
+    margin: 0 0 16px;
+    width: 55px;
+    height: 55px;
+  }
+
+  .process-step h3 {
+    font-size: 17px;
+    margin-bottom: 7px;
+  }
+
+  .process-step p {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+
+  /* ---------------------------------
+     CTA
+  --------------------------------- */
+
+  .cta {
+    padding: 65px 0;
+  }
+
+  .cta-inner {
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+  }
+
+  .cta h2 {
+    font-size: clamp(34px, 9vw, 48px);
+    line-height: 1.05;
+  }
+
+  .cta p {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .cta .btn {
+    width: 100%;
+    white-space: normal;
+    text-align: center;
+  }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+
+  .section {
+    padding: 60px 0;
+  }
+
+  .section > .container {
+    width: 88%;
+  }
+
+
+  /* PERFORMANCE SYSTEM */
+
+  .section-heading {
+    margin-bottom: 32px;
+  }
+
+  .section-heading h2 {
+    font-size: 36px;
+  }
+
+  .section-heading p {
+    font-size: 14px;
+  }
+
+  .performance-grid {
+    gap: 14px;
+  }
+
+  .performance-card {
+    padding: 26px 20px;
+  }
+
+  .number {
+    font-size: 13px;
+    margin-bottom: 18px;
+  }
+
+  .performance-card h3 {
+    font-size: 18px;
+    line-height: 1.2;
+  }
+
+  .performance-card p {
+    font-size: 14px;
+  }
+
+
+  /* PERFORMANCE AREAS */
+
+  .areas {
+    margin-top: 30px;
+    gap: 12px;
+  }
+
+  .area {
+    padding: 17px 16px;
+  }
+
+  .area-icon {
+    width: 26px;
+    height: 26px;
+    flex: 0 0 26px;
+  }
+
+  .area span {
+    font-size: 13px;
+  }
+
+
+  /* PROCESS */
+
+  .process {
+    gap: 32px;
+    margin-top: 35px;
+  }
+
+  .circle {
+    width: 52px;
+    height: 52px;
+    margin-bottom: 14px;
+  }
+
+  .process-step h3 {
+    font-size: 16px;
+  }
+
+  .process-step p {
+    font-size: 13px;
+  }
+
+
+  /* CTA */
+
+  .cta {
+    padding: 55px 0;
+  }
+
+  .cta h2 {
+    font-size: 36px;
+  }
+
+  .cta p {
+    font-size: 14px;
+  }
+
+  .cta .btn {
+    padding: 16px 18px;
+    font-size: 12px;
+  }
+}
     </style>
   </head>
 
@@ -1083,7 +1565,7 @@
 
         <div class="visual">
           <img
-            src="images/sports-performance.jpg"
+            src="./assets/images/sports-performance.jpg"
             alt="Sports Performance Training"
           />
         </div>

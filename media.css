@@ -239,7 +239,7 @@ button {
 ========================================= */
 
 .media-hero {
-  min-height: 390px;
+  min-height: 500px !important;
 
   display: flex;
   align-items: center;
