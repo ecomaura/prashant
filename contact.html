@@ -1591,6 +1591,57 @@
       .nav-dropdown.active .dropdown-arrow {
         transform: rotate(180deg);
       } */
+
+      /* =========================================
+   MOBILE FORM WIDTH FIX
+========================================= */
+
+.form-group {
+  min-width: 0;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+/* Fix native date input overflow on mobile */
+.form-group input[type="date"] {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+/* Extra protection for small screens */
+@media (max-width: 600px) {
+  .contact-form-wrapper {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+
+  .form-grid,
+  .form-group {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+}
     </style>
   </head>
 
