@@ -1510,3 +1510,21 @@ footer {
     margin-top: 3rem;
   }
 }
+
+/* =========================================
+   NAVBAR — SERVICES UPPERCASE
+========================================= */
+
+.nav-links .nav-dropdown-toggle {
+  text-transform: uppercase !important;
+}
+
+/* =========================================
+   MOBILE NAVBAR — SERVICES UPPERCASE
+========================================= */
+
+@media (max-width: 900px) {
+  .nav-links .nav-dropdown-toggle {
+    text-transform: uppercase !important;
+  }
+}
