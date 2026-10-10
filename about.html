@@ -554,8 +554,6 @@
         }
       }
 
-
-
       /* =========================
    FOOTER - FINAL
 ========================= */
@@ -728,6 +726,305 @@
           margin-top: 3rem;
         }
       }
+
+      /* ABOUT PRASHANT SIR */
+      .prashant-profile-section {
+        padding: 7rem 0;
+        background: #0b0b0b;
+        color: #ffffff;
+      }
+
+      .prashant-profile-grid {
+        width: min(1250px, 90%);
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 0.85fr 1.15fr;
+        gap: 5rem;
+        align-items: center;
+      }
+
+      .prashant-profile-image {
+        position: relative;
+        max-width: 460px;
+        width: 100%;
+        margin: 0 auto;
+      }
+
+      .prashant-profile-image::before {
+        content: "";
+        position: absolute;
+        top: 18px;
+        left: 18px;
+        right: -18px;
+        bottom: -18px;
+        border: 1px solid var(--yellow, #ffd400);
+        z-index: 0;
+      }
+
+      .prashant-profile-image img {
+        display: block;
+        position: relative;
+        z-index: 1;
+        width: 100%;
+        height: 560px;
+        object-fit: cover;
+        object-position: center top;
+        background: #151515;
+      }
+
+      .prashant-profile-content {
+        min-width: 0;
+      }
+
+      .prashant-profile-content .section-label {
+        margin-bottom: 1.25rem;
+      }
+
+      .prashant-profile-content h2 {
+        margin: 0 0 2rem;
+        font-size: clamp(2.5rem, 5vw, 4.5rem);
+        line-height: 1.05;
+        letter-spacing: -1.5px;
+        text-transform: uppercase;
+      }
+
+      .prashant-profile-content h2 span {
+        color: var(--yellow, #ffd400);
+      }
+
+      .prashant-profile-content p {
+        margin: 0 0 1.25rem;
+        color: #bdbdbd;
+        font-size: 1rem;
+        line-height: 1.9;
+      }
+
+      .prashant-profile-content .profile-approach-label {
+        margin-top: 1.75rem;
+        margin-bottom: 0.75rem;
+        color: #ffffff;
+        font-weight: 600;
+      }
+
+      .prashant-profile-approach {
+        padding: 1.1rem 1.25rem;
+        margin: 0 0 1.5rem;
+        border-left: 3px solid var(--yellow, #ffd400);
+        background: #151515;
+        color: #ffffff;
+        font-weight: 600;
+        line-height: 1.8;
+      }
+
+      .prashant-profile-tagline {
+        padding-top: 0.5rem;
+        color: var(--yellow, #ffd400) !important;
+        font-weight: 700;
+        font-size: 1.05rem !important;
+      }
+
+      /* RESPONSIVE */
+      @media (max-width: 900px) {
+        .prashant-profile-grid {
+          grid-template-columns: 0.8fr 1.2fr;
+          gap: 3rem;
+        }
+
+        .prashant-profile-image img {
+          height: 480px;
+        }
+      }
+
+      @media (max-width: 650px) {
+        .prashant-profile-section {
+          padding: 5rem 0;
+        }
+
+        .prashant-profile-grid {
+          grid-template-columns: 1fr;
+          gap: 3rem;
+        }
+
+        .prashant-profile-image {
+          max-width: 380px;
+        }
+
+        .prashant-profile-image::before {
+          top: 12px;
+          left: 12px;
+          right: -12px;
+          bottom: -12px;
+        }
+
+        .prashant-profile-image img {
+          height: auto;
+          aspect-ratio: 4 / 5;
+          object-position: center top;
+        }
+
+        .prashant-profile-content h2 {
+          font-size: clamp(2.3rem, 10vw, 3.5rem);
+        }
+
+        .prashant-profile-content p {
+          font-size: 0.95rem;
+          line-height: 1.8;
+        }
+
+        .prashant-profile-approach {
+          padding: 1rem;
+        }
+      }
+
+
+/* INSTAGRAM TESTIMONIALS */
+.pb-testimonials {
+  padding: 6rem 0;
+  background: #101010;
+  color: #ffffff;
+}
+
+.pb-testimonials-container {
+  width: min(1250px, 90%);
+  margin: 0 auto;
+}
+
+.pb-testimonials-heading {
+  max-width: 720px;
+  margin: 0 auto 3rem;
+  text-align: center;
+}
+
+.pb-testimonials-heading h2 {
+  margin: 1rem 0;
+  font-size: clamp(2.2rem, 5vw, 3.8rem);
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+.pb-testimonials-heading h2 span {
+  color: var(--yellow, #ffd400);
+}
+
+.pb-testimonials-heading p {
+  color: #bdbdbd;
+  line-height: 1.8;
+}
+
+.pb-testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+  align-items: stretch;
+}
+
+.pb-testimonial-card {
+  min-width: 0;
+  overflow: hidden;
+  background: #181818;
+  border: 1px solid #303030;
+  border-radius: 12px;
+}
+
+.pb-video-frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  max-height: 560px;
+  background: #080808;
+}
+
+.pb-video-frame iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.pb-testimonial-content {
+  padding: 1.5rem;
+}
+
+.pb-content-tag {
+  display: inline-block;
+  margin-bottom: 0.85rem;
+  color: var(--yellow, #ffd400);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.pb-testimonial-content h3 {
+  margin: 0 0 0.75rem;
+  color: #ffffff;
+  font-size: 1.35rem;
+  line-height: 1.4;
+}
+
+.pb-testimonial-content p {
+  margin: 0 0 1.25rem;
+  color: #bdbdbd;
+  font-size: 0.95rem;
+  line-height: 1.8;
+}
+
+.pb-testimonial-content a {
+  display: inline-block;
+  color: var(--yellow, #ffd400);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.pb-testimonial-content a:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.pb-story-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 240px;
+}
+
+.pb-story-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 54px;
+  height: 54px;
+  margin: 1.5rem 1.5rem 0;
+  border: 1px solid var(--yellow, #ffd400);
+  border-radius: 50%;
+  color: var(--yellow, #ffd400);
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+@media (max-width: 650px) {
+  .pb-testimonials {
+    padding: 4rem 0;
+  }
+
+  .pb-testimonials-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .pb-testimonials-heading {
+    margin-bottom: 2rem;
+  }
+
+  .pb-testimonial-content {
+    padding: 1.25rem;
+  }
+
+  .pb-story-card {
+    min-height: 220px;
+  }
+}
+
     </style>
   </head>
 
@@ -883,6 +1180,172 @@
           </div>
         </div>
       </section>
+
+      <!-- ABOUT PRASHANT SIR -->
+      <section class="prashant-profile-section">
+        <div class="prashant-profile-grid">
+          <div class="prashant-profile-image reveal">
+            <img
+              src="./assets/images/Prashant Sir img.jpeg"
+              alt="Dr. Prashant Govind Mistry, Physiotherapist and Biomechanics Educator"
+              loading="lazy"
+            />
+          </div>
+
+          <div class="prashant-profile-content reveal">
+            <div class="section-label">Meet the Expert</div>
+
+            <h2>About <span>Prashant Sir</span></h2>
+
+            <p>
+              Dr. Prashant Govind Mistry is a Physiotherapist, Biomechanics
+              Educator, and Movement Specialist with qualifications including
+              BPT, MPT, and PhD in Physical Therapy.
+            </p>
+
+            <p>
+              With a strong academic and clinical foundation, Dr. Prashant
+              focuses on understanding the science of human movement, exercise
+              biomechanics, muscle function, joint loading, and movement
+              efficiency.
+            </p>
+
+            <p>
+              Through Prashant Biomechanics, he aims to simplify complex
+              biomechanical concepts and connect scientific principles with
+              practical exercise and movement.
+            </p>
+
+            <p class="profile-approach-label">
+              His approach focuses on understanding:
+            </p>
+
+            <div class="prashant-profile-approach">
+              Movement &rarr; Forces &rarr; Moments &rarr; Joint Loading &rarr;
+              Adaptation
+            </div>
+
+            <p>
+              The goal is to help physiotherapists, fitness professionals,
+              coaches, athletes, students, and movement enthusiasts develop a
+              deeper understanding of biomechanics and apply it effectively in
+              practice.
+            </p>
+
+            <p class="prashant-profile-tagline">
+              Understand Movement. Apply Science. Move Better.
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- END ABOUT PRASHANT SIR -->
+
+
+
+<!-- INSTAGRAM TESTIMONIALS -->
+<section class="pb-testimonials" id="testimonials">
+  <div class="pb-testimonials-container">
+
+    <div class="pb-testimonials-heading">
+      <div class="section-label">Community & Insights</div>
+      <h2>From <span>Instagram</span></h2>
+      <p>
+        Explore fitness insights, sustainable lifestyle tips and
+        shared moments from the Prashant Biomechanics community.
+      </p>
+    </div>
+
+    <div class="pb-testimonials-grid">
+
+      <!-- INSTAGRAM REEL -->
+      <article class="pb-testimonial-card pb-featured-card">
+        <div class="pb-video-frame">
+          <iframe
+            src="https://www.instagram.com/reel/DIIsfnMpJJd/embed"
+            title="Fat loss and sustainable lifestyle insights"
+            loading="lazy"
+            allowfullscreen
+            allow="encrypted-media; picture-in-picture; web-share">
+          </iframe>
+        </div>
+
+        <div class="pb-testimonial-content">
+          <span class="pb-content-tag">Fitness & Lifestyle</span>
+          <h3>Sustainable Fat Loss</h3>
+          <p>
+            Fat loss can be approached through sustainable lifestyle
+            changes, regular exercise and a balanced diet instead of
+            quick fixes.
+          </p>
+          <a
+            href="https://www.instagram.com/reel/DIIsfnMpJJd/"
+            target="_blank"
+            rel="noopener noreferrer">
+            Watch on Instagram ↗
+          </a>
+        </div>
+      </article>
+
+      <!-- INSTAGRAM STORY 1 -->
+      <article class="pb-testimonial-card pb-story-card">
+        <div class="pb-story-icon">IG</div>
+        <div class="pb-testimonial-content">
+          <span class="pb-content-tag">Instagram Story</span>
+          <h3>Community Moments</h3>
+          <p>
+            Explore shared content from the fitness community on Instagram.
+          </p>
+          <a
+            href="https://www.instagram.com/stories/queenfitness_111/3949712270078874818/"
+            target="_blank"
+            rel="noopener noreferrer">
+            View Instagram Story ↗
+          </a>
+        </div>
+      </article>
+
+      <!-- INSTAGRAM STORY 2 -->
+      <article class="pb-testimonial-card pb-story-card">
+        <div class="pb-story-icon">IG</div>
+        <div class="pb-testimonial-content">
+          <span class="pb-content-tag">Instagram Story</span>
+          <h3>Prashant Biomechanics</h3>
+          <p>
+            View the original story shared on the Prashant Biomechanics
+            Instagram account.
+          </p>
+          <a
+            href="https://www.instagram.com/stories/prashantbiomechanic/1713148035708837660/"
+            target="_blank"
+            rel="noopener noreferrer">
+            View Instagram Story ↗
+          </a>
+        </div>
+      </article>
+
+      <!-- INSTAGRAM STORY 3 -->
+      <article class="pb-testimonial-card pb-story-card">
+        <div class="pb-story-icon">IG</div>
+        <div class="pb-testimonial-content">
+          <span class="pb-content-tag">Instagram Story</span>
+          <h3>Movement & Community</h3>
+          <p>
+            Discover more content and updates from Prashant Biomechanics.
+          </p>
+          <a
+            href="https://www.instagram.com/stories/prashantbiomechanic/2362168391181811806/"
+            target="_blank"
+            rel="noopener noreferrer">
+            View Instagram Story ↗
+          </a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+<!-- END INSTAGRAM TESTIMONIALS -->
+
 
       <!-- =========================================================
          ABOUT US
